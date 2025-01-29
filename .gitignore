@@ -1,2 +1,5 @@
 _build
 .DS_Store
+conda/
+__pycache__/
+venv/
