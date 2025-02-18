@@ -169,7 +169,7 @@ from IPython.display import HTML
 
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;"> 
-    <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; placeholder="Ihre Antwort"></textarea>
+     <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
