@@ -12,16 +12,27 @@ kernelspec:
 
 # 🏆Selbsttest: Wissen und Praxis
 
-```{admonition} Feinlernziel
-:class: lernziele
-Sie können die Funktionsweise und Einsatzzwecke von OCR erläutern.
-```
-
-## Frage 1 
+## Teil 1: OCR als Methode
+### Assessment 3.1.1: OCR Grundlagen
+#### Frage 1
+ 
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
+
+""" 
+Lernziel: 
+     Sie können den Prozess der Optical Character Recognition (OCR) für die Korpuserstellung beschreiben und dessen Qualität systematisch analysieren.
+Bloom-Stufe: Verstehen
+Format: Multiple Choice
+Geschätzte Zeit: 15 Minuten
+Schwerpunkte:
+    - Grundprinzipien der OCR
+    - Anwendungsbereiche
+    - Funktionsweise
+
+"""
 
 import sys
 sys.path.append("..")
@@ -63,7 +74,7 @@ multiple_choice_1 = [{
 
 display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
-## Frage 2
+#### Frage 2
 
 Analysieren Sie die folgenden Aussagen zur OCR-Qualitätskontrolle.
 
@@ -118,11 +129,26 @@ question2 = [
 display_quiz(question2, colors=colors.jupyterquiz)
 ```
 
-## Frage 3
+## Teil 2: OCR in Python mit PyTesseract
+### Assessment 3.2.1: PDF-Verarbeitung mit OCR
+#### Aufgabe 2: Verarbeitungsschritte
+ 
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
+
+""" 
+Lernziel: 
+     Sie können die notwendigen Schritte zur Verarbeitung eines einseitigen und eines mehrseitigen PDFs zu einem Text aufzählen und das Ursprungs- sowie das Zielformat nennen und Unterschiede erklären.
+Bloom-Stufe: Verstehen
+Format: Tool-Vergleich und Zuordnungsaufgabe
+Geschätzte Zeit: 20 Minuten
+Schwerpunkte:
+    - Verarbeitungsschritte für PDFs
+	- Format-Transformationen und Formate
+	- Unterschiede einseitig/mehrseitig
+"""
 
 import sys
 sys.path.append("..")
@@ -166,9 +192,9 @@ question3 = [
 display_quiz(question3, colors=colors.jupyterquiz)
 ```
 
-## Frage 4
+#### Aufgabe 4: Fehleridentifikation
 
-dentifizieren Sie mögliche Probleme in den folgenden Aussagen zur OCR-Verarbeitung.
+Identifizieren Sie mögliche Probleme in den folgenden Aussagen:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -186,7 +212,7 @@ question4 = [
             {
                 "answer": "Ja",
                 "correct": False,
-                "feedback": """× Nicht korrekt! Diese Aussage ist falsch, weil:
+                "feedback": """× Diese Aussage ist falsch, weil:
                 - PyTesseract benötigt Bilddaten
                 - Direkte PDF-Verarbeitung nicht möglich
                 - Konvertierung ist zwingend erforderlich
@@ -206,7 +232,7 @@ question4 = [
             {
                 "answer": "Ja",
                 "correct": False,
-                "feedback": """× Nicht korrekt! Diese Aussage ist falsch, weil:
+                "feedback": """× Diese Aussage ist falsch, weil:
                 - Automatisierung für große Korpora notwendig
                 - Manuelle Verarbeitung zeitaufwändig
                 - Fehleranfälligkeit bei manueller Arbeit
@@ -223,11 +249,27 @@ question4 = [
 display_quiz(question4, colors=colors.jupyterquiz)
 ```
 
-## Frage 5
+## Teil 3: Messung der OCR-Qualität
+### Assessment 3.3.1: Messung der OCR-Qualität
+#### Aufgabe 1: Grundlegende Metriken
+ 
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
+
+""" 
+Lernziel: 
+     Sie können die grundlegenden Metriken zur OCR-Qualitätsevaluation (Präzision, Recall, F1-Score) erläutern und ihre Bedeutung für die Bewertung von OCR-Systemen beschreiben.
+Bloom-Stufe: Verstehen, Analysieren
+Format: Vergleichsmatrix + Multiple Choice
+Geschätzte Zeit: 25 Minuten
+Schwerpunkte:
+    - Definition und Berechnung der Qualitätsmetriken
+    - Zusammenhänge zwischen den Metriken
+    - Interpretation der Messwerte
+    - Anwendung in der OCR-Evaluation
+"""
 
 import sys
 sys.path.append("..")
@@ -269,9 +311,11 @@ question5 = [{
 display_quiz(question5, colors=colors.jupyterquiz)
 ```
 
-## Frage 6
+#### Aufgabe 2: Anwendungsszenarien
 
 Analysieren Sie die Bedeutung der verschiedenen Metriken in folgenden Szenarien.
+
+**Szenario 1: Digitalisierung historischer Zeitungen für wissenschaftliche Forschung**
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -300,13 +344,29 @@ question6 = [
                 "answer": "Ausgewogener F1-Score",
                 "correct": True,
                 "feedback": """✓ Richtig! Ein ausgewogener F1-Score ist ideal, weil:
-                - Balanciert Präzision und Recall
-                - Wissenschaftliche Forschung benötigt beide Aspekte
-                - Minimiert Fehler und Auslassungen
-                - Optimale Balance für Forschungszwecke"""
+                - Wissenschaftliche Forschung benötigt sowohl Genauigkeit als auch Vollständigkeit
+                - Falsche Erkennungen können Forschungsergebnisse verfälschen
+                - Fehlende Erkennungen können wichtige Informationen übersehen
+                - Balance zwischen Präzision und Recall notwendig
+                """
             }
         ]
-    },
+    } 
+]
+display_quiz(question6, colors=colors.jupyterquiz)
+```
+
+**Szenario 2: Automatische Erfassung von Formulardaten**
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+question7 = [
     {
         "question": "Welche Metrik sollte bei der automatischen Erfassung von Formulardaten priorisiert werden?",
         "type": "multiple_choice",
@@ -333,9 +393,9 @@ question6 = [
         ]
     }
 ]
-display_quiz(question6, colors=colors.jupyterquiz)
+display_quiz(question7, colors=colors.jupyterquiz)
 ```
-## Frage 7
+#### Aufgabe 3: Metriken-Beziehungen
 Erklären Sie die Beziehungen zwischen den OCR-Qualitätsmetriken.
 
 **Trade-off zwischen Präzision und Recall**
@@ -345,7 +405,7 @@ from IPython.display import HTML
 
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
+    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
@@ -368,7 +428,7 @@ from IPython.display import HTML
 
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;">     
-    <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
+    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
@@ -381,7 +441,11 @@ Der F1-Score:
 - Berücksichtigt beide Aspekte der Qualität
 ````
 
-## Frage 8
+## Teil 4: Messung der OCR-Qualität in Python
+### Assessment 3.4.1: Messung der OCR-Qualität
+
+#### Aufgabe 2: Interpretation von Messwerten
+
 Analysieren Sie die folgenden OCR-Qualitätswerte aus dem Beispiel:
 - Precision: 0.778
 - Recall: 0.7932
@@ -392,9 +456,20 @@ Analysieren Sie die folgenden OCR-Qualitätswerte aus dem Beispiel:
 :tags: [remove-input]
 from IPython.display import HTML
 
+"""
+Lernziel: 
+    Sie können die Schritte zur Qualitätsmessung eines OCR-Outputs aufzählen und die Qualitätsmaße interpretieren.
+Bloom-Stufe: Verstehen, Anwenden
+Format: 
+Geschätzte Zeit: 10 Minuten
+    - Reihenfolge der Prozessschritte 
+    - Bedeutung der Messergebnisse 
+    - Praktische Interpretation
+"""
+
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;">
-     <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
+     <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
@@ -402,7 +477,7 @@ HTML("""
 :class: solution, dropdown
 **77.8% der vom OCR-System erkannten Zeichen sind korrekt.**
 
-Erklärung:
+Begründung:
 - Precision misst den Anteil korrekter Erkennungen
 - Wert von 0.778 entspricht 77.8%
 - Zeigt moderate bis gute Erkennungsgenauigkeit
@@ -416,7 +491,7 @@ from IPython.display import HTML
 
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;">
-     <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
+     <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
@@ -424,14 +499,14 @@ HTML("""
 :class: solution, dropdown
 **Das System erkennt mehr vorhandene Zeichen, macht dabei aber auch mehr Fehler.**
 
-Erklärung:
+Begründung:
 - Höherer Recall bedeutet bessere Vollständigkeit
 - Kompromiss zwischen Genauigkeit und Vollständigkeit
 - Typisches Muster bei historischen Dokumenten
 - Balance durch F1-Score (0.7855) ersichtlich
 ````
 
-## Frage 9
+#### Aufgabe 3
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -469,17 +544,17 @@ question9 = [
 ]
 display_quiz(question9, colors=colors.jupyterquiz)
 ```
-## Frage 10
+#### Aufgabe 4: Anwendungskontexte
 Bewerten Sie die Eignung der gemessenen OCR-Qualität für verschiedene Anwendungsfälle.
 
-**Volltextsuche in digitalisierten Zeitungen**
+**Fall 1: Volltextsuche in digitalisierten Zeitungen**
 ```{code-cell} ipython3
 :tags: [remove-input]
 from IPython.display import HTML
 
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
+    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
@@ -497,14 +572,14 @@ Bedingt geeignet, weil:
 - Mögliche manuelle Nachkorrektur wichtiger Passagen
 ````
 
-**Exakte Texttranskription für Edition**
+**Fall 2: Exakte Texttranskription für Edition**
 ```{code-cell} ipython3
 :tags: [remove-input]
 from IPython.display import HTML
 
 HTML("""
 <div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
+    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
 </div>
 """)
 ```
@@ -521,4 +596,13 @@ Nicht ausreichend, weil:
 - Systematische manuelle Korrektur
 - Dokumentation der OCR-Qualität
 - Mehrfache Qualitätskontrolle
+````
+
+````{admonition} Hinweise zur Bearbeitung
+:class: hinweis, dropdown
+
+1.	Arbeiten Sie die Aufgaben in der angegebenen Reihenfolge durch
+2.	Nutzen Sie das Feedback zur Selbstüberprüfung
+3.	Achten Sie besonders auf die Begründungen
+4.	Reflektieren Sie die praktischen Implikationen der Messwerte
 ````

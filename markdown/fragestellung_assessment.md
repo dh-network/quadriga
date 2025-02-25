@@ -12,7 +12,15 @@ kernelspec:
 
 # 🏆Selbsttest: Wissen und Praxis
 
-## Frage 1
+## Assessment 1.1: Forschungsfrage und Operationalisierung
+
+### Teil 1: Fragestellung und Operationalisierung
+
+**Anweisungen**
+1. Lesen Sie jede Option sorgfältig
+2. Wählen Sie alle zutreffenden Aussagen aus
+3. Beachten Sie das Feedback zu jeder Option, um Ihr Verständnis zu vertiefen
+4. Reflektieren Sie, warum bestimmte Aussagen korrekt oder inkorrekt sind
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -21,6 +29,18 @@ from jupyterquiz import display_quiz
 import sys
 sys.path.append("..")
 from quadriga_config import colors
+
+""" 
+Lernziel: 
+    Sie können an einem konkreten Beispiel (Spanische Grippe) nachvollziehen, wie eine qualitative Forschungsfrage für quantitative Analyse operationalisiert wird.
+Bloom-Stufe: Verstehen
+Format: Multiple Choice + Selbsteinschätzung
+Geschätzte Zeit: 30 Minuten
+Schwerpunkte:
+    - Verständnis der Operationalisierung
+    - Anwendung auf konkrete Forschungsfrage
+    - Reflexion methodischer Entscheidungen
+"""
 
 question1 = [
     {
@@ -83,9 +103,13 @@ question1 = [
         ]
     }
 ]
-display_quiz(question1, colors=colors.jupyterquiz)
+display_quiz(question1, colors=colors.jupyterquiz, max_width=1000)
 ```
-## Frage 2
+
+### Teil 2: Operationalisierung in der Praxis
+
+#### Kontext
+Eine Forschungsfrage im Bereich der Digital Humanities lautet: "Wie entwickelte sich die öffentliche Aufmerksamkeit für Umweltthemen in deutschen Tageszeitungen zwischen 1960-1980?"
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -103,43 +127,61 @@ question2 = [
             {
                 "answer": "Zählen der Häufigkeit von umweltbezogenen Begriffen (wie 'Umweltschutz', 'Verschmutzung') in den Zeitungstexten",
                 "correct": True,
-                "feedback": "✓ Korrekt! Die Worthäufigkeitsanalyse ist geeignet, weil sie ein quantifizierbares Maß für die Intensität der medialen Berichterstattung liefert."
+                "feedback": """✓ Korrekt! Diese Operationalisierung ist geeignet, weil:
+                    - Sie ein quantifizierbares Maß für die Intensität der Berichterstattung liefert
+                    - Die Häufigkeit von Schlüsselbegriffen messbar ist
+                    - Systematische Vergleiche über Zeit möglich sind
+                    - Die Analyse auf dem definierten Korpus basiert"""
             },
             {
                 "answer": "Messen der Länge von Artikeln, die Umweltthemen behandeln",
                 "correct": True,
-                "feedback": "✓ Korrekt! Die Artikellänge und der prozentuale Seitenanteil sind ebenfalls geeignet, da sie die dem Thema gewidmete Aufmerksamkeit quantitativ erfassen."
+                "feedback": """✓ Korrekt! Diese Methode ist geeignet, weil:
+                    - Sie den Umfang der Berichterstattung quantifiziert
+                    - Längere Artikel oft mehr Aufmerksamkeit bedeuten
+                    - Die Messung über Zeit vergleichbar ist
+                    - Die Analyse innerhalb des Quellenkorpus bleibt"""
             },
             {
                 "answer": "Erfassen der tatsächlichen Umweltverschmutzungswerte aus diesem Zeitraum",
                 "correct": False,
-                "feedback": "× Nicht korrekt! Umweltverschmutzungswerte sind ungeeignet, da sie nicht die mediale Aufmerksamkeit, sondern das tatsächliche Umweltgeschehen messen."
+                "feedback": """× Nicht korrekt, weil:
+                    - Dies keine mediale Aufmerksamkeit misst
+                    - Es außerhalb des Untersuchungskorpus liegt
+                    - Es das tatsächliche Geschehen statt der Berichterstattung erfasst
+                    - Es nicht die Forschungsfrage beantwortet"""
             },
             {
                 "answer": "Analyse von Regierungsdokumenten zur Umweltpolitik",
                 "correct": False,
-                "feedback": "× Nicht korrekt! Regierungsdokumente fallen außerhalb des definierten Untersuchungskorpus (Tageszeitungen) und sind daher ungeeignet."
+                "feedback": """× Nicht korrekt, weil:
+                    - Dies außerhalb des definierten Quellenkorpus (Tageszeitungen) liegt
+                    - Es eine andere Textgattung betrifft
+                    - Es nicht die mediale Aufmerksamkeit misst
+                    - Es eine andere Forschungsfrage erfordern würde"""
             },
             {
                 "answer": "Erfassen des prozentualen Anteils der Zeitungsseiten mit Umweltthemen",
                 "correct": True,
-                "feedback": """✓ Korrekt! Die geeigneten Operationalisierungen zeichnen sich dadurch aus, dass sie:
-                    - ein quantifizierbares Maß für mediale Aufmerksamkeit bieten
-                    - sich auf das definierte Quellenkorpus (Tageszeitungen) beschränken
-                    - eine systematische Analyse über den gesamten Zeitraum ermöglichen"""
+                "feedback": """✓ Korrekt! Diese Operationalisierung ist geeignet, weil:
+                    - Sie den relativen Stellenwert des Themas misst
+                    - Sie verschiedene Zeitpunkte vergleichbar macht
+                    - Sie auf dem definierten Korpus basiert
+                    - Sie ein quantifizierbares Maß liefert"""
             }
         ]
-        }
+    }
 ]
-display_quiz(question2, colors=colors.jupyterquiz)
+display_quiz(question2, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-## Frage 3
-### Self-Assessment-Aufgabe
+### Teil 3: Selbsteinschätzungsaufgabe
 
-#### Schritt 1: Formulieren Sie zunächst selbst eine mögliche Operationalisierung für folgende Forschungsfrage
-Wie veränderte sich die Berichterstattung über wissenschaftliche Themen in der Wochenzeitung 'Die Zeit' zwischen 1950-1970?
+#### Aufgabe
+Entwickeln Sie eine Operationalisierung für folgende Forschungsfrage: "Wie veränderte sich die Berichterstattung über wissenschaftliche Themen in der Wochenzeitung 'Die Zeit' zwischen 1950-1970?"
 
+#### Schritt 1
+Formulieren Sie zunächst selbst eine mögliche Operationalisierung
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -151,7 +193,11 @@ HTML("""
 </div>
 """)
 ```
-#### Schritt 2:Vergleichen Sie Ihre Antwort mit den folgenden Kriterien für eine geeignete Operationalisierung. Bewerten Sie Ihre eigene Antwort anhand dieser Kriterien
+
+#### Schritt 2 
+
+Vergleichen Sie Ihre Antwort mit den folgenden Kriterien für eine geeignete Operationalisierung. Bewerten Sie Ihre eigene Antwort anhand dieser Kriterien
+
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -174,7 +220,11 @@ questions = [
             {
                 "answer": "Nein",
                 "correct": False,
-                "feedback": "× Nicht korrekt!"
+                    "feedback": """× Nicht korrekt! Die Indikatoren müssen in Zahlen ausdrückbar sein
+                    - Beispiele für quantifizierbare Indikatoren:
+                    - Worthäufigkeiten (z.B. Anzahl wissenschaftsbezogener Begriffe), Textlängen (z.B. Wörter pro Artikel), Prozentuale Anteile (z.B. Anteil am Gesamtumfang)
+                    - Gegenbeispiele (nicht quantifizierbar):
+                    "Wichtigkeit" ohne weitere Spezifikation, "Qualität der Berichterstattung" ohne Messkriterien, Vage Beschreibungen wie "häufig" oder "selten"."""
             }
         ]
     },
@@ -190,7 +240,15 @@ questions = [
             {
                 "answer": "Nein",
                 "correct": False,
-                "feedback": "× Nicht korrekt!"
+                "feedback": """× Nicht korrekt! Alle Messungen müssen im Korpus der "Zeit" durchführbar sein. 
+                - Zu beachten:
+                Verfügbarkeit aller Ausgaben im Untersuchungszeitraum, 
+                Konsistenz des Zeitungsformats, 
+                Zugänglichkeit der relevanten Artikel. 
+                - Nicht geeignet sind Messungen, die:
+                Andere Zeitungen einbeziehen, 
+                Externe Datenquellen erfordern, 
+                Nicht im Zeitungskorpus enthaltene Informationen benötigen"""
             }
         ]
     },
@@ -206,7 +264,15 @@ questions = [
             {
                 "answer": "Nein",
                 "correct": False,
-                "feedback": "× Nicht korrekt!"
+                "feedback": """× Nicht korrekt! Die Messungen müssen von 1950-1970 konsistent möglich sein
+                - Wichtige Aspekte:
+                Gleichbleibende Verfügbarkeit der Daten, 
+                Vergleichbarkeit der Messungen über Zeit, 
+                Berücksichtigung möglicher Formatänderungen. 
+                - Problematisch wären:
+                Indikatoren, die nur für Teilzeiträume verfügbar sind, 
+                Messungen, die durch Änderungen der Zeitung beeinflusst werden, 
+                Nicht durchgängig dokumentierte Aspekte"""
             }
         ]
     },
@@ -222,24 +288,41 @@ questions = [
             {
                 "answer": "Nein",
                 "correct": False,
-                "feedback": "× Nicht korrekt!"
+                "feedback": """× Nicht korrekt! - Die Methoden müssen mit verfügbaren Ressourcen durchführbar sein
+                - Praktische Aspekte:
+                Verfügbare Zeit und Personal, 
+                Technische Möglichkeiten (z.B. OCR, Textanalysetools), 
+                Aufwand-Nutzen-Verhältnis. 
+                - Problematisch wären:
+                Zu zeitaufwendige manuelle Analysen, 
+                Technisch nicht realisierbare Messungen, 
+                Unverhältnismäßig komplexe Verfahren"""
             }
         ]
     }
 ]
-display_quiz(questions, colors=colors.jupyterquiz)
+display_quiz(questions, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-````{admonition}  Lösungen
+#### Anwendung der Kriterien
+
+Bei der Bewertung Ihrer Operationalisierung:
+
+1. Prüfen Sie jeden Indikator einzeln gegen alle Kriterien
+2. Identifizieren Sie mögliche Schwachstellen
+3. Erwägen Sie Alternativen für problematische Aspekte
+4. Dokumentieren Sie Ihre Überlegungen zu jedem Kriterium
+
+
+````{admonition} Lösungen
 :class: solution, dropdown
-**Beispiel einer möglichen Operationalisierung:**
+**Beispielhafte Anwendung**
+Ein Indikator wie "Anzahl wissenschaftlicher Artikel pro Ausgabe":
+- ✓ Quantifizierbar (zählbare Einheit)
+- ✓ Basiert auf Quellenkorpus (nur Zeit-Artikel) 
+- ✓ Durchgängig messbar (über gesamten Zeitraum)
+- ✓ Praktisch umsetzbar (mit klarer Definition und OCR)
 
-"Die Veränderung der Berichterstattung wird durch die Analyse von Worthäufigkeiten wissenschaftsbezogener Begriffe, die Länge der Artikel und deren Platzierung in der Zeitung gemessen. Diese Indikatoren werden pro Ausgabe erfasst und über den Zeitraum verglichen."
-
-**Reflexionsfragen:**
-- Welche Stärken hat Ihre Operationalisierung im Vergleich zum Beispiel?
-- Welche zusätzlichen Aspekte haben Sie berücksichtigt?
-- Wo sehen Sie potenzielle Herausforderungen bei Ihrer Operationalisierung?
-
-**Hinweis:** Es gibt nicht die eine "richtige" Operationalisierung. Verschiedene Ansätze können geeignet sein, solange sie den grundlegenden Kriterien entsprechen und praktisch umsetzbar sind.
+**Hinweis** 
+Es gibt nicht die eine "richtige" Operationalisierung. Verschiedene Ansätze können geeignet sein, solange sie den grundlegenden Kriterien entsprechen und praktisch umsetzbar sind.
 ````
