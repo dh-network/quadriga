@@ -301,7 +301,7 @@ questions = [
         ]
     }
 ]
-display_quiz(questions, colors=colors.jupyterquiz, max_width=1000)
+display_quiz(questions, colors=colors.jupyterquiz)
 ```
 
 #### Anwendung der Kriterien

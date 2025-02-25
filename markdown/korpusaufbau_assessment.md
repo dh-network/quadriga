@@ -295,7 +295,7 @@ question5 = [
         ]
     }
 ]
-display_quiz(question5, colors=colors.jupyterquiz, max_width=1000)
+display_quiz(question5, colors=colors.jupyterquiz)
 ```
 
 #### Frage 7: Metadatenebenen
@@ -329,7 +329,7 @@ question7 = [
         ]
     }
 ]
-display_quiz(question7, colors=colors.jupyterquiz, max_width=1000)
+display_quiz(question7, colors=colors.jupyterquiz)
 ```
 ````{admonition} Lösungen
 :class: solution, dropdown
@@ -342,10 +342,8 @@ Für Einzeldokumente sind stattdessen relevant:
 ## Praktische Anwendung
 ### Assessment 2.4: Korpusaufbau in der Praxis
 
-```{code-cell} ipython3
-:tags: [remove-input]
+<!--
 
-"""
 Lernziel:
     Sie können den schrittweisen Prozess des praktischen Korpusaufbaus (Konzeptentwicklung, Metadatenerstellung und Datensammlung) am Beispiel eines Zeitungskorpus beschreiben.
 Bloom-Stufe: Verstehen
@@ -355,8 +353,7 @@ Schwerpunkte:
     - Planung des Korpusaufbaus
     - Berücksichtigung praktischer Einschränkungen
     - Qualitätssicherung im Aufbauprozess
-"""
-```
+-->
 
 #### Frage 10: Analyse eines Korpusaufbau-Konzepts
 
