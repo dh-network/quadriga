@@ -12,8 +12,11 @@ kernelspec:
 
 # 🏆Selbsttest: Wissen und Praxis
 
-## Frage 1 
-### Korpora als Forschungsobjekte
+## Theoretische Grundlagen
+
+### Assessment 2.1: Korpora als Forschungsobjekte
+
+#### Frage 1: Merkmale von Korpora
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -23,48 +26,80 @@ import sys
 sys.path.append("..")
 from quadriga_config import colors
 
+"""
+Lernziel: 
+    Sie können Korpora als geisteswissenschaftliche Forschungsobjekte definieren und ihre wesentlichen Merkmale beschreiben.
+Bloom-Stufe: Verstehen
+Format: Multiple Choice + Zuordnungsaufgabe
+Geschätzte Zeit: 5 Minuten
+Schwerpunkte:
+    - Verständnis der Korpus-Grundprinzipien
+    - Unterscheidung von Korpustypen
+    - Bewertung von Korpusqualität
+"""
+
+
 question1 = [
     {
-        "question": "Welche der folgenden Aussagen beschreiben korrekt die wesentlichen Merkmale eines Korpus in den Digital Humanities?Wählen Sie alle zutreffenden Aussagen.",
-            "type": "multiple_choice",
-            "answers": [
+        "question": "Welche der folgenden Aussagen beschreiben korrekt die wesentlichen Merkmale eines Korpus in den Digital Humanities? Wählen Sie alle zutreffenden Aussagen.",
+        "type": "multiple_choice",
+        "answers": [
             {
                 "answer": "Eine Sammlung von maschinenlesbaren Textdokumenten",
                 "correct": True,
-                "feedback": "✓ Korrekt! Die Maschinenlesbarkeit ist ein zentrales Merkmal von DH-Korpora, da sie die computergestützte Analyse ermöglicht.\\nDies unterscheidet DH-Korpora von traditionellen Textsammlungen und ist Voraussetzung für quantitative Analysen."
-            },    
+                "feedback": """✓ Korrekt! Die Maschinenlesbarkeit ist ein zentrales Merkmal von DH-Korpora, da sie die computergestützte Analyse ermöglicht. Dies unterscheidet DH-Korpora von traditionellen Textsammlungen und ist Voraussetzung für quantitative Analysen."""
+            },
             {
                 "answer": "Eine nach bestimmten Kriterien zusammengestellte Textsammlung",
                 "correct": True,
-                "feedback": "✓ Korrekt! Die kriteriengeleitete Zusammenstellung ist essentiell für wissenschaftliche Korpora.Die Kriterien müssen dabei:\n- transparent dokumentiert sein\n- zur Forschungsfrage passen\n- systematisch angewendet werden"
+                "feedback": """✓ Korrekt! Die kriteriengeleitete Zusammenstellung ist essentiell für wissenschaftliche Korpora. Die Kriterien müssen dabei:
+                - transparent dokumentiert sein
+                - zur Forschungsfrage passen
+                - systematisch angewendet werden"""
             },
             {
                 "answer": "Eine Sammlung, die nur digitalisierte Bücher enthält",
                 "correct": False,
-                "feedback": "× Nicht korrekt. Korpora können verschiedene Arten von Texten enthalten:\n- Zeitungsartikel (wie in unserer Fallstudie)\n- Literarische Texte\n- Dokumente\n- Andere Textformen\nDie Art der Texte wird durch die Forschungsfrage bestimmt, nicht durch das Format."
+                "feedback": """× Nicht korrekt. Korpora können verschiedene Arten von Texten enthalten:
+                - Zeitungsartikel (wie in unserer Fallstudie)
+                - Literarische Texte
+                - Dokumente
+                - Andere Textformen
+                Die Art der Texte wird durch die Forschungsfrage bestimmt, nicht durch das Format."""
             },
             {
                 "answer": "Eine Textsammlung, die spezifischen Forschungszwecken dient",
                 "correct": True,
-                "feedback": "✓ Korrekt! Die Zweckgebundenheit ist ein wichtiges Merkmal:\n- Das Korpus wird für bestimmte Forschungsfragen zusammengestellt\n- Die Forschungszwecke bestimmen die Auswahlkriterien\n- Die Zweckbindung beeinflusst auch die Art der Aufbereitung der Texte"
+                "feedback": """✓ Korrekt! Die Zweckgebundenheit ist ein wichtiges Merkmal:
+                - Das Korpus wird für bestimmte Forschungsfragen zusammengestellt
+                - Die Forschungszwecke bestimmen die Auswahlkriterien
+                - Die Zweckbindung beeinflusst auch die Art der Aufbereitung der Texte"""
             },
             {
                 "answer": "Eine beliebige Sammlung von digitalisierten Texten",
                 "correct": False,
-                "feedback": "× Nicht korrekt. Eine beliebige Sammlung erfüllt nicht die wissenschaftlichen Anforderungen an ein Korpus:\n- Es fehlen systematische Auswahlkriterien\n- Die Zusammenstellung ist nicht durch Forschungsfragen motiviert\n- Eine methodisch fundierte Analyse wäre nicht möglich"
+                "feedback": """× Nicht korrekt. Eine beliebige Sammlung erfüllt nicht die wissenschaftlichen Anforderungen an ein Korpus:
+                - Es fehlen systematische Auswahlkriterien
+                - Die Zusammenstellung ist nicht durch Forschungsfragen motiviert
+                - Eine methodisch fundierte Analyse wäre nicht möglich"""
             },
             {
                 "answer": "Eine Sammlung, die immer alle verfügbaren Texte zu einem Thema enthalten muss",
                 "correct": False,
-                "feedback": "× Nicht korrekt. Vollständigkeit ist nur eine mögliche Strategie des Korpusaufbaus:\n- Wie im Text erläutert, gibt es verschiedene Strategien (z.B. repräsentative Stichproben)\n- Die Vollständigkeit ist nur bei klar begrenzten, kleinen Untersuchungsbereichen sinnvoll\n- Die Strategie der Korpuserstellung richtet sich nach der Forschungsfrage und praktischen Erwägungen"
+                "feedback": """× Nicht korrekt. Vollständigkeit ist nur eine mögliche Strategie des Korpusaufbaus:
+                - Wie im Text erläutert, gibt es verschiedene Strategien (z.B. repräsentative Stichproben)
+                - Die Vollständigkeit ist nur bei klar begrenzten, kleinen Untersuchungsbereichen sinnvoll
+                - Die Strategie der Korpuserstellung richtet sich nach der Forschungsfrage und praktischen Erwägungen"""
             }
         ]
     }
 ]
-display_quiz(question1, colors=colors.jupyterquiz)
+display_quiz(question1, colors=colors.jupyterquiz, max_width=1000)
 ```
-## Frage 2
-### Digital Text Formats
+
+### Assessment 2.2: Digitale Textformate
+
+#### Frage 2: Digitale Textformate
 
 Welche Aussage trifft auf das jeweilige Textformat zu? Wählen Sie für jede Aussage das passende Format.
 
@@ -75,6 +110,19 @@ from jupyterquiz import display_quiz
 import sys
 sys.path.append("..")
 from quadriga_config import colors
+
+"""
+Lernziel:
+    Sie können die vier Hauptformate digitaler Texte (Bilddigitalisate, Plain Text, XML/TEI, CSV) anhand ihrer charakteristischen Eigenschaften unterscheiden und deren Vor- und Nachteile für spezifische Anwendungsfälle analysieren.
+Bloom-Stufe: Analysieren
+Format: Vergleichsmatrix + Multiple Choice
+Geschätzte Zeit: 15 Minuten
+Schwerpunkte:
+    - Eigenschaften digitaler Textformate
+    - Vor- und Nachteile verschiedener Formate
+    - Formatauswahl für spezifische Zwecke
+"""
+
 
 statements = [
     {
@@ -152,16 +200,15 @@ statements = [
 display_quiz(statements, colors=colors.jupyterquiz)
 ```
 
-## Frage 3
+#### Frage 3: Anwendungsfall-Analyse
 
-Analysieren Sie die folgenden Anwendungsfälle. Wählen Sie das am besten geeignete Format und begründen Sie die Vor- und Nachteile.
 
-Ein Forschungsprojekt möchte einen historischen Zeitungskorpus erstellen, der:
+**Szenario:** Ein Forschungsprojekt möchte einen historischen Zeitungskorpus erstellen, der:
 - für automatische Textanalysen nutzbar ist
 - die ursprüngliche Seitengestaltung dokumentiert
 - langfristig archiviert werden soll
 
-Welche Kombination von Formaten würden Sie empfehlen?
+**Frage:** Welche Kombination von Formaten würden Sie empfehlen?
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -175,9 +222,9 @@ HTML("""
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
-**Empfohlene Lösung:** Kombination aus Bilddigitalisaten (PDF) und Plain Text
+**Musterlösung:** Kombination aus Bilddigitalisaten (PDF) und Plain Text
 
-Diese Kombination ist optimal, weil:
+**Begründung:**
 
 Bilddigitalisate (PDF):
 - Bewahren das originale Layout
@@ -194,25 +241,33 @@ Alternative Ansätze:
 - CSV ist nicht geeignet für Volltext
 - Nur Bilddigitalisate würden Analysen erschweren
 ````
+### Assessment 2.3: Metadaten und Dokumentation
 
-## Frage 4
-### Metadaten
+#### Frage 5: Metadatenschemata
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
-import sys
-sys.path.append("..")
-from quadriga_config import colors
+"""
+Lernziel:
+    Sie können die grundlegenden Metadatenschemata (Dublin Core, TEI, MODS, METS) und deren charakteristische Elemente für Korpora und Einzeldokumente beschreiben.
+Bloom-Stufe: Verstehen
+Format: Multiple Choice + Selbsteinschätzung
+Zeitaufwand: 25 Minuten
+Schwerpunkte:
+    - Verständnis verschiedener Metadatenschemata (Dublin Core, TEI, MODS, METS)
+    - Kenntnis charakteristischer Elemente 
+    - Unterscheidung Korpus- und Dokumentebene
+"""
 
-question = [
+question5 = [
     {
         "question": "Welche Aussagen beschreiben die verschiedenen Metadatenschemata korrekt?",
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "Dublin Core umfasst 15 grundlegende Elemente wie Titel, Autor und Datum.",
+                "answer": "Dublin Core umfasst 15 grundlegende Elemente wie Titel, Autor und Datum",
                 "correct": True,
                 "feedback": """✓ Richtig! Dublin Core:
                 - Bietet ein einfaches, universelles Schema
@@ -221,7 +276,7 @@ question = [
                 - Ist weit verbreitet und leicht anzuwenden"""
             },
             {
-                "answer": "TEI wurde speziell für die Auszeichnung von Texten entwickelt und speichert Metadaten im teiHeader.",
+                "answer": "TEI wurde speziell für die Auszeichnung von Texten entwickelt und speichert Metadaten im teiHeader",
                 "correct": True,
                 "feedback": """✓ Richtig! TEI:
                 - Ist ein spezialisiertes Schema für Texte
@@ -230,7 +285,7 @@ question = [
                 - Bietet umfangreiche Beschreibungsmöglichkeiten"""
             },
             {
-                "answer": "MODS und METS sind identische Standards für Bibliotheken.",
+                "answer": "MODS und METS sind identische Standards für Bibliotheken",
                 "correct": False,
                 "feedback": """× Nicht korrekt. Die Standards unterscheiden sich:
                 - MODS ist für bibliographische Beschreibungen
@@ -240,184 +295,106 @@ question = [
         ]
     }
 ]
-display_quiz(question, colors=colors.jupyterquiz)
+display_quiz(question5, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-## Frage 5
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-question = [
-    {"question": "Welche Metadatenelemente sind charakteristisch für die Beschreibung einzelner Korpus-Dokumente?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Eindeutiger Identifikator (z.B. DOI oder spezifische Kennung)",
-            "correct": True,
-            "feedback": """✓ Richtig! Ein eindeutiger Identifikator:
-            - Ist essentiell für die Dokumentidentifikation
-            - Ermöglicht präzise Referenzierung
-            - Unterstützt die Langzeitarchivierung
-            - Erleichtert die Verknüpfung von Dokumenten"""
-        },
-        {
-            "answer": "Gesamtumfang des Korpus",
-            "correct": False,
-            "feedback": """× Nicht korrekt! Der Gesamtumfang:
-            - Ist ein Korpus-Level Metadatum
-            - Beschreibt die gesamte Sammlung
-            - Gehört nicht zur Dokumentbeschreibung
-            Für Einzeldokumente sind stattdessen relevant:
-            - Individuelle Eigenschaften
-            - Spezifische Publikationsdaten
-            - Dokumentspezifische Merkmale"""
-        }
-    ]}
-]
-display_quiz(question, colors=colors.jupyterquiz)
-```
-## Frage 6
-### Aufbau des Forschungskorpus
+#### Frage 7: Metadatenebenen
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-question = [
+question7 = [
     {
-        "question": "Welche Aussagen beschreiben den Prozess des Korpusaufbaus korrekt?",
+        "question": "Welche Metadatenelemente sind charakteristisch für die Beschreibung einzelner Korpus-Dokumente?",
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "Die Entwicklung des Korpuskonzepts muss pragmatische Einschränkungen wie verfügbare Ressourcen berücksichtigen.",
+                "answer": "Eindeutiger Identifikator (z.B. DOI oder spezifische Kennung)",
                 "correct": True,
-                "feedback": """✓ Richtig! Dies zeigt sich im Beispiel deutlich:
-                - Die ursprüngliche Schätzung von 2 Terabyte war nicht praktikabel
-                - Es wurde auf ein balanciertes Korpus mit zwei Zeitungen reduziert
-                - Der Zeitraum wurde auf 1918-1919 eingegrenzt
-                Die Berücksichtigung praktischer Grenzen ist ein wichtiger Teil der Konzeptentwicklung."""
-            },{
-                "answer": "Die Metadaten für die Korpuselemente müssen vor der Datensammlung vollständig definiert sein.",
-                "correct": True,
-                "feedback": """✓ Richtig! Im Beispiel wird dies deutlich durch:
-                - Festlegung der Metadatenfelder (ID, Name, Datum, URL)
-                - Systematische Dokumentation in tabellarischer Form
-                - Nutzung standardisierter Dublin Core Elemente
-                Diese Strukturierung ermöglicht erst die systematische Sammlung."""
+                "feedback": """✓ Richtig! Ein eindeutiger Identifikator:
+                - Ist essentiell für die Dokumentidentifikation
+                - Ermöglicht präzise Referenzierung
+                - Unterstützt die Langzeitarchivierung
+                - Erleichtert die Verknüpfung von Dokumenten"""
             },
             {
-                "answer": "Ein vollständiges Korpus ist immer die beste Wahl für ein Forschungsprojekt.",
+                "answer": "Gesamtumfang des Korpus",
                 "correct": False,
-                "feedback": """× Nicht korrekt! Das Beispiel zeigt:
-                - Vollständige Korpora können zu groß für praktische Handhabung sein
-                - Balancierte oder repräsentative Korpora können ausreichen
-                - Die Wahl der Korpusstrategie hängt von verschiedenen Faktoren ab:
-                  * Verfügbare Ressourcen
-                  * Forschungsziele
-                  * Praktische Umsetzbarkeit"""
+                "feedback": """× Nicht korrekt! Der Gesamtumfang:
+                - Ist ein Korpus-Level Metadatum
+                - Beschreibt die gesamte Sammlung
+                - Gehört nicht zur Dokumentbeschreibung"""
             }
         ]
     }
 ]
-display_quiz(question, colors=colors.jupyterquiz)
+display_quiz(question7, colors=colors.jupyterquiz, max_width=1000)
 ```
+````{admonition} Lösungen
+:class: solution, dropdown
+Für Einzeldokumente sind stattdessen relevant:
+- Individuelle Eigenschaften
+- Spezifische Publikationsdaten
+- Dokumentspezifische Merkmale
+````
 
-## Frage 7
-### Korpusaufbau: Einflussfaktoren
+## Praktische Anwendung
+### Assessment 2.4: Korpusaufbau in der Praxis
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-from jupyterquiz import display_quiz
 
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-question = [
-    {
-        "question": "Welche Faktoren beeinflussen die Entscheidungen beim Korpusaufbau am Beispiel des Zeitungskorpus?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Die technische Zugänglichkeit der Quellen über eine API oder ähnliche Schnittstellen",
-                "correct": True,
-                "feedback": """✓ Richtig! Im Beispiel wird dies deutlich durch:
-                - Nutzung des ZEFYS-Portals
-                - Systematische URL-Strukturen
-                - Automatisierbare Download-Möglichkeiten"""
-            },
-            {
-                "answer": "Die Größe der einzelnen Dateien und des Gesamtkorpus",
-                "correct": True,
-                "feedback": """✓ Richtig! Dies zeigt sich durch:
-                - Berechnung der durchschnittlichen PDF-Größe (74 MB)
-                - Abschätzung des Gesamtvolumens
-                - Anpassung des Konzepts an praktische Limitationen"""
-            }, {
-                "answer": "Das persönliche Interesse der Forschenden an bestimmten Zeitungen",
-                "correct": False,
-                "feedback": """× Nicht korrekt! Die Auswahl basiert auf:
-                - Systematischen Kriterien (renommierte Zeitungen)
-                - Praktischer Verfügbarkeit
-                - Forschungsfrage und Zeitraum
-                Persönliche Präferenzen sind kein valides Auswahlkriterium."""
-            }
-        ]
-    }
-]
-display_quiz(question, colors=colors.jupyterquiz)
+"""
+Lernziel:
+    Sie können den schrittweisen Prozess des praktischen Korpusaufbaus (Konzeptentwicklung, Metadatenerstellung und Datensammlung) am Beispiel eines Zeitungskorpus beschreiben.
+Bloom-Stufe: Verstehen
+Format: Multiple Choice + Projektplanung
+Geschätzte Zeit: 30 Minuten
+Schwerpunkte:
+    - Planung des Korpusaufbaus
+    - Berücksichtigung praktischer Einschränkungen
+    - Qualitätssicherung im Aufbauprozess
+"""
 ```
 
-## Frage 8
-### Dokumentationselemente im Korpusaufbau
+#### Frage 10: Analyse eines Korpusaufbau-Konzepts
 
-Identifizieren Sie die wesentlichen Dokumentationselemente für den Korpusaufbau-Prozess.
+Analysieren Sie den folgenden Ausschnitt aus einem Korpusaufbau-Konzept:
+
+"Für das Zeitungskorpus zur Spanischen Grippe werden Ausgaben der Berliner Morgenpost und der Vossischen Zeitung aus den Jahren 1918-1919 gesammelt. Die Zeitungen sind über ZEFYS als PDF verfügbar. Aufgrund der Datenmenge (ca. 2 TB) wird ein balanciertes Korpus mit repräsentativen Stichproben erstellt."
+
+Bewerten Sie die folgenden Aspekte:
+
+1.	Quellenauswahl
+2.	Technische Umsetzbarkeit
+3.	Praktische Einschränkungen
+4.	Lösungsansatz
 
 
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
 
-question = [
-    {
-        "question": "Welche Dokumentationselemente sind für den Korpusaufbau-Prozess wesentlich?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Korpus-Metadaten (z.B. DC.title, DC.description)",
-                "correct": True,
-                "feedback": """✓ Richtig! Wichtig weil:
-                - Identifiziert das Korpus eindeutig
-                - Beschreibt Umfang und Inhalt
-                - Ermöglicht Nachnutzung"""
-            },
-            {
-                "answer": "Element-Metadaten (ID, Name, Datum, URL)",
-                "correct": True,
-                "feedback": """✓ Richtig! Wichtig weil:
-                - Ermöglicht systematische Erfassung
-                - Unterstützt Datenmanagement
-                - Erleichtert spätere Analyse"""
-            },
-            {
-                "answer": "Sammlungsprozess (Download-Methode, Skripte)",
-                "correct": True,
-                "feedback": """✓ Richtig! Wichtig weil:
-                - Macht Prozess nachvollziehbar
-                - Ermöglicht Reproduzierbarkeit
-                - Dokumentiert technische Entscheidungen"""
-            }
-        ]
-    }
-]
-display_quiz(question, colors=colors.jupyterquiz)
-```
+````{admonition} Lösungen
+:class: solution, dropdown
+
+**Musterlösung**:
+
+1. Quellenauswahl:
+    - Zwei relevante Berliner Zeitungen
+    - Zeitraum entspricht Pandemieverlauf
+    - Digitale Verfügbarkeit gegeben
+
+2. Technische Umsetzbarkeit:
+    - Zugang über ZEFYS-Portal möglich
+    - PDF-Format erfordert OCR
+    - Systematischer Download möglich
+
+3. Praktische Einschränkungen:
+    - Sehr große Datenmenge (2 TB)
+    - Hoher Speicherbedarf
+    - Aufwendige Verarbeitung
+
+4. Lösungsansatz:
+    - Balanciertes Korpus als Alternative
+    - Repräsentative Stichproben
+    - Praktikable Größe bei wissenschaftlicher Qualität
+````
