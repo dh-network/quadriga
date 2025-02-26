@@ -12,15 +12,28 @@ kernelspec:
 
 # 🏆Selbsttest: Wissen und Praxis
 
-## Assessment 1.1: Forschungsfrage und Operationalisierung
+````{admonition} Hinweis
+:class: hinweis
+Diese Übungsaufgaben dienen Ihrer Selbsteinschätzung und helfen Ihnen, das im Kapitel Gelernte zu reflektieren.
 
-### Teil 1: Fragestellung und Operationalisierung
+Sie können die Fragen in beliebiger Reihenfolge beantworten und auch mehrfach versuchen. 
 
-**Anweisungen**
-1. Lesen Sie jede Option sorgfältig
-2. Wählen Sie alle zutreffenden Aussagen aus
-3. Beachten Sie das Feedback zu jeder Option, um Ihr Verständnis zu vertiefen
-4. Reflektieren Sie, warum bestimmte Aussagen korrekt oder inkorrekt sind
+**So funktioniert es:**
+- Wählen Sie bei jeder Frage die Antwort(en), die Sie für richtig halten
+- Lesen Sie das Feedback zu den einzelnen Antwortoptionen sorgfältig durch
+- Die Erklärungen helfen Ihnen, Ihr Verständnis zu vertiefen – auch bei korrekten Antworten 
+
+Es erfolgt keine Bewertung oder Speicherung Ihrer Ergebnisse. Nutzen Sie dieses Assessment, um Wissenslücken zu identifizieren und gegebenenfalls die entsprechenden Abschnitte des Kapitels noch einmal zu bearbeiten. 
+
+**Geschätzte Zeit**: 20min
+
+Viel Erfolg!
+````
+
+
+## Frage 1
+
+(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -36,10 +49,6 @@ Lernziel:
 Bloom-Stufe: Verstehen
 Format: Multiple Choice + Selbsteinschätzung
 Geschätzte Zeit: 30 Minuten
-Schwerpunkte:
-    - Verständnis der Operationalisierung
-    - Anwendung auf konkrete Forschungsfrage
-    - Reflexion methodischer Entscheidungen
 """
 
 question1 = [
@@ -106,10 +115,11 @@ question1 = [
 display_quiz(question1, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-### Teil 2: Operationalisierung in der Praxis
+## Frage 2
 
-#### Kontext
 Eine Forschungsfrage im Bereich der Digital Humanities lautet: "Wie entwickelte sich die öffentliche Aufmerksamkeit für Umweltthemen in deutschen Tageszeitungen zwischen 1960-1980?"
+
+(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -175,12 +185,10 @@ question2 = [
 display_quiz(question2, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-### Teil 3: Selbsteinschätzungsaufgabe
-
-#### Aufgabe
+## Frage 3
 Entwickeln Sie eine Operationalisierung für folgende Forschungsfrage: "Wie veränderte sich die Berichterstattung über wissenschaftliche Themen in der Wochenzeitung 'Die Zeit' zwischen 1950-1970?"
 
-#### Schritt 1
+### Frage 3(a)
 Formulieren Sie zunächst selbst eine mögliche Operationalisierung
 
 ```{code-cell} ipython3
@@ -194,8 +202,7 @@ HTML("""
 """)
 ```
 
-#### Schritt 2 
-
+### Frage 3(b)
 Vergleichen Sie Ihre Antwort mit den folgenden Kriterien für eine geeignete Operationalisierung. Bewerten Sie Ihre eigene Antwort anhand dieser Kriterien
 
 

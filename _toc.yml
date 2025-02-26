@@ -37,6 +37,7 @@ parts:
     - file: data-input/FS_1_MVP_Post_Correcting_OCR
     - file: markdown/post-correcting_llm
     - file: markdown/post-correcting_summary
+    - file: markdown/post-correcting_assessment
   - caption: Korpusverarbeitung. Von Strings zu Token
     chapters:
     - file: markdown/corpus-processing_intro
