@@ -10,7 +10,7 @@ kernelspec:
   name: python3
 ---
 
-# 🏆Selbsttest: OCR-Nachbereitung
+# 🏆Selbsttest: Wissen und Praxis
 
 ````{admonition} Hinweis
 :class: hinweis
