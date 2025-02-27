@@ -241,14 +241,13 @@ display_quiz(statements, colors=colors.jupyterquiz)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;"> 
-     <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('korpus-1')
 ```
+
 ````{admonition}  Lösungen
 :class: solution, dropdown
 **Musterlösung:** Kombination aus Bilddigitalisaten (PDF) und Plain Text
@@ -1148,13 +1147,11 @@ Bewerten Sie die folgenden Aspekte:
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;"> 
-     <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('korpus-2')
 ```
 
 

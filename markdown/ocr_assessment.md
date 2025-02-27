@@ -674,13 +674,11 @@ Erklären Sie die Beziehungen zwischen den OCR-Qualitätsmetriken.
 **Trade-off zwischen Präzision und Recall**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-1')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -697,13 +695,11 @@ Wichtig zu verstehen:
 **Rolle des F1-Scores**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">     
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-2')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -961,13 +957,11 @@ Analysieren Sie die folgenden OCR-Qualitätswerte aus dem Beispiel:
 **Was bedeutet die Precision von 0.778 in diesem Kontext?**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-     <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-3')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -983,13 +977,11 @@ Begründung:
 **Warum ist der Recall (0.7932) höher als die Precision?**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-     <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-4')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -1009,13 +1001,11 @@ Bewerten Sie die Eignung der gemessenen OCR-Qualität für verschiedene Anwendun
 **Fall 1: Volltextsuche in digitalisierten Zeitungen**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-5')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -1034,13 +1024,11 @@ Bedingt geeignet, weil:
 **Fall 2: Exakte Texttranskription für Edition**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-6')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown

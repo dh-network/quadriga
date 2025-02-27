@@ -193,13 +193,11 @@ Formulieren Sie zunächst selbst eine mögliche Operationalisierung
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="3" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('1')
 ```
 
 ### Frage 3(b)
