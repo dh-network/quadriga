@@ -12,11 +12,26 @@ kernelspec:
 
 # 🏆Selbsttest: Wissen und Praxis
 
-## Theoretische Grundlagen
+````{admonition} Hinweis
+:class: hinweis
+Diese Übungsaufgaben dienen Ihrer Selbsteinschätzung und helfen Ihnen, das im Kapitel Gelernte zu reflektieren.
 
-### Assessment 2.1: Korpora als Forschungsobjekte
+Sie können die Fragen in beliebiger Reihenfolge beantworten und auch mehrfach versuchen. 
 
-#### Frage 1: Merkmale von Korpora
+**So funktioniert es:**
+- Wählen Sie bei jeder Frage die Antwort(en), die Sie für richtig halten
+- Lesen Sie das Feedback zu den einzelnen Antwortoptionen sorgfältig durch
+- Die Erklärungen helfen Ihnen, Ihr Verständnis zu vertiefen – auch bei korrekten Antworten 
+
+Es erfolgt keine Bewertung oder Speicherung Ihrer Ergebnisse. Nutzen Sie dieses Assessment, um Wissenslücken zu identifizieren und gegebenenfalls die entsprechenden Abschnitte des Kapitels noch einmal zu bearbeiten. 
+
+**Geschätzte Zeit**: 1h 10min
+
+Viel Erfolg!
+````
+
+## Frage 1
+(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -97,11 +112,11 @@ question1 = [
 display_quiz(question1, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-### Assessment 2.2: Digitale Textformate
-
-#### Frage 2: Digitale Textformate
+## Frage 2
 
 Welche Aussage trifft auf das jeweilige Textformat zu? Wählen Sie für jede Aussage das passende Format.
+
+### Frage 2(a)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -122,7 +137,6 @@ Schwerpunkte:
     - Vor- und Nachteile verschiedener Formate
     - Formatauswahl für spezifische Zwecke
 """
-
 
 statements = [
     {
@@ -156,7 +170,23 @@ statements = [
                     - Keine Möglichkeit für systematische Annotationen"""
             }
         ]
-    },
+    }
+]
+display_quiz(statements, colors=colors.jupyterquiz)
+```
+
+
+### Frage 2(b)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+statements = [
     {
         "question": "Dieses Format bewahrt die ursprüngliche visuelle Erscheinung des Dokuments, ist aber nicht direkt maschinenlesbar.",
         "type": "multiple_choice",
@@ -200,8 +230,7 @@ statements = [
 display_quiz(statements, colors=colors.jupyterquiz)
 ```
 
-#### Frage 3: Anwendungsfall-Analyse
-
+## Frage 3
 
 **Szenario:** Ein Forschungsprojekt möchte einen historischen Zeitungskorpus erstellen, der:
 - für automatische Textanalysen nutzbar ist
@@ -212,14 +241,13 @@ display_quiz(statements, colors=colors.jupyterquiz)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;"> 
-     <textarea id="answer" rows="1" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('korpus-1')
 ```
+
 ````{admonition}  Lösungen
 :class: solution, dropdown
 **Musterlösung:** Kombination aus Bilddigitalisaten (PDF) und Plain Text
@@ -241,9 +269,218 @@ Alternative Ansätze:
 - CSV ist nicht geeignet für Volltext
 - Nur Bilddigitalisate würden Analysen erschweren
 ````
-### Assessment 2.3: Metadaten und Dokumentation
+## Frage 4
+(Wählen Sie alle zutreffenden Antworten aus)
 
-#### Frage 5: Metadatenschemata
+### Frage 4(a)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+format_questions = [
+    {
+        "question": "Welche der folgenden Formate sind direkt maschinenlesbar? (Mehrere Antworten können korrekt sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Bilddigitalisate",
+                "correct": False,
+                "feedback": "Falsch. Bilddigitalisate benötigen erst OCR (Optical Character Recognition), um für Maschinen lesbar zu werden. Die Inhalte sind für Computer nicht direkt zugänglich."
+            },
+            {
+                "answer": "Plain Text",
+                "correct": True,
+                "feedback": "Richtig. Text in einfachen Textdateien kann direkt von Algorithmen gelesen und verarbeitet werden."
+            },
+            {
+                "answer": "XML/TEI",
+                "correct": True,
+                "feedback": "Richtig. XML und TEI sind strukturierte Textformate, die von Computern direkt verarbeitet werden können."
+            },
+            {
+                "answer": "CSV",
+                "correct": True,
+                "feedback": "Richtig. Comma-Separated Values sind strukturierte Daten, die direkt maschinenlesbar sind."
+            }
+        ]
+    }
+]
+
+display_quiz(format_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 4(b)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+format_questions = [
+    {
+        "question": "Welche der folgenden Formate können Formatierungen darstellen oder speichern? (Mehrere Antworten können korrekt sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Bilddigitalisate",
+                "correct": True,
+                "feedback": "Richtig. Sie bewahren alle visuellen Formatierungen des Originaldokuments."
+            },
+            {
+                "answer": "Plain Text",
+                "correct": False,
+                "feedback": "Falsch. In reinen Textdateien können keine Formatierungen (wie Fettdruck, Kursiv, etc.) gespeichert werden."
+            },
+            {
+                "answer": "XML/TEI",
+                "correct": True,
+                "feedback": "Richtig. Diese Formate können Formatierungen strukturiert beschreiben und kodieren."
+            },
+            {
+                "answer": "CSV",
+                "correct": False,
+                "feedback": "Falsch. CSV-Dateien können nur tabellarische Strukturen speichern, aber keine Textformatierungen."
+            }
+        ]
+    }
+]
+
+display_quiz(format_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 4(c)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+format_questions = [
+    {
+        "question": "Welche der folgenden Formate eignen sich für linguistische Annotationen? (Mehrere Antworten können korrekt sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Bilddigitalisate",
+                "correct": False,
+                "feedback": "Falsch. Ohne Textextraktion können keine linguistischen Informationen hinzugefügt werden."
+            },
+            {
+                "answer": "Plain Text",
+                "correct": True,
+                "feedback": "Teilweise richtig. Grundlegende Annotationen können durch zusätzliche Zeichen eingefügt werden, aber die Möglichkeiten sind sehr begrenzt."
+            },
+            {
+                "answer": "XML/TEI",
+                "correct": True,
+                "feedback": "Richtig. Diese Formate wurden speziell für strukturierte Textannotationen entwickelt und eignen sich hervorragend für linguistische Informationen."
+            },
+            {
+                "answer": "CSV",
+                "correct": True,
+                "feedback": "Teilweise richtig. Tabellarische Strukturen können linguistische Merkmale in separaten Spalten speichern, sind aber für komplexe hierarchische Annotationen weniger geeignet."
+            }
+        ]
+    }
+]
+
+display_quiz(format_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 4(d)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+format_questions = [
+    {
+        "question": "Welche der folgenden Formate sind besonders speichereffizient? (Mehrere Antworten können korrekt sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Bilddigitalisate",
+                "correct": False,
+                "feedback": "Falsch. Bilddateien benötigen in der Regel viel Speicherplatz, besonders bei hoher Auflösung."
+            },
+            {
+                "answer": "Plain Text",
+                "correct": True,
+                "feedback": "Richtig. Reiner Text ohne Metadaten oder Formatierungen braucht sehr wenig Speicherplatz."
+            },
+            {
+                "answer": "XML/TEI",
+                "correct": False,
+                "feedback": "Falsch. Durch die zusätzlichen Tags und strukturellen Informationen benötigen diese Formate mehr Speicherplatz als Plain Text."
+            },
+            {
+                "answer": "CSV",
+                "correct": True,
+                "feedback": "Richtig. Tabellarische Daten in CSV-Format sind sehr speichereffizient für strukturierte Informationen."
+            }
+        ]
+    }
+]
+
+display_quiz(format_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 4(e)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+format_questions = [
+    {
+        "question": "Welche der folgenden Formate bewahren visuelle Informationen? (Mehrere Antworten können korrekt sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Bilddigitalisate",
+                "correct": True,
+                "feedback": "Richtig. Sie enthalten die vollständige visuelle Information des Originaldokuments."
+            },
+            {
+                "answer": "Plain Text",
+                "correct": False,
+                "feedback": "Falsch. Visuelle Informationen wie Layout, Schriftarten oder Bilder gehen in Plain Text vollständig verloren."
+            },
+            {
+                "answer": "XML/TEI",
+                "correct": True,
+                "feedback": "Teilweise richtig. Layout und visuelle Strukturen können beschrieben werden, aber die tatsächlichen visuellen Informationen werden nicht direkt gespeichert."
+            },
+            {
+                "answer": "CSV",
+                "correct": False,
+                "feedback": "Falsch. CSV-Dateien speichern nur tabellarische Daten ohne visuelle Informationen."
+            }
+        ]
+    }
+]
+
+display_quiz(format_questions, colors=colors.jupyterquiz)
+```
+
+## Frage 5
+(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -295,10 +532,175 @@ question5 = [
         ]
     }
 ]
-display_quiz(question5, colors=colors.jupyterquiz, max_width=1000)
+display_quiz(question5, colors=colors.jupyterquiz)
 ```
 
-#### Frage 7: Metadatenebenen
+## Frage 6
+
+### Frage 6(a)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_questions = [
+    {
+        "question": """Zu welchem Metadatenschema gehört das Element "teiHeader"?""",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Dublin Core",
+                "correct": False,
+                "feedback": """× Falsch. Der "teiHeader" ist ein Element aus dem TEI-Schema, nicht aus Dublin Core."""
+            },
+            {
+                "answer": "TEI",
+                "correct": True,
+                "feedback": """✓ Richtig. Der "teiHeader" ist ein zentrales Element des TEI-Schemas (Text Encoding Initiative) und dient der strukturierten Beschreibung von Metadaten in TEI-Dokumenten."""
+            },
+            {
+                "answer": "MARC",
+                "correct": False,
+                "feedback": """× Falsch. MARC ist ein bibliothekarisches Metadatenformat und enthält kein "teiHeader"-Element."""
+            },
+            {
+                "answer": "MODS",
+                "correct": False,
+                "feedback": """× Falsch. MODS (Metadata Object Description Schema) ist ein XML-Schema für bibliografische Metadaten, aber enthält kein "teiHeader"-Element."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 6(b)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_questions = [
+    {
+        "question": """Zu welchem Metadatenschema gehört das Element "DC.coverage"?""",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Dublin Core",
+                "correct": True,
+                "feedback": """✓ Richtig. \"DC.coverage\" ist ein Element aus dem Dublin Core Metadatenstandard, das räumliche und zeitliche Angaben zum beschriebenen Objekt enthält."""
+            },
+            {
+                "answer": "TEI",
+                "correct": False,
+                "feedback": """× Falsch. Obwohl TEI Dublin Core Elemente integrieren kann, ist \"DC.coverage\" kein genuines TEI-Element."""
+            },
+            {
+                "answer": "MARC",
+                "correct": False,
+                "feedback": """× Falsch. MARC verwendet andere Bezeichnungen für räumliche und zeitliche Abdeckungen."""
+            },
+            {
+                "answer": "MODS",
+                "correct": False,
+                "feedback": """× Falsch. MODS hat eigene Elemente für geografische und chronologische Informationen."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_questions, colors=colors.jupyterquiz)
+```
+### Frage 6(c)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_questions = [
+    {
+        "question": """Auf welcher Beschreibungsebene wird das "teiHeader"-Element verwendet?""",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Nur auf Korpus-Level",
+                "correct": False,
+                "feedback": """× Falsch. Der "teiHeader" wird nicht ausschließlich für die Beschreibung des gesamten Korpus verwendet."""
+            },
+            {
+                "answer": "Nur auf Dokument-Level",
+                "correct": False,
+                "feedback": """× Falsch. Der "teiHeader" wird nicht ausschließlich für einzelne Dokumente verwendet."""
+            },
+            {
+                "answer": "Sowohl auf Korpus- als auch auf Dokument-Level",
+                "correct": True,
+                "feedback": """✓ Richtig. Der "teiHeader" ist flexibel und kann Metadaten sowohl für ein einzelnes Dokument als auch für eine Sammlung (Korpus) aufnehmen. Er enthält strukturierte Metadaten und kann je nach Kontext angepasst werden."""
+            },
+            {
+                "answer": "Auf keiner der genannten Ebenen",
+                "correct": False,
+                "feedback": """× Falsch. Der "teiHeader" ist ein zentrales Element für die Metadatenbeschreibung in TEI."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_questions, colors=colors.jupyterquiz)
+```
+### Frage 6(d)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_questions = [
+    {
+        "question": """Auf welcher Beschreibungsebene wird das "DC.coverage"-Element typischerweise verwendet?""",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Nur auf Korpus-Level",
+                "correct": True,
+                "feedback": """✓ Richtig. "DC.coverage" beschreibt typischerweise die zeitliche und räumliche Abdeckung einer gesamten Sammlung und wird daher vorwiegend auf Korpus-Level eingesetzt. Es definiert den Rahmen der Sammlung und ist wichtig für die Gesamteinordnung des Korpus."""
+            },
+            {
+                "answer": "Nur auf Dokument-Level",
+                "correct": False,
+                "feedback": """× Falsch. Obwohl "DC.coverage" auch auf Dokumentebene verwendet werden kann, ist es in der Praxis besonders relevant für die Korpus-Beschreibung."""
+            },
+            {
+                "answer": "Sowohl auf Korpus- als auch auf Dokument-Level",
+                "correct": False,
+                "feedback": """× Falsch. Im Kontext dieser Fallstudie wird "DC.coverage" vorrangig auf Korpus-Level verwendet."""
+            },
+            {
+                "answer": "Auf keiner der genannten Ebenen",
+                "correct": False,
+                "feedback": """× Falsch. "DC.coverage" ist ein wichtiges Element für die Metadatenbeschreibung, insbesondere auf Korpus-Level."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_questions, colors=colors.jupyterquiz)
+```
+
+
+## Frage 7
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -329,7 +731,7 @@ question7 = [
         ]
     }
 ]
-display_quiz(question7, colors=colors.jupyterquiz, max_width=1000)
+display_quiz(question7, colors=colors.jupyterquiz)
 ```
 ````{admonition} Lösungen
 :class: solution, dropdown
@@ -339,11 +741,178 @@ Für Einzeldokumente sind stattdessen relevant:
 - Dokumentspezifische Merkmale
 ````
 
-## Praktische Anwendung
-### Assessment 2.4: Korpusaufbau in der Praxis
+## Frage 8
+
+### Frage 8(a)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_schema_questions = [
+    {
+        "question": "Welches Metadatenschema wird als \"einfach und universell verwendbar, mit grundlegenden Elementen\" beschrieben?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Dublin Core",
+                "correct": True,
+                "feedback": """✓ Richtig. Dublin Core ist bewusst einfach gehalten, universal einsetzbar und besteht aus 15 Kernelementen, die grundlegend für die Beschreibung digitaler Ressourcen sind. Es ist weit verbreitet und international standardisiert."""
+            },
+            {
+                "answer": "TEI",
+                "correct": False,
+                "feedback": """× Falsch. TEI ist ein komplexeres Schema, das speziell für die Auszeichnung und Beschreibung von Texten entwickelt wurde, nicht primär für universelle Einfachheit."""
+            },
+            {
+                "answer": "MARC",
+                "correct": False,
+                "feedback": """× Falsch. MARC ist ein umfassendes Format für bibliographische Informationen, aber nicht als besonders einfach oder universell bekannt."""
+            },
+            {
+                "answer": "METS",
+                "correct": False,
+                "feedback": """× Falsch. METS ist ein XML-Schema für Metadaten zu digitalen Objekten in Repositorien, aber nicht primär für Einfachheit konzipiert."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_schema_questions, colors=colors.jupyterquiz)
+```
+### Frage 8(b)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_schema_questions = [
+    {
+        "question": "Welches Metadatenschema wird als \"spezialisiert auf Textauszeichnung und -beschreibung\" charakterisiert?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Dublin Core",
+                "correct": False,
+                "feedback": """× Falsch. Dublin Core bietet allgemeine Metadatenelemente, ist aber nicht speziell für detaillierte Textauszeichnung konzipiert."""
+            },
+            {
+                "answer": "TEI",
+                "correct": True,
+                "feedback": """✓ Richtig. Die Text Encoding Initiative (TEI) wurde speziell für Texte entwickelt und ermöglicht detaillierte Textauszeichnung mit umfangreichen Beschreibungsmöglichkeiten. Der spezialisierte teiHeader erlaubt eine präzise Beschreibung von Textdokumenten."""
+            },
+            {
+                "answer": "MARC",
+                "correct": False,
+                "feedback": """× Falsch. MARC dient in erster Linie der bibliographischen Beschreibung, nicht der Auszeichnung von Textinhalten."""
+            },
+            {
+                "answer": "METS",
+                "correct": False,
+                "feedback": """× Falsch. METS beschreibt die Struktur digitaler Objekte, ist aber nicht speziell für Textauszeichnung konzipiert."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_schema_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 8(c)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_schema_questions = [
+    {
+        "question": "Welches Metadatenschema wird als \"umfassend für bibliographische Informationen\" beschrieben?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Dublin Core",
+                "correct": False,
+                "feedback": """× Falsch. Dublin Core bietet zwar bibliographische Grundelemente, ist aber nicht so umfassend wie spezialisierte bibliographische Formate."""
+            },
+            {
+                "answer": "TEI",
+                "correct": False,
+                "feedback": """× Falsch. TEI kann bibliographische Informationen enthalten, ist aber primär ein Textauszeichnungsformat."""
+            },
+            {
+                "answer": "MARC",
+                "correct": True,
+                "feedback": """✓ Richtig. MARC (Machine-Readable Cataloging) wurde speziell für umfassende bibliographische Informationen entwickelt und ist ein Standard in Bibliotheken weltweit. Es enthält detaillierte Felder für alle Aspekte bibliographischer Beschreibung."""
+            },
+            {
+                "answer": "EAD",
+                "correct": False,
+                "feedback": """× Falsch. Encoded Archival Description ist für archivische Findmittel konzipiert, nicht primär für bibliographische Daten."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_schema_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 8(d)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+metadata_schema_questions = [
+    {
+        "question": "Welches Metadatenschema wird als \"Standard für Digitalisate und deren Übertragung\" bezeichnet?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Dublin Core",
+                "correct": False,
+                "feedback": """× Falsch. Dublin Core bietet zwar einen einfachen Standard für digitale Ressourcen, ist aber nicht speziell auf Digitalisate und deren Übertragung ausgerichtet."""
+            },
+            {
+                "answer": "TEI",
+                "correct": False,
+                "feedback": """× Falsch. TEI konzentriert sich auf die Auszeichnung und Beschreibung von Texten, nicht auf die Übertragung von Digitalisaten."""
+            },
+            {
+                "answer": "MARC",
+                "correct": False,
+                "feedback": """× Falsch. MARC dient hauptsächlich der bibliographischen Beschreibung, nicht dem Management von Digitalisaten."""
+            },
+            {
+                "answer": "METS",
+                "correct": True,
+                "feedback": """✓ Richtig. Das Metadata Encoding and Transmission Standard (METS) wurde speziell für die Beschreibung und Übertragung digitaler Objekte in Repositorien entwickelt. Es dient als Container für verschiedene Metadatentypen und unterstützt die strukturierte Beschreibung von Digitalisaten."""
+            }
+        ]
+    }
+]
+
+display_quiz(metadata_schema_questions, colors=colors.jupyterquiz)
+```
+
+## Frage 9
+
+### Frage 9(a)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
 
 """
 Lernziel:
@@ -356,9 +925,214 @@ Schwerpunkte:
     - Berücksichtigung praktischer Einschränkungen
     - Qualitätssicherung im Aufbauprozess
 """
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+sequence_questions = [
+    {
+        "question": "Welcher Schritt kommt beim Korpusaufbau an ERSTER Stelle?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Durchführung der Datensammlung",
+                "correct": False,
+                "feedback": """× Falsch. Die Datensammlung kann erst erfolgen, nachdem konzeptionelle Grundlagen gelegt wurden."""
+            },
+            {
+                "answer": "Entwicklung des Korpuskonzepts",
+                "correct": True,
+                "feedback": """✓ Richtig. Das Korpuskonzept legt die Grundlage für alle weiteren Schritte, definiert den Umfang und die Kriterien und berücksichtigt praktische Einschränkungen. Ohne klares Konzept fehlt die Orientierung für alle folgenden Schritte."""
+            },
+            {
+                "answer": "Festlegung der Metadatenstruktur",
+                "correct": False,
+                "feedback": """× Falsch. Die Metadatenstruktur baut auf dem zuvor entwickelten Konzept auf."""
+            },
+            {
+                "answer": "Test der Sammlungsmethodik",
+                "correct": False,
+                "feedback": """× Falsch. Der Test setzt voraus, dass Konzept, Kriterien und Metadatenstruktur bereits definiert sind."""
+            },
+            {
+                "answer": "Dokumentation der Auswahlkriterien",
+                "correct": False,
+                "feedback": """× Falsch. Die Auswahlkriterien können erst dokumentiert werden, nachdem das Grundkonzept entwickelt wurde."""
+            }
+        ]
+    }
+]
+
+display_quiz(sequence_questions, colors=colors.jupyterquiz)
 ```
 
-#### Frage 10: Analyse eines Korpusaufbau-Konzepts
+### Frage 9(b)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+sequence_questions = [
+    {
+        "question": "Welcher Schritt folgt beim Korpusaufbau unmittelbar nach der Entwicklung des Korpuskonzepts?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Durchführung der Datensammlung",
+                "correct": False,
+                "feedback": """× Falsch. Vor der eigentlichen Datensammlung müssen weitere vorbereitende Schritte erfolgen."""
+            },
+            {
+                "answer": "Dokumentation der Auswahlkriterien",
+                "correct": True,
+                "feedback": """✓ Richtig. Nach der Entwicklung des Grundkonzepts werden die konkreten Auswahlkriterien dokumentiert. Dies macht den Prozess nachvollziehbar, sichert die wissenschaftliche Qualität und ermöglicht eine spätere Nachnutzung des Korpus."""
+            },
+            {
+                "answer": "Festlegung der Metadatenstruktur",
+                "correct": False,
+                "feedback": """× Falsch. Die Metadatenstruktur wird erst festgelegt, nachdem die Auswahlkriterien dokumentiert wurden."""
+            },
+            {
+                "answer": "Test der Sammlungsmethodik",
+                "correct": False,
+                "feedback": """× Falsch. Der Test erfolgt erst nach der Konzeption der Methodik und der Metadatenstruktur."""
+            }
+        ]
+    }
+]
+
+display_quiz(sequence_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 9(c)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+sequence_questions = [
+    {
+        "question": "Welcher Schritt folgt beim Korpusaufbau nach der Dokumentation der Auswahlkriterien?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Durchführung der Datensammlung",
+                "correct": False,
+                "feedback": """× Falsch. Die Datensammlung erfolgt erst nach weiteren vorbereitenden Schritten."""
+            },
+            {
+                "answer": "Festlegung der Metadatenstruktur",
+                "correct": True,
+                "feedback": """✓ Richtig. Nach der Dokumentation der Auswahlkriterien wird die Metadatenstruktur festgelegt. Diese basiert auf dem Konzept und den Kriterien, strukturiert die Datenerfassung und ermöglicht eine systematische Sammlung."""
+            },
+            {
+                "answer": "Test der Sammlungsmethodik",
+                "correct": False,
+                "feedback": """× Falsch. Der Test der Methodik erfolgt erst nach der Festlegung der Metadatenstruktur."""
+            }
+        ]
+    }
+]
+
+display_quiz(sequence_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 9(d)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+sequence_questions = [
+    {
+        "question": "Welcher Schritt kommt beim Korpusaufbau vor der eigentlichen Durchführung der Datensammlung?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Entwicklung des Korpuskonzepts",
+                "correct": False,
+                "feedback": """× Falsch. Das Korpuskonzept steht ganz am Anfang des Prozesses, nicht unmittelbar vor der Datensammlung."""
+            },
+            {
+                "answer": "Dokumentation der Auswahlkriterien",
+                "correct": False,
+                "feedback": """× Falsch. Die Dokumentation der Auswahlkriterien erfolgt nach der Konzeptentwicklung, aber nicht direkt vor der Datensammlung."""
+            },
+            {
+                "answer": "Festlegung der Metadatenstruktur",
+                "correct": False,
+                "feedback": """× Falsch. Die Metadatenstruktur wird nach der Dokumentation der Auswahlkriterien festgelegt, aber es folgt noch ein weiterer Schritt vor der eigentlichen Datensammlung."""
+            },
+            {
+                "answer": "Test der Sammlungsmethodik",
+                "correct": True,
+                "feedback": """✓ Richtig. Vor der eigentlichen Datensammlung wird die Sammlungsmethodik getestet. Dies prüft die technische Machbarkeit, identifiziert mögliche Probleme und ermöglicht Anpassungen vor der Hauptsammlung."""
+            }
+        ]
+    }
+]
+
+display_quiz(sequence_questions, colors=colors.jupyterquiz)
+```
+
+### Frage 9(e)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+sequence_questions = [
+    {
+        "question": "Welcher Schritt kommt beim Korpusaufbau an LETZTER Stelle?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Entwicklung des Korpuskonzepts",
+                "correct": False,
+                "feedback": """× Falsch. Das Korpuskonzept steht am Anfang des Prozesses."""
+            },
+            {
+                "answer": "Dokumentation der Auswahlkriterien",
+                "correct": False,
+                "feedback": """× Falsch. Die Dokumentation der Auswahlkriterien erfolgt früh im Prozess."""
+            },
+            {
+                "answer": "Festlegung der Metadatenstruktur",
+                "correct": False,
+                "feedback": """× Falsch. Die Metadatenstruktur wird vor der Testphase festgelegt."""
+            },
+            {
+                "answer": "Test der Sammlungsmethodik",
+                "correct": False,
+                "feedback": """× Falsch. Der Test erfolgt vor der eigentlichen Datensammlung."""
+            },
+            {
+                "answer": "Durchführung der Datensammlung",
+                "correct": True,
+                "feedback": """✓ Richtig. Die eigentliche Datensammlung bildet den Abschluss des Prozesses. Sie folgt dem definierten Prozess, nutzt die getesteten Methoden und dokumentiert die Sammlung systematisch."""
+            }
+        ]
+    }
+]
+
+display_quiz(sequence_questions, colors=colors.jupyterquiz)
+```
+
+
+## Frage 10
 
 Analysieren Sie den folgenden Ausschnitt aus einem Korpusaufbau-Konzept:
 
@@ -371,6 +1145,14 @@ Bewerten Sie die folgenden Aspekte:
 3.	Praktische Einschränkungen
 4.	Lösungsansatz
 
+```{code-cell} ipython3
+:tags: [remove-input]
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
+
+create_answer_box('korpus-2')
+```
 
 
 ````{admonition} Lösungen

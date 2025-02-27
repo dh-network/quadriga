@@ -12,10 +12,26 @@ kernelspec:
 
 # 🏆Selbsttest: Wissen und Praxis
 
-## Teil 1: OCR als Methode
-### Assessment 3.1.1: OCR Grundlagen
-#### Frage 1
- 
+````{admonition} Hinweis
+:class: hinweis
+Diese Übungsaufgaben dienen Ihrer Selbsteinschätzung und helfen Ihnen, das im Kapitel Gelernte zu reflektieren.
+
+Sie können die Fragen in beliebiger Reihenfolge beantworten und auch mehrfach versuchen. 
+
+**So funktioniert es:**
+- Wählen Sie bei jeder Frage die Antwort(en), die Sie für richtig halten
+- Lesen Sie das Feedback zu den einzelnen Antwortoptionen sorgfältig durch
+- Die Erklärungen helfen Ihnen, Ihr Verständnis zu vertiefen – auch bei korrekten Antworten 
+
+Es erfolgt keine Bewertung oder Speicherung Ihrer Ergebnisse. Nutzen Sie dieses Assessment, um Wissenslücken zu identifizieren und gegebenenfalls die entsprechenden Abschnitte des Kapitels noch einmal zu bearbeiten. 
+
+**Geschätzte Zeit**: 1h 10min
+
+Viel Erfolg!
+````
+
+## Frage 1
+(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -74,7 +90,7 @@ multiple_choice_1 = [{
 
 display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
-#### Frage 2
+## Frage 2
 
 Analysieren Sie die folgenden Aussagen zur OCR-Qualitätskontrolle.
 
@@ -129,10 +145,55 @@ question2 = [
 display_quiz(question2, colors=colors.jupyterquiz)
 ```
 
-## Teil 2: OCR in Python mit PyTesseract
-### Assessment 3.2.1: PDF-Verarbeitung mit OCR
-#### Aufgabe 2: Verarbeitungsschritte
- 
+
+## Frage 3
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+ocr_sequence_question = [
+    {
+        "question": "Welche Reihenfolge der Prozessschritte ist für eine OCR-Pipeline korrekt?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1. Texterkennung → 2. Bildvorverarbeitung → 3. Qualitätskontrolle",
+                "correct": False,
+                "feedback": """× Falsch. Die Bildvorverarbeitung muss vor der Texterkennung erfolgen, um optimale Ergebnisse zu erzielen."""
+            },
+            {
+                "answer": "1. Qualitätskontrolle → 2. Bildvorverarbeitung → 3. Texterkennung",
+                "correct": False,
+                "feedback": """× Falsch. Die Qualitätskontrolle kann erst nach der Texterkennung durchgeführt werden, da sie den OCR-Output überprüft."""
+            },
+            {
+                "answer": "1. Bildvorverarbeitung → 2. Texterkennung → 3. Qualitätskontrolle",
+                "correct": True,
+                "feedback": """✓ Richtig! Dies ist die korrekte Reihenfolge einer OCR-Pipeline:
+                * Schritt 1: Die Bildvorverarbeitung verbessert die Bildqualität (durch Entfernung von Rauschen, Kontrastanpassung, etc.), erhöht dadurch die OCR-Genauigkeit und reduziert potenzielle Fehler.
+                * Schritt 2: Bei der Texterkennung werden einzelne Zeichen erkannt, das Layout analysiert und die visuellen Elemente in digitalen Text umgewandelt.
+                * Schritt 3: Die abschließende Qualitätskontrolle überprüft die Genauigkeit des erzeugten Textes, identifiziert Probleme und hilft bei der Entscheidung über notwendige Nachbearbeitungen."""
+            },
+            {
+                "answer": "1. Bildvorverarbeitung → 2. Qualitätskontrolle → 3. Texterkennung",
+                "correct": False,
+                "feedback": """× Falsch. Die Qualitätskontrolle kann erst durchgeführt werden, nachdem die Texterkennung Text erzeugt hat, den man überprüfen kann."""
+            }
+        ]
+    }
+]
+
+display_quiz(ocr_sequence_question, colors=colors.jupyterquiz,max_width=1000)
+```
+## Frage 4
+(Wählen Sie alle zutreffenden Antworten aus)
+
+### Frage 4(a)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -149,6 +210,174 @@ Schwerpunkte:
 	- Format-Transformationen und Formate
 	- Unterschiede einseitig/mehrseitig
 """
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+question1 = [
+    {
+        "question": "Welche Aussagen über Einzelbilder (JPEG) im OCR-Prozess sind korrekt? (Mehrere Antworten können richtig sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Eine direkte OCR-Verarbeitung ist ohne zusätzliche Konvertierung möglich",
+                "correct": True,
+                "feedback": """✓ Richtig. Einzelbilder im JPEG-Format können direkt an OCR-Engines wie Tesseract übergeben werden, z.B. mit der Funktion `image_to_string`."""
+            },
+            {
+                "answer": "Es muss eine Seitenextraktion durchgeführt werden",
+                "correct": False,
+                "feedback": """× Falsch. Bei Einzelbildern ist keine Seitenextraktion notwendig, da sie bereits genau eine "Seite" darstellen."""
+            },
+            {
+                "answer": "Die OCR-Komplexität ist in der Regel niedrig",
+                "correct": True,
+                "feedback": """✓ Richtig. Einzelbilder stellen den einfachsten Verarbeitungsfall dar, da keine zusätzlichen Verarbeitungsschritte wie Seitenextraktion erforderlich sind."""
+            },
+            {
+                "answer": "Sie erfordern eine Konvertierung in ein anderes Format vor der OCR-Verarbeitung",
+                "correct": False,
+                "feedback": """× Falsch. JPEG-Dateien können direkt von OCR-Engines verarbeitet werden."""
+            },
+            {
+                "answer": "Sie eignen sich gut für einzelne Zeitungsartikel",
+                "correct": True,
+                "feedback": """✓ Richtig. Für einzelne Zeitungsartikel oder isolierte Textabschnitte sind Einzelbilder ein geeignetes Format."""
+            }
+        ]
+    }
+]
+
+display_quiz(question1, colors=colors.jupyterquiz)
+```
+
+### Frage 4(b)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+question2 = [
+    {
+        "question": "Welche Aussagen über mehrseitige PDF-Dokumente im OCR-Prozess sind korrekt? (Mehrere Antworten können richtig sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Sie können direkt an die OCR-Engine übergeben werden",
+                "correct": False,
+                "feedback": """× Falsch. Mehrseitige PDFs müssen zunächst in Bilder konvertiert werden, bevor sie von den meisten OCR-Engines verarbeitet werden können."""
+            },
+            {
+                "answer": "Sie erfordern eine PDF-zu-Bild-Konvertierung vor der OCR",
+                "correct": True,
+                "feedback": """✓ Richtig. PDFs müssen in Bildformate konvertiert werden, bevor sie durch OCR-Engines wie Tesseract verarbeitet werden können."""
+            },
+            {
+                "answer": "Eine seitenweise Verarbeitung ist notwendig",
+                "correct": True,
+                "feedback": """✓ Richtig. Mehrseitige PDFs müssen Seite für Seite verarbeitet werden, was zusätzliche Programmierlogik erfordert."""
+            },
+            {
+                "answer": "Die Speicherung von Zwischenergebnissen ist wichtig",
+                "correct": True,
+                "feedback": """✓ Richtig. Bei der Verarbeitung umfangreicher PDFs ist es wichtig, Zwischenergebnisse zu speichern, um bei möglichen Fehlern nicht den gesamten Prozess neu starten zu müssen."""
+            },
+            {
+                "answer": "Die Verarbeitungskomplexität ist niedriger als bei Einzelbildern",
+                "correct": False,
+                "feedback": """× Falsch. Die Komplexität ist bei mehrseitigen PDFs mittel bis hoch, da zusätzliche Verarbeitungsschritte notwendig sind."""
+            }
+        ]
+    }
+]
+
+display_quiz(question2, colors=colors.jupyterquiz)
+```
+
+### Frage 4(c)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+question3 = [
+    {
+        "question": "Welcher Dokumenttyp erfordert keine zusätzliche Vorverarbeitung für OCR?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Einzelbild (JPEG)",
+                "correct": True,
+                "feedback": """✓ Richtig. Einzelbilder können direkt an OCR-Engines übergeben werden, ohne dass zusätzliche Vorverarbeitung notwendig ist."""
+            },
+            {
+                "answer": "Mehrseitiges PDF",
+                "correct": False,
+                "feedback": """× Falsch. PDFs erfordern eine Konvertierung in Bilder vor der OCR-Verarbeitung."""
+            },
+            {
+                "answer": "Beide Formate",
+                "correct": False,
+                "feedback": """× Falsch. Nur Einzelbilder können ohne zusätzliche Vorverarbeitung verarbeitet werden."""
+            },
+            {
+                "answer": "Keines der Formate",
+                "correct": False,
+                "feedback": """× Falsch. Einzelbilder benötigen keine zusätzliche Vorverarbeitung."""
+            }
+        ]
+    }
+]
+
+display_quiz(question3, colors=colors.jupyterquiz)
+```
+
+### Frage 4(d)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+question4 = [
+    {
+        "question": "Welcher Dokumenttyp eignet sich gut für vollständige Zeitungsausgaben?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Einzelbild (JPEG)",
+                "correct": False,
+                "feedback": """× Falsch. Einzelbilder eignen sich besser für einzelne Artikel, nicht für vollständige Ausgaben."""
+            },
+            {
+                "answer": "Mehrseitiges PDF",
+                "correct": True,
+                "feedback": """✓ Richtig. Mehrseitige PDFs sind ideal für vollständige Zeitungsausgaben, da sie mehrere Seiten in einer Datei zusammenfassen."""
+            },
+            {
+                "answer": "Beide Formate",
+                "correct": False,
+                "feedback": """× Falsch. Einzelbilder sind für vollständige Ausgaben unpraktisch, da sie für jede Seite eine separate Datei erfordern würden."""
+            },
+            {
+                "answer": "Keines der Formate",
+                "correct": False,
+                "feedback": """× Falsch. Mehrseitige PDFs eignen sich durchaus für vollständige Zeitungsausgaben."""
+            }
+        ]
+    }
+]
+
+display_quiz(question4, colors=colors.jupyterquiz)
+```
+
+
+## Frage 5
+(Wählen Sie alle zutreffenden Antworten aus)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
 
 import sys
 sys.path.append("..")
@@ -191,8 +420,52 @@ question3 = [
 ]
 display_quiz(question3, colors=colors.jupyterquiz)
 ```
+## Frage 6
 
-#### Aufgabe 4: Fehleridentifikation
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+question5 = [
+    {
+        "question": "In welcher Reihenfolge werden die folgenden Schritte bei der OCR-Verarbeitung eines mehrseitigen PDFs durchgeführt?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1. OCR auf jeder Seite durchführen → 2. PDF in Einzelseiten konvertieren → 3. Erkannten Text speichern",
+                "correct": False,
+                "feedback": """× Falsch. Die OCR-Engine benötigt Bilddaten als Eingabe, daher muss das PDF zuerst in Einzelbilder konvertiert werden, bevor die OCR durchgeführt werden kann."""
+            },
+            {
+                "answer": "1. PDF in Einzelseiten konvertieren → 2. OCR auf jeder Seite durchführen → 3. Erkannten Text speichern",
+                "correct": True,
+                "feedback": """✓ Richtig! Dies ist die korrekte Reihenfolge:
+                * Zuerst wird das PDF in Einzelseiten konvertiert, da OCR Bilddaten benötigt und PDFs seitenweise verarbeitet werden müssen
+                * Dann wird auf jeder konvertierten Bildseite die OCR durchgeführt (typischerweise mit Funktionen wie `image_to_string`), wodurch Text für jede Seite erzeugt wird
+                * Schließlich wird der erkannte Text gespeichert, um die OCR-Ergebnisse zu sichern, weitere Verarbeitung zu ermöglichen und für die Dokumentation"""
+            },
+            {
+                "answer": "1. PDF in Einzelseiten konvertieren → 2. Erkannten Text speichern → 3. OCR auf jeder Seite durchführen",
+                "correct": False,
+                "feedback": """× Falsch. Man kann keinen Text speichern, bevor die OCR durchgeführt wurde, da die OCR erst den Text aus den Bildern erzeugt."""
+            },
+            {
+                "answer": "1. Erkannten Text speichern → 2. PDF in Einzelseiten konvertieren → 3. OCR auf jeder Seite durchführen",
+                "correct": False,
+                "feedback": """× Falsch. Diese Reihenfolge ist logisch unmöglich, da der Text erst nach der PDF-Konvertierung und OCR-Durchführung vorhanden ist und gespeichert werden kann."""
+            }
+        ]
+    }
+]
+
+display_quiz(question5, colors=colors.jupyterquiz, max_width=1000)
+```
+
+## Frage 7
 
 Identifizieren Sie mögliche Probleme in den folgenden Aussagen:
 
@@ -249,10 +522,8 @@ question4 = [
 display_quiz(question4, colors=colors.jupyterquiz)
 ```
 
-## Teil 3: Messung der OCR-Qualität
-### Assessment 3.3.1: Messung der OCR-Qualität
-#### Aufgabe 1: Grundlegende Metriken
- 
+## Frage 8
+(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -311,10 +582,11 @@ question5 = [{
 display_quiz(question5, colors=colors.jupyterquiz)
 ```
 
-#### Aufgabe 2: Anwendungsszenarien
+## Frage 9
 
 Analysieren Sie die Bedeutung der verschiedenen Metriken in folgenden Szenarien.
 
+### Frage 9(a)
 **Szenario 1: Digitalisierung historischer Zeitungen für wissenschaftliche Forschung**
 
 ```{code-cell} ipython3
@@ -355,7 +627,7 @@ question6 = [
 ]
 display_quiz(question6, colors=colors.jupyterquiz)
 ```
-
+### Frage 9(b)
 **Szenario 2: Automatische Erfassung von Formulardaten**
 
 ```{code-cell} ipython3
@@ -395,19 +667,18 @@ question7 = [
 ]
 display_quiz(question7, colors=colors.jupyterquiz)
 ```
-#### Aufgabe 3: Metriken-Beziehungen
+## Frage 10
 Erklären Sie die Beziehungen zwischen den OCR-Qualitätsmetriken.
 
+### Frage 10(a)
 **Trade-off zwischen Präzision und Recall**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-1')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -420,17 +691,15 @@ Wichtig zu verstehen:
 **Beispiel:** 
 "Strengere Erkennungsregeln erhöhen Präzision, können aber Recall senken."
 ````
-
+### Frage 10(b)
 **Rolle des F1-Scores**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">     
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-2')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -441,20 +710,190 @@ Der F1-Score:
 - Berücksichtigt beide Aspekte der Qualität
 ````
 
-## Teil 4: Messung der OCR-Qualität in Python
-### Assessment 3.4.1: Messung der OCR-Qualität
+## Frage 11
+(Wählen Sie alle zutreffenden Antworten aus)
 
-#### Aufgabe 2: Interpretation von Messwerten
+### Frage 11(a)
 
-Analysieren Sie die folgenden OCR-Qualitätswerte aus dem Beispiel:
-- Precision: 0.778
-- Recall: 0.7932
-- F1-score: 0.7855
-
-**Was bedeutet die Precision von 0.778 in diesem Kontext?**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+precision_question = [
+    {
+        "question": "Welche Aussagen treffen auf OCR-Ergebnisse mit HOHER PRÄZISION zu? (Mehrere Antworten können richtig sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Weniger Korrekturaufwand ist notwendig",
+                "correct": True,
+                "feedback": """✓ Richtig. Hohe Präzision bedeutet, dass die meisten erkannten Zeichen korrekt sind, was den Korrekturaufwand reduziert."""
+            },
+            {
+                "answer": "Es entstehen viele falsch positive Erkennungen",
+                "correct": False,
+                "feedback": """× Falsch. Hohe Präzision bedeutet genau das Gegenteil - es gibt wenige falsch positive Erkennungen."""
+            },
+            {
+                "answer": "Der erkannte Text ist sehr zuverlässig",
+                "correct": True,
+                "feedback": """✓ Richtig. Präzision misst die Zuverlässigkeit der gefundenen Elemente; bei hoher Präzision kann man den erkannten Wörtern vertrauen."""
+            },
+            {
+                "answer": "Die Ergebnisse können unvollständig sein",
+                "correct": True,
+                "feedback": """✓ Richtig. Ein System, das auf hohe Präzision optimiert ist, könnte unsichere Erkennungen weglassen, was zu unvollständiger Texterfassung führen kann."""
+            },
+            {
+                "answer": "Hoher manueller Nachbearbeitungsaufwand ist zu erwarten",
+                "correct": False,
+                "feedback": """× Falsch. Hohe Präzision reduziert den Nachbearbeitungsaufwand, da weniger falsche Erkennungen korrigiert werden müssen."""
+            }
+        ]
+    }
+]
+
+display_quiz(precision_question, colors=colors.jupyterquiz)
+```
+
+### Frage 11(b)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+precision_applications = [
+    {
+        "question": "Für welche Anwendungsfälle sind OCR-Ergebnisse mit HOHER PRÄZISION besonders wichtig? (Mehrere Antworten können richtig sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Erfassung historischer Dokumente, bei denen Vollständigkeit wichtiger ist als absolute Genauigkeit",
+                "correct": False,
+                "feedback": """× Falsch. Bei historischen Dokumenten ist oft Vollständigkeit (hoher Recall) wichtiger als Präzision."""
+            },
+            {
+                "answer": "Kritische Anwendungen, bei denen falsche Informationen schwerwiegende Folgen haben können",
+                "correct": True,
+                "feedback": """✓ Richtig. In kritischen Anwendungen sind zuverlässige, fehlerfreie Daten wichtiger als vollständige Erfassung."""
+            },
+            {
+                "answer": "Datenmining-Projekte, bei denen einzelne Fehler tolerierbar sind",
+                "correct": False,
+                "feedback": """× Falsch. Beim Datenmining ist oft eine umfassende Erfassung (hoher Recall) wichtiger als absolute Präzision."""
+            },
+            {
+                "answer": "Automatische Verarbeitung von Dokumenten ohne manuelle Nachkontrolle",
+                "correct": True,
+                "feedback": """✓ Richtig. Wenn keine manuelle Überprüfung erfolgt, ist hohe Präzision besonders wichtig, um Fehler zu minimieren."""
+            },
+            {
+                "answer": "Explorative Analyse großer Textkorpora",
+                "correct": False,
+                "feedback": """× Falsch. Bei explorativen Analysen ist Vollständigkeit oft wichtiger als absolute Fehlerfreiheit."""
+            }
+        ]
+    }
+]
+
+display_quiz(precision_applications, colors=colors.jupyterquiz)
+```
+
+### Frage 11(c)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+recall_question = [
+    {
+        "question": "Welche Aussagen treffen auf OCR-Ergebnisse mit HOHEM RECALL zu? (Mehrere Antworten können richtig sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Vollständige Erfassung des Originaltextes",
+                "correct": True,
+                "feedback": """✓ Richtig. Hoher Recall bedeutet, dass ein großer Teil der tatsächlich vorhandenen Zeichen erkannt wird."""
+            },
+            {
+                "answer": "Erhöhte Wahrscheinlichkeit von Fehlerkennungen",
+                "correct": True,
+                "feedback": """✓ Richtig. Systeme mit hohem Recall neigen dazu, auch zweifelhafte Fälle zu erkennen, was zu mehr Fehlern führen kann."""
+            },
+            {
+                "answer": "Reduzierter Korrekturaufwand",
+                "correct": False,
+                "feedback": """× Falsch. Wegen der höheren Fehlerrate steigt der Korrekturaufwand in der Regel an."""
+            },
+            {
+                "answer": "Mehr manuelle Überprüfung notwendig",
+                "correct": True,
+                "feedback": """✓ Richtig. Da mehr Fehler zu erwarten sind, ist eine gründlichere manuelle Überprüfung erforderlich."""
+            },
+            {
+                "answer": "Optimale Eignung für sicherheitskritische Anwendungen",
+                "correct": False,
+                "feedback": """× Falsch. Für sicherheitskritische Anwendungen ist in der Regel hohe Präzision wichtiger als hoher Recall."""
+            }
+        ]
+    }
+]
+
+display_quiz(recall_question, colors=colors.jupyterquiz)
+```
+
+### Frage 11(d)
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+recall_applications = [
+    {
+        "question": "Für welche Anwendungsfälle sind OCR-Ergebnisse mit HOHEM RECALL besonders wichtig? (Mehrere Antworten können richtig sein)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Automatische Dokumentenverarbeitung ohne manuelle Nachkontrolle",
+                "correct": False,
+                "feedback": """× Falsch. Ohne manuelle Nachkontrolle ist hohe Präzision wichtiger, um Fehler zu vermeiden."""
+            },
+            {
+                "answer": "Explorative textuelle Datenanalyse",
+                "correct": True,
+                "feedback": """✓ Richtig. Bei explorativen Analysen ist es wichtiger, möglichst alle relevanten Daten zu erfassen, auch wenn einige Fehler enthalten sind."""
+            },
+            {
+                "answer": "Vollständige Digitalisierung historischer Archive",
+                "correct": True,
+                "feedback": """✓ Richtig. Bei der Archivdigitalisierung ist es oft wichtig, keinen Teil des Textes zu verlieren, auch wenn nachträgliche Korrekturen erforderlich sind."""
+            },
+            {
+                "answer": "Sicherheitskritische Finanztransaktionen",
+                "correct": False,
+                "feedback": """× Falsch. Bei Finanztransaktionen ist Präzision wichtiger als Vollständigkeit."""
+            },
+            {
+                "answer": "Erstellung durchsuchbarer Textdatenbanken",
+                "correct": True,
+                "feedback": """✓ Richtig. Für durchsuchbare Datenbanken ist es wichtig, dass alle relevanten Informationen erfasst werden, damit sie bei Suchanfragen gefunden werden können."""
+            }
+        ]
+    }
+]
+
+display_quiz(recall_applications, colors=colors.jupyterquiz)
+```
+
+## Frage 12
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
 
 """
 Lernziel: 
@@ -467,11 +906,62 @@ Geschätzte Zeit: 10 Minuten
     - Praktische Interpretation
 """
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-     <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+quality_sequence = [
+    {
+        "question": "In welcher Reihenfolge werden die folgenden Schritte zur Messung der OCR-Qualität durchgeführt?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1. Berechnung der Qualitätsmetriken → 2. Erstellung der Ground Truth → 3. Durchführung der OCR",
+                "correct": False,
+                "feedback": """× Falsch. Die Qualitätsmetriken können erst berechnet werden, wenn sowohl der OCR-Output als auch die Ground Truth vorliegen, da sie auf dem Vergleich dieser beiden Texte basieren."""
+            },
+            {
+                "answer": "1. Erstellung der Ground Truth → 2. Durchführung der OCR → 3. Berechnung der Qualitätsmetriken",
+                "correct": False,
+                "feedback": """× Falsch. Obwohl es möglich wäre, zuerst die Ground Truth zu erstellen und dann die OCR durchzuführen, ist dies in der Praxis ineffizient, da die manuelle Erstellung der Ground Truth oft auf dem OCR-Text aufbaut, der dann korrigiert wird."""
+            },
+            {
+                "answer": "1. Durchführung der OCR → 2. Erstellung der Ground Truth → 3. Berechnung der Qualitätsmetriken",
+                "correct": True,
+                "feedback": """✓ Richtig! Dies ist die effizienteste und übliche Reihenfolge:
+                * Zuerst wird die OCR auf dem Quelldokument durchgeführt, wobei die entsprechende OCR-Engine (hier: Tesseract) mit spezifischen Parametern (z.B. lang='frk' für Fraktur) verwendet wird. Dies erzeugt den OCR-Output, der für den Vergleich benötigt wird.
+                * Dann wird die Ground Truth durch manuelle Korrektur erstellt. Dabei wird der OCR-Output als Grundlage genommen und manuell korrigiert, um einen fehlerfreien Referenztext zu erhalten.
+                * Zuletzt werden die Qualitätsmetriken berechnet, indem der OCR-Output mit der Ground Truth verglichen wird. Dabei werden Maße wie Precision, Recall und F1-Score ermittelt, die eine quantitative Bewertung der OCR-Qualität ermöglichen."""
+            },
+            {
+                "answer": "1. Durchführung der OCR → 2. Berechnung der Qualitätsmetriken → 3. Erstellung der Ground Truth",
+                "correct": False,
+                "feedback": """× Falsch. Die Qualitätsmetriken können erst nach Erstellung der Ground Truth berechnet werden, da für die Berechnung beide Texte (OCR-Output und Ground Truth) benötigt werden."""
+            }
+        ]
+    }
+]
+
+display_quiz(quality_sequence, colors=colors.jupyterquiz, max_width=1000)
+```
+
+
+## Frage 13
+
+Analysieren Sie die folgenden OCR-Qualitätswerte aus dem Beispiel:
+- Precision: 0.778
+- Recall: 0.7932
+- F1-score: 0.7855
+
+### Frage 13(a)
+**Was bedeutet die Precision von 0.778 in diesem Kontext?**
+```{code-cell} ipython3
+:tags: [remove-input]
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
+
+create_answer_box('ocr-3')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -483,17 +973,15 @@ Begründung:
 - Zeigt moderate bis gute Erkennungsgenauigkeit
 - Typisch für historische Frakturschrift
 ````
-
+### Frage 13(b)
 **Warum ist der Recall (0.7932) höher als die Precision?**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-     <textarea id="answer" rows="2" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-4')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -506,57 +994,18 @@ Begründung:
 - Balance durch F1-Score (0.7855) ersichtlich
 ````
 
-#### Aufgabe 3
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-question9 = [
-    {
-        "question": "Basierend auf den gemessenen Qualitätswerten, welche Verbesserungsmaßnahmen wären sinnvoll?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Verwendung eines spezialisierten Fraktur-OCR-Modells",
-                "correct": True,
-                "feedback": """✓ Sinnvoll, weil:
-                - Bereits lang='frk' verwendet
-                - Spezialisierte Modelle oft bessere Ergebnisse
-                - Besonders wichtig bei historischen Schriften
-                - Kann beide Metriken verbessern"""
-            },
-            {
-                "answer": "Ausschließliche Fokussierung auf Precision-Verbesserung",
-                "correct": False,
-                "feedback": """× Nicht optimal, weil:
-                - Balance zwischen Precision und Recall wichtig
-                - Aktuelle Werte relativ ausgewogen
-                - F1-Score zeigt akzeptable Gesamtleistung
-                - Beidseitige Verbesserung anzustreben"""
-            }
-        ]
-    }
-]
-display_quiz(question9, colors=colors.jupyterquiz)
-```
-#### Aufgabe 4: Anwendungskontexte
+## Frage 14
 Bewerten Sie die Eignung der gemessenen OCR-Qualität für verschiedene Anwendungsfälle.
 
+### Frage 14(a)
 **Fall 1: Volltextsuche in digitalisierten Zeitungen**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-5')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -571,17 +1020,15 @@ Bedingt geeignet, weil:
 - Berücksichtigung häufiger OCR-Fehler
 - Mögliche manuelle Nachkorrektur wichtiger Passagen
 ````
-
+### Frage 14(b)
 **Fall 2: Exakte Texttranskription für Edition**
 ```{code-cell} ipython3
 :tags: [remove-input]
-from IPython.display import HTML
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
 
-HTML("""
-<div padding: 15px; border-radius: 5px; margin: 10px 0;">
-    <textarea id="answer" rows="4" style="width: 100%; margin-top: 10px; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" placeholder="Ihre Antwort"></textarea>
-</div>
-""")
+create_answer_box('ocr-6')
 ```
 ````{admonition}  Lösungen
 :class: solution, dropdown
@@ -596,13 +1043,4 @@ Nicht ausreichend, weil:
 - Systematische manuelle Korrektur
 - Dokumentation der OCR-Qualität
 - Mehrfache Qualitätskontrolle
-````
-
-````{admonition} Hinweise zur Bearbeitung
-:class: hinweis, dropdown
-
-1.	Arbeiten Sie die Aufgaben in der angegebenen Reihenfolge durch
-2.	Nutzen Sie das Feedback zur Selbstüberprüfung
-3.	Achten Sie besonders auf die Begründungen
-4.	Reflektieren Sie die praktischen Implikationen der Messwerte
 ````
