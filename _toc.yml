@@ -44,6 +44,7 @@ parts:
     - file: markdown/corpus-processing_intro-to-nlp
     - file: nlp-enrichment/NLP-Enrichment
     - file: markdown/corpus-processing_resumee
+    - file: markdown/corpus-processing_assessment
   - caption: Korpusanalyse. Von Häufigkeiten zu Diagrammen
     chapters:
     - file: markdown/corpus-analysis_intro
@@ -51,6 +52,7 @@ parts:
     - file: word_search/FS_1_MVP_Analysis_Diachronic_Frequencies_Plots
     - file: word_search/FS_1_MVP_Analysis_KWIC
     - file: markdown/corpus-analysis_resumee
+    - file: markdown/corpus-analysis_assessment
   - caption: Reflexion und Resümee
     chapters:
     - file: markdown/reflection_reflection
