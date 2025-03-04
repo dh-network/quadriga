@@ -25,7 +25,7 @@ Sie können die Fragen in beliebiger Reihenfolge beantworten und auch mehrfach v
 
 Es erfolgt keine Bewertung oder Speicherung Ihrer Ergebnisse. Nutzen Sie dieses Assessment, um Wissenslücken zu identifizieren und gegebenenfalls die entsprechenden Abschnitte des Kapitels noch einmal zu bearbeiten.
 
-**Geschätzte Zeit**: 45min
+**Geschätzte Zeit**: 1h 15min
 
 Viel Erfolg!
 ````
@@ -36,43 +36,304 @@ Viel Erfolg!
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
+"""
+Lernziel: Sie verfügen über ein Grundverständnis des Konzepts des semantischen Feldes, können den Unterschied zwischen absoluten und relativen Häufigkeiten erklären und die Darstellungsmethoden des Liniendiagramms und der Key Word in Context (KWIC)-Anzeige interpretieren.
+Bloom-Stufe: Verstehen, Analysieren
+Format: Multiple Choice
+"""
+
+
 import sys
 sys.path.append("..")
 from quadriga_config import colors
 
-semantic_field_q1 = [{
-    "question": "Welche Aussagen zum Konzept des semantischen Feldes sind korrekt?",
+multiple_choice_1 = [{
+    "question": """Was versteht man unter einem semantischen Feld im Kontext der Analyse der Spanischen Grippe?""",
     "type": "multiple_choice",
     "answers": [
         {
-            "answer": "Für die Analyse der Spanischen Grippe sollten nur eindeutige, themenbezogene Begriffe ins semantische Feld aufgenommen werden",
-            "correct": True,
-            "feedback": """✓ Richtig! Wichtig weil:
-            - Vermeidung von Mehrdeutigkeiten
-            - Spezifischer Themenbezug
-            - Kontextunabhängige Aussagekraft
-            - Präzise Häufigkeitsanalyse möglich"""
+            "answer": "Eine grafische Darstellung der Verbreitung einer Krankheit auf einer Landkarte",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage beschreibt nicht ein semantisches Feld, sondern eher eine epidemiologische Karte. Ein semantisches Feld bezieht sich auf eine Gruppe von Wörtern mit verwandten Bedeutungen."""
         },
         {
-            "answer": "Alle Krankheitsbegriffe sind automatisch Teil des semantischen Feldes 'Grippe'",
+            "answer": "Eine Sammlung von Wörtern, die mit der Spanischen Grippe im Zusammenhang stehen und diese spezifisch bezeichnen",
+            "correct": True,
+            "feedback": """✓ Richtig! Laut Text ist ein semantisches Feld eine "Sammlung dieser Wörter", die "mit der Spanischen Grippe im Zusammenhang" stehen. Diese Wörter sollten "sich auf die Spanische Grippe und nur auf diese beziehen"."""
+        },
+        {
+            "answer": "Die Gesamtheit aller Zeitungsartikel zu einem bestimmten Thema",
             "correct": False,
-            "feedback": """× Nicht korrekt, weil:
-            - Begriffe müssen spezifisch für Grippe sein
-            - Historischer Sprachgebrauch relevant
-            - Eindeutigkeit erforderlich
-            - Kontextbezug wichtig"""
+            "feedback": """× Nicht korrekt. Diese Aussage beschreibt ein Korpus zu einem Thema, nicht ein semantisches Feld. Ein semantisches Feld besteht aus Wörtern mit verwandten Bedeutungen, nicht aus vollständigen Texten."""
+        },
+        {
+            "answer": "Eine statistische Methode zur Berechnung der Häufigkeit von Krankheitsfällen",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage beschreibt eine epidemiologische Analysemethode, nicht ein semantisches Feld. Ein semantisches Feld ist eine linguistische Kategorie, die bedeutungsverwandte Wörter zusammenfasst."""
         }
     ]
 }]
 
-display_quiz(semantic_field_q1, colors=colors.jupyterquiz)
+display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
 
 ## Frage 2
 
-Gegeben ist ein Text mit 500 Wörtern, davon 15 aus dem semantischen Feld 'Grippe'.
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
 
-Berechnen Sie die relative Häufigkeit und interpretieren Sie das Ergebnis.
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_2 = [{
+    "question": """Worin besteht der Unterschied zwischen absoluter und relativer Häufigkeit?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Absolute Häufigkeit bezieht sich auf die Anzahl der Erkrankten, relative Häufigkeit auf die Anzahl der Todesopfer",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage bezieht sich auf epidemiologische Kennzahlen, nicht auf textanalytische Häufigkeitsmaße. Im Kontext der Textanalyse haben absolute und relative Häufigkeit andere Bedeutungen."""
+        },
+        {
+            "answer": "Absolute Häufigkeit misst das Vorkommen in Qualitätszeitungen, relative Häufigkeit in allen verfügbaren Medien",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Der Unterschied zwischen absoluter und relativer Häufigkeit bezieht sich nicht auf unterschiedliche Medientypen, sondern auf die Art der Berechnung."""
+        },
+        {
+            "answer": "Absolute Häufigkeit ist die tatsächliche Anzahl des Vorkommens eines Wortes, relative Häufigkeit setzt diese ins Verhältnis zur Textlänge",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Text wird erklärt: "Dafür wird die absolute Häufigkeit durch die Textlänge dividiert, daraus ergibt sich die relative Frequenz." Die relative Häufigkeit ermöglicht den Vergleich von Texten unterschiedlicher Länge."""
+        },
+        {
+            "answer": "Absolute Häufigkeit bezieht sich auf ein einzelnes Wort, relative Häufigkeit auf ein ganzes semantisches Feld",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Sowohl absolute als auch relative Häufigkeit können sich auf einzelne Wörter oder auf semantische Felder beziehen. Der Unterschied liegt in der Berechnungsmethode, nicht im betrachteten Objekt."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_2, colors=colors.jupyterquiz)
+```
+
+## Frage 3
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_3 = [{
+    "question": """Warum ist die Verwendung relativer Häufigkeiten bei der vergleichenden Analyse von Texten aus verschiedenen Zeitungen sinnvoll?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Weil verschiedene Zeitungen unterschiedliche Schreibstile verwenden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Unterschiedliche Schreibstile sind zwar ein wichtiger Aspekt bei der Textanalyse, erklären aber nicht, warum relative statt absolute Häufigkeiten verwendet werden sollten."""
+        },
+        {
+            "answer": "Weil die Texte unterschiedlich lang sein können und die relative Häufigkeit diese Unterschiede ausgleicht",
+            "correct": True,
+            "feedback": """✓ Richtig! Der Text erklärt: "Wenn Texte verschieden lang sind, sollten die Häufigkeiten normalisiert werden, das heißt sie werden in Bezug zur Textlänge gesetzt." Dies ermöglicht einen faireren Vergleich zwischen Texten unterschiedlicher Länge."""
+        },
+        {
+            "answer": "Weil absolute Häufigkeiten nur in Prozentangaben aussagekräftig sind",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Absolute Häufigkeiten sind durchaus aussagekräftig, allerdings nicht für den Vergleich von Texten unterschiedlicher Länge. Prozentangaben sind eine Form der relativen Häufigkeit, nicht der absoluten."""
+        },
+        {
+            "answer": "Weil verschiedene Zeitungen unterschiedliche Erscheinungszyklen haben",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Der Erscheinungszyklus von Zeitungen hat keinen direkten Einfluss auf die Wahl zwischen absoluter und relativer Häufigkeit. Entscheidend ist vielmehr die Vergleichbarkeit der Textlängen."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_3, colors=colors.jupyterquiz)
+```
+
+## Frage 4
+
+Ein Text hat eine Länge von 500 Wörtern und enthält 15 Wörter aus dem semantischen Feld "Grippe". Ein zweiter Text hat eine Länge von 800 Wörtern und enthält 20 Wörter aus demselben semantischen Feld. 
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_4 = [{
+    "question": """Welche Aussage ist korrekt?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Der erste Text hat eine höhere absolute Häufigkeit von Grippewörtern",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Der erste Text enthält 15 Grippewörter, der zweite 20 Grippewörter. Daher hat der zweite Text die höhere absolute Häufigkeit."""
+        },
+        {
+            "answer": "Beide Texte haben dieselbe relative Häufigkeit von Grippewörtern",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die relative Häufigkeit des ersten Textes ist 15/500 = 0,03 (3%), die des zweiten Textes ist 20/800 = 0,025 (2,5%). Die relativen Häufigkeiten sind unterschiedlich."""
+        },
+        {
+            "answer": "Der erste Text hat eine höhere relative Häufigkeit von Grippewörtern",
+            "correct": True,
+            "feedback": """✓ Richtig! Die relative Häufigkeit des ersten Textes beträgt 15/500 = 0,03 (3%), die des zweiten Textes 20/800 = 0,025 (2,5%). Obwohl der zweite Text mehr Grippewörter enthält (höhere absolute Häufigkeit), ist ihr Anteil am Gesamttext (relative Häufigkeit) geringer als im ersten Text."""
+        },
+        {
+            "answer": "Aus den gegebenen Informationen kann keine Aussage über die Häufigkeiten getroffen werden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die gegebenen Informationen (Textlänge und Anzahl der Grippewörter) sind ausreichend, um sowohl absolute als auch relative Häufigkeiten zu berechnen und zu vergleichen."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
+```
+
+## Frage 5
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_5 = [{
+    "question": """Welche Funktion erfüllt die KWIC-Darstellung (Keyword in Context) in der Textanalyse?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Sie ermöglicht die automatische Berechnung der relativen Häufigkeiten",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung ist kein Berechnungswerkzeug für Häufigkeiten, sondern eine Visualisierungsmethode, die den Kontext von Suchbegriffen zeigt."""
+        },
+        {
+            "answer": "Sie bildet eine Brücke zwischen quantitativer und qualitativer Analyse, indem sie den Kontext der Suchbegriffe zeigt",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Text heißt es: "Die KWIC-Darstellung bildet eine Brücke von der quantitativen zur qualitativen Analyse, da die Grundlage der Häufigkeitenanalyse genauer in Betracht genommen werden kann." Sie ermöglicht es, Muster im Wortgebrauch zu erkennen und die Qualität des semantischen Feldes zu überprüfen."""
+        },
+        {
+            "answer": "Sie dient ausschließlich der grafischen Darstellung von Häufigkeitsverläufen über die Zeit",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die grafische Darstellung von Häufigkeitsverläufen wird durch Linien- oder Balkendiagramme erreicht, nicht durch die KWIC-Darstellung. KWIC zeigt den textuellen Kontext von Suchbegriffen."""
+        },
+        {
+            "answer": "Sie erlaubt die automatische Identifikation aller Wörter des semantischen Feldes",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung identifiziert nicht automatisch alle Wörter eines semantischen Feldes, sondern zeigt den Kontext bereits identifizierter Suchbegriffe. Sie kann jedoch zur Verbesserung eines semantischen Feldes beitragen."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
+```
+
+## Frage 6
+Betrachten Sie folgende drei Texte und ihre Häufigkeitswerte:
+
+- Text A: 30 Grippewörter bei 600 Wörtern Gesamtlänge 
+- Text B: 25 Grippewörter bei 400 Wörtern Gesamtlänge 
+- Text C: 20 Grippewörter bei 500 Wörtern Gesamtlänge
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_6 = [{
+    "question": """Was ist die korrekte relative Häufigkeit der Grippewörter, wenn alle drei Texte zusammen betrachtet werden?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "0,05083 (5,083%)",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Dieser Wert entspricht dem Durchschnitt der relativen Häufigkeiten (0,05 + 0,0625 + 0,04)/3 = 0,05083. Der Text erklärt jedoch, warum diese Berechnungsmethode problematisch sein kann."""
+        },
+        {
+            "answer": "0,075 (7,5%)",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Antwort ist falsch. Die korrekte Berechnung ist: Summe aller Grippewörter geteilt durch Summe aller Wörter: (30+25+20)/(600+400+500) = 75/1500 = 0,05 (5%)."""
+        },
+        {
+            "answer": "0,0625 (6,25%)",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Dieser Wert entspricht der relativen Häufigkeit von Text B (25/400 = 0,0625), nicht der Gesamthäufigkeit aller drei Texte."""
+        },
+        {
+            "answer": "0,05 (5%)",
+            "correct": True,
+            "feedback": """✓ Richtig! Die korrekte Berechnung der relativen Häufigkeit für mehrere Texte addiert alle absoluten Häufigkeiten und teilt sie durch die Summe aller Textlängen: (30+25+20)/(600+400+500) = 75/1500 = 0,05 (5%). Wie im Text erläutert, ist diese Methode besser als die Berechnung des Durchschnitts der relativen Häufigkeiten."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
+```
+
+## Frage 7
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_7 = [{
+    "question": """Warum eignet sich ein Liniendiagramm besonders gut zur Darstellung der Häufigkeitsverläufe der Grippewörter über die Zeit?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Es zeigt kontinuierliche Verläufe und macht lokale und globale Extremwerte leicht erkennbar",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Text wird erklärt: "Liniendiagramme eignen sich gut, um zeitliche Verläufe darzustellen, da lokale und globale Minima und Maxima leicht erkennbar sind und sie die Kontinuität der Daten unterstreichen." """
+        },
+        {
+            "answer": "Es ermöglicht die gleichzeitige Darstellung von absoluten und relativen Häufigkeiten",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Ein Liniendiagramm kann entweder absolute oder relative Häufigkeiten darstellen, nicht jedoch beide gleichzeitig auf derselben Skala, da sie unterschiedliche Maßeinheiten haben."""
+        },
+        {
+            "answer": "Es ist die einzige Darstellungsform, die für Zeitreihenanalysen geeignet ist",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Es gibt auch andere Darstellungsformen für Zeitreihenanalysen, wie z.B. Balkendiagramme. Der Text erwähnt: "Die Häufigkeiten über Zeit ließen sich auch in einem Balkendiagramm darstellen." """
+        },
+        {
+            "answer": "Es verbindet automatisch qualitative und quantitative Analyse",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Ein Liniendiagramm ist ein rein quantitatives Analysewerkzeug. Die Verbindung zur qualitativen Analyse wird eher durch die KWIC-Darstellung hergestellt, nicht durch das Liniendiagramm."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_7, colors=colors.jupyterquiz)
+```
+
+## Frage 8
+
+Analysieren Sie das folgende Szenario:
+
+Ein Forschungsteam untersucht die mediale Berichterstattung über COVID-19 in verschiedenen deutschen Zeitungen im Jahr 2020. Sie haben ein semantisches Feld mit Begriffen wie "Coronavirus", "COVID-19", "Pandemie", "Lockdown" usw. erstellt.
+
+1. Beschreiben Sie, wie Sie die relative Häufigkeit dieser Begriffe für einen monatlichen Vergleich berechnen würden.
+2. Erläutern Sie, warum relative statt absolute Häufigkeiten für den Vergleich verschiedener Zeitungen wichtig sind.
+3. Erklären Sie, wie Sie die KWIC-Darstellung nutzen könnten, um das semantische Feld zu verfeinern.
+4. Diskutieren Sie, welche Einsichten ein Liniendiagramm der relativen Häufigkeiten über die Zeit liefern könnte.
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -80,445 +341,93 @@ import sys
 sys.path.append("../quadriga_config")  # Adjust path as needed
 from assessment import create_answer_box
 
-create_answer_box('frage-2')
+create_answer_box('semantic-field')
 ```
 
-
-````{admonition} Lösungen
+````{admonition} Lösung
 :class: solution, dropdown
+**Beispiellösung zur Selbstbewertung:**
 
-**Berechnung**: 15/500 = 0.03 = 3%
+**1. Berechnung der relativen Häufigkeit für monatlichen Vergleich:**
+- Für jeden Monat alle Artikel der jeweiligen Zeitung zusammenfassen
+- Absolute Häufigkeit: Zählen aller Vorkommen von Wörtern aus dem semantischen Feld "COVID-19" in den Artikeln des Monats
+- Gesamtwortzahl: Zählen aller Wörter in den Artikeln des Monats
+- Relative Häufigkeit = Absolute Häufigkeit / Gesamtwortzahl
+- Alternativ könnte man auch die Summe der absoluten Häufigkeiten durch die Summe der Textlängen teilen
 
-**Interpretation**:
-- 3% aller Wörter beziehen sich auf Grippe
-- Vergleichbar mit anderen Textlängen
-- Basis für zeitliche Analyse
-- Normalisierte Darstellung
+**2. Bedeutung relativer Häufigkeiten für den Zeitungsvergleich:**
+- Zeitungen haben unterschiedliche Formate, Umfänge und Erscheinungsweisen
+- Absolute Häufigkeiten wären stark von der Gesamttextmenge abhängig
+- Relative Häufigkeiten ermöglichen fairen Vergleich unabhängig von Textlänge
+- Beispiel: Eine Zeitung mit 50 COVID-Begriffen in 1000 Wörtern (5%) vs. eine Zeitung mit 100 COVID-Begriffen in 4000 Wörtern (2,5%)
 
-**Wichtig zu verstehen**:
-- Relative Häufigkeiten ermöglichen Vergleiche
-- Normalisierung durch Textlänge
-- Prozentuale Darstellung sinnvoll
-- Basis für weitere Analysen
+**3. Nutzung der KWIC-Darstellung zur Verfeinerung des semantischen Feldes:**
+- Analyse des Kontexts einzelner Begriffe, um deren tatsächliche Verwendung zu prüfen
+- Identifikation mehrdeutiger Begriffe (z.B. "Corona" könnte sich auch auf das Bier beziehen)
+- Entdeckung weiterer relevanter Begriffe im Kontext der vorhandenen Suchbegriffe
+- Überprüfung, ob Begriffe tatsächlich im Zusammenhang mit COVID-19 verwendet werden
+- Iterative Anpassung des semantischen Feldes: Entfernen irrelevanter und Hinzufügen neuer Begriffe
+
+**4. Einsichten aus einem Liniendiagramm der relativen Häufigkeiten:**
+- Visualisierung des zeitlichen Verlaufs der medialen Aufmerksamkeit für COVID-19
+- Identifikation von Höhepunkten der Berichterstattung und Korrelation mit wichtigen Ereignissen
+- Vergleich zwischen "Wellen" der Pandemie und "Wellen" der Berichterstattung
+- Erkennen von Trends wie Ermüdungserscheinungen in der Berichterstattung
+- Unterschiede zwischen verschiedenen Zeitungen im zeitlichen Verlauf ihrer Berichterstattung
 ````
 
-## Frage 3
 
+## Frage 9
 (Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
-visualization_q1 = [{
-    "question": "Welche Aussagen zum Liniendiagramm treffen zu?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Ermöglicht die Visualisierung des zeitlichen Verlaufs",
-            "correct": True,
-            "feedback": """✓ Richtig! Das Liniendiagramm eignet sich besonders für:
-            - Visualisierung zeitlicher Entwicklung
-            - Erkennung von Mustern
-            - Vergleichende Analyse"""
-        },
-        {
-            "answer": "Bietet detaillierte Einblicke in Wortverwendungskontexte",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Liniendiagramme zeigen:
-            - Nur quantitative Perspektive
-            - Keine Kontextdetails
-            - Rein numerische Darstellung"""
-        },
-        {
-            "answer": "Wellenmuster in der Begriffsverwendung werden sichtbar",
-            "correct": True,
-            "feedback": """✓ Richtig! Vorteile des Liniendiagramms:
-            - Zeigt Schwankungen über Zeit
-            - Ermöglicht Vergleich verschiedener Zeiträume
-            - Verdeutlicht Trends und Muster"""
-        },
-        {
-            "answer": "Zeigt qualitative Aspekte der Textdaten",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Liniendiagramme zeigt nur quantitative Trends, keine qualitativen Aspekte."""
-        }
-    ]
-}]
+"""
+Lernziel: Sie können die notwendigen Schritte zur Frequenzanalyse eines semantischen Felds aufzählen, Unterschiede in der Berechnung der Häufigkeiten benennen und die Ergebnisse reflektieren.
+Bloom-Stufe: Verstehen, Analysieren
+Format: Multiple Choice
+"""
 
-display_quiz(visualization_q1, colors=colors.jupyterquiz)
-```
-
-## Frage 4
-
-(Wählen Sie alle zutreffenden Antworten aus)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-visualization_q2 = [{
-    "question": "Welche Aussagen zur KWIC-Darstellung (Key Word in Context) sind korrekt?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Ermöglicht eine qualitative Analyse der Wortverwendung",
-            "correct": True,
-            "feedback": """✓ Richtig! KWIC ist wichtig für:
-            - Validierung des semantischen Feldes
-            - Detailanalyse der Verwendung
-            - Qualitative Ergänzung"""
-        },
-        {
-            "answer": "Bietet eine schnelle Gesamtübersicht der Begriffsverwendung",
-            "correct": False,
-            "feedback": """× Nicht korrekt. KWIC hat Limitationen:
-            - Keine Gesamtübersicht
-            - Zeitaufwändige Analyse
-            - Fokus auf einzelne Kontexte"""
-        },
-        {
-            "answer": "Zeigt die Verwendung von Schlüsselwörtern in ihrem unmittelbaren Textkontext",
-            "correct": True,
-            "feedback": """✓ Richtig! Stärken der KWIC-Methode:
-            - Kontextuelle Einbettung
-            - Überprüfung der Wortverwendung
-            - Detaillierte Analyse möglich"""
-        },
-        {
-            "answer": "Ist eine zeiteffiziente Methode für große Textmengen",
-            "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Erfordert zeitaufwändige manuelle Analyse
-            - Ist detailliert aber langsam
-            - Eignet sich für gezielte Detailuntersuchungen"""
-        }
-    ]
-}]
-
-display_quiz(visualization_q2, colors=colors.jupyterquiz)
-```
-
-## Frage 5
-(Wählen Sie alle zutreffenden Antworten aus)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-method_integration_q1 = [{
-    "question": "Welche Aussagen beschreiben korrekt das Zusammenspiel verschiedener Methoden in der textanalytischen Workflow?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Das semantische Feld bildet die Grundlage für die Häufigkeitsanalyse, da es die zu untersuchenden Begriffe definiert",
-            "correct": True,
-            "feedback": """✓ Richtig! Die Erstellung semantischer Felder:
-            - Definiert systematisch die relevanten Suchbegriffe
-            - Schafft einen konzeptionellen Rahmen für die quantitative Analyse
-            - Ermöglicht eine strukturierte Herangehensweise an den Text"""
-        },
-        {
-            "answer": "Die KWIC-Analyse sollte vor der Erstellung des semantischen Feldes durchgeführt werden",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Der effiziente Workflow ist anders strukturiert:
-            - KWIC-Analysen bauen auf vordefinierten Suchbegriffen auf
-            - Die semantische Feldanalyse definiert erst, welche Begriffe kontextuell untersucht werden sollen
-            - Die KWIC-Analyse dient der Validierung und qualitativen Vertiefung bereits quantifizierter Ergebnisse"""
-        },
-        {
-            "answer": "Visualisierungen wie Liniendiagramme verwenden die Ergebnisse der Häufigkeitsanalyse als Datengrundlage",
-            "correct": True,
-            "feedback": """✓ Richtig! Visualisierungen:
-            - Basieren auf den quantitativen Daten der Häufigkeitsanalyse
-            - Machen zeitliche Entwicklungen und Muster sichtbar
-            - Transformieren numerische Daten in visuell erfassbare Informationen"""
-        },
-        {
-            "answer": "Die KWIC-Analyse ersetzt die Notwendigkeit einer quantitativen Häufigkeitsanalyse",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Beide Methoden ergänzen sich:
-            - Die KWIC-Analyse bietet qualitative Einblicke, aber keine systematische Quantifizierung
-            - Häufigkeitsanalysen liefern quantitative Daten, aber keinen kontextuellen Einblick
-            - Für eine umfassende Analyse werden beide Perspektiven benötigt"""
-        },
-        {
-            "answer": "Die Kombination aus quantitativen und qualitativen Methoden ermöglicht eine Validierung und Vertiefung der Ergebnisse",
-            "correct": True,
-            "feedback": """✓ Richtig! Die Methodenkombination ist entscheidend:
-            - Quantitative Analysen zeigen Trends und Muster
-            - Qualitative Methoden wie KWIC validieren und kontextualisieren diese Ergebnisse
-            - Erst die Kombination ermöglicht robuste und tiefgehende Interpretationen"""
-        },
-        {
-            "answer": "Häufigkeitsanalysen können unabhängig von einem semantischen Feld durchgeführt werden und liefern dieselbe Qualität an Ergebnissen",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Ein systematisches semantisches Feld ist essenziell:
-            - Ohne konzeptionellen Rahmen fehlt die theoretische Fundierung der Analyse
-            - Die Qualität der Häufigkeitsanalyse hängt direkt von der Qualität des semantischen Feldes ab
-            - Willkürlich gewählte Suchbegriffe führen zu weniger aussagekräftigen und weniger vergleichbaren Ergebnissen"""
-        }
-    ]
-}]
-
-display_quiz(method_integration_q1, colors=colors.jupyterquiz, max_width=1000)
-```
-
-
-## Frage 6
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
 
 import sys
 sys.path.append("..")
 from quadriga_config import colors
 
-process_steps_q1 = [{
-    "question": "In welcher Reihenfolge werden die Schritte der Frequenzanalyse durchgeführt?",
+multiple_choice_1 = [{
+    "question": """Welche Schritte sind für die Frequenzanalyse eines semantischen Feldes in historischen Texten notwendig?""",
     "type": "multiple_choice",
     "answers": [
         {
-            "answer": "1. Berechnung der Häufigkeiten → 2. Einlesen des Korpus → 3. Visualisierung",
-            "correct": False,
-            "feedback": """× Falsch. Der Korpus muss zuerst eingelesen werden, bevor Häufigkeiten berechnet werden können."""
-        },
-        {
-            "answer": "1. Einlesen des Korpus und der Metadaten → 2. Berechnung der Häufigkeiten des semantischen Felds → 3. Visualisierung der Ergebnisse im Liniendiagramm",
+            "answer": "Einlesen des Korpus und der Metadaten",
             "correct": True,
-            "feedback": """✓ Richtig! Dies ist die korrekte Reihenfolge:
-            1. Einlesen des Korpus und der Metadaten:
-               - Datengrundlage muss verfügbar sein
-               - Metadaten für zeitliche Zuordnung wichtig
-               - Basis für weitere Verarbeitung
-               - Strukturierte Datenorganisation nötig
-
-            2. Berechnung der Häufigkeiten des semantischen Felds:
-               - Basiert auf eingelesenen Daten
-               - Verschiedene Berechnungsmethoden möglich
-               - Absolute und relative Häufigkeiten
-               - Zeitliche Gruppierung wichtig
-
-            3. Visualisierung der Ergebnisse im Liniendiagramm:
-               - Zeigt zeitlichen Verlauf
-               - Macht Muster sichtbar
-               - Ermöglicht Vergleiche
-               - Basis für Interpretation"""
+            "feedback": """✓ Richtig! Im Notebook werden zunächst die annotierten CSV-Dateien und die zugehörigen Metadaten eingelesen. Dies ist ein essentieller erster Schritt, um auf die Textdaten und deren zeitliche Einordnung zugreifen zu können."""
         },
         {
-            "answer": "1. Visualisierung → 2. Einlesen des Korpus → 3. Berechnung der Häufigkeiten",
-            "correct": False,
-            "feedback": """× Falsch. Die Visualisierung kann erst nach Berechnung der Häufigkeiten erfolgen."""
+            "answer": "Einlesen der definierten Wortliste (semantisches Feld)",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook wird explizit eine Wortliste für das semantische Feld "Grippe" eingelesen, die die Suchbegriffe für die Frequenzanalyse enthält."""
         },
         {
-            "answer": "1. Einlesen des Korpus → 2. Visualisierung der Datengrundlage → 3. Berechnung der Häufigkeiten des semantischen Feldes",
+            "answer": "Manuelle Annotation aller Texte nach relevanten Begriffen",
             "correct": False,
-            "feedback": """× Falsch. Die Visualisierung sollte nach der Häufigkeitsberechnung erfolgen."""
+            "feedback": """× Nicht korrekt. Die Texte wurden bereits zuvor annotiert (tokenisiert und lemmatisiert) und liegen als CSV-Dateien vor. Eine manuelle Annotation ist nicht Teil des Prozesses, der im Notebook beschrieben wird."""
+        },
+        {
+            "answer": "Berechnung der Häufigkeiten der Begriffe über verschiedene Zeiträume",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook werden die Häufigkeiten der Begriffe aus dem semantischen Feld berechnet und nach verschiedenen Zeiträumen (Tag, Woche, Monat) gruppiert."""
+        },
+        {
+            "answer": "Visualisierung der Ergebnisse in einem diachronen Diagramm",
+            "correct": True,
+            "feedback": """✓ Richtig! Die berechneten Häufigkeiten werden in einem interaktiven Liniendiagramm dargestellt, das den zeitlichen Verlauf (diachron) der Wortfrequenzen visualisiert."""
         }
     ]
 }]
 
-display_quiz(process_steps_q1, colors=colors.jupyterquiz, max_width=1000)
-```
-
-## Frage 7
-
-(Wählen Sie alle zutreffenden Antworten aus)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-frequency_calc_q1 = [{
-    "question": "Welche Aussagen zu absoluten Häufigkeiten treffen zu?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Einfach zu berechnen und zeigen die Gesamtzahl der Vorkommen",
-            "correct": True,
-            "feedback": """✓ Richtig! Absolute Häufigkeiten:
-            - Zeigen rohe Vorkommenshäufigkeit
-            - Einfach zu ermitteln
-            - Direkte Zahlen ohne Normalisierung"""
-        },
-        {
-            "answer": "Schwierig zu berechnen und verstecken die tatsächliche Anzahl der Vorkommen",
-            "correct": False,
-            "feedback": """× Nicht korrekt!"""
-        },
-        {
-            "answer": "Ermöglichen direkte Vergleiche zwischen Textkorpora unterschiedlicher Länge",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Absolute Häufigkeiten:
-            - Sind abhängig von Korpusgröße
-            - Nicht vergleichbar bei unterschiedlichen Textlängen
-            - Benötigen Normalisierung für faire Vergleiche"""
-        },
-        {
-            "answer": "Abhängig von der Gesamtlänge des untersuchten Textkorpus",
-            "correct": True,
-            "feedback": """✓ Richtig! Wichtig zu verstehen:
-            - Größe des Korpus beeinflusst absolute Zahlen
-            - Keine Berücksichtigung der Textlänge
-            - Begrenzte Aussagekraft ohne Normalisierung"""
-        }
-    ]
-}]
-
-display_quiz(frequency_calc_q1, colors=colors.jupyterquiz)
-```
-## Frage 8
-
-(Wählen Sie alle zutreffenden Antworten aus)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-frequency_calc_q2 = [{
-    "question": "Welche Vorteile haben relative Häufigkeiten?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Ermöglichen faire Vergleiche zwischen unterschiedlich langen Texten",
-            "correct": True,
-            "feedback": """✓ Richtig! Relative Häufigkeiten sind vorteilhaft weil:
-            - Ermöglichen faire Vergleiche
-            - Berücksichtigen Textlängen
-            - Standardisierte Darstellung
-            - Wissenschaftlich fundiert"""
-        },
-        {
-            "answer": "Sind immer leicht zu interpretieren",
-            "correct": False,
-            "feedback": """× Nicht ganz korrekt. Relative Häufigkeiten:
-            - Können abstrakt wirken
-            - Erfordern Kontextverständnis
-            - Benötigen sorgfältige Interpretation"""
-        },
-        {
-            "answer": "Normalisieren die Häufigkeiten im Verhältnis zur Textlänge",
-            "correct": True,
-            "feedback": """✓ Richtig! Relative Häufigkeiten:
-            - Setzen Vorkommen in Relation zur Textlänge
-            - Schaffen Vergleichbarkeit
-            - Eliminieren Verzerrungen durch Korpusgröße
-            - Wissenschaftlich präzise"""
-        },
-        {
-            "answer": "Benötigen weniger Rechenaufwand als absolute Häufigkeiten",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Relative Häufigkeiten:
-            - Erfordern einen zusätzlichen Berechnungsschritt (Division durch Textlänge)
-            - Bauen auf absoluten Häufigkeiten auf, die zuerst berechnet werden müssen
-            - Benötigen also mehr, nicht weniger Rechenaufwand
-            - Der Mehraufwand ist jedoch gerechtfertigt durch die bessere Vergleichbarkeit"""
-        }
-    ]
-}]
-
-display_quiz(frequency_calc_q2, colors=colors.jupyterquiz)
-```
-
-## Frage 9
-
-Gegeben ist folgendes Analyseergebnis: 'Zwei deutliche Häufigkeitsspitzen im Herbst 1918 und Winter 1918/19'
-
-(Wählen Sie alle zutreffenden Antworten aus)
-
-### Frage 9(a)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-results_analysis_q1 = [{
-    "question": "Welche Aspekte sind bei der historischen Einordnung dieser Ergebnisse zu berücksichtigen?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Korrelation mit bekannten Grippewellen",
-            "correct": True,
-            "feedback": """✓ Richtig! Die Spitzen korrelieren mit:
-            - Bekannten Grippewellen
-            - Höhepunkten der Pandemie
-            - Verstärkter Berichterstattung
-            - Gesellschaftlicher Wahrnehmung
-
-            Wichtig für:
-            - Validierung der Methode
-            - Historische Kontextualisierung
-            - Bestätigung der Operationalisierung"""
-        },
-        {
-            "answer": "Absolute Unabhängigkeit von historischen Ereignissen",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Frequenzanalysen:
-            - Müssen historischen Kontext berücksichtigen
-            - Sind eng mit gesellschaftlichen Ereignissen verknüpft
-            - Erfordern interdisziplinäre Interpretation"""
-        },
-        {
-            "answer": "Reflexion der methodischen Grenzen und Möglichkeiten",
-            "correct": True,
-            "feedback": """✓ Richtig! Die Analyse zeigt:
-            - Funktionalität des semantischen Felds
-            - Aussagekraft der Frequenzanalyse
-            - Grenzen der Methode
-            - Notwendigkeit weiterer Untersuchungen
-
-            Relevant für:
-            - Methodische Evaluation
-            - Weiterentwicklung der Analyse
-            - Wissenschaftliche Einordnung"""
-        }
-    ]
-}]
-
-display_quiz(results_analysis_q1, colors=colors.jupyterquiz)
-```
-### Frage 9(b)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-results_analysis_q2 = [{
-    "question": "Welche methodischen Aspekte sind bei der Interpretation der Frequenzanalyse zu beachten?",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Absolute Zuverlässigkeit der Ergebnisse ohne weitere Überprüfung",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Wissenschaftliche Analyse erfordert:
-            - Kritische Reflexion
-            - Methodische Überprüfung
-            - Berücksichtigung von Grenzen
-            - Kontextuelle Einordnung"""
-        },
-        {
-            "answer": "Notwendigkeit zusätzlicher qualitativer Analysen",
-            "correct": True,
-            "feedback": """✓ Richtig! Methodische Reflexion bedeutet:
-            - Quantitative Ergebnisse ergänzen
-            - Tiefere Kontextanalyse erforderlich
-            - KWIC-Analyse zur Validierung
-            - Umfassenderes Verständnis gewinnen"""
-        },
-        {
-            "answer": "Berücksichtigung von Zufälligkeiten und Verzerrungen",
-            "correct": True,
-            "feedback": """✓ Richtig! Wichtige methodische Überlegungen:
-            - Mögliche Verzerrungen identifizieren
-            - Statistische Signifikanz prüfen
-            - Zufällige Schwankungen berücksichtigen
-            - Wissenschaftliche Präzision gewährleisten"""
-        }
-    ]
-}]
-
-display_quiz(results_analysis_q2, colors=colors.jupyterquiz)
+display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
 
 ## Frage 10
@@ -532,243 +441,584 @@ import sys
 sys.path.append("..")
 from quadriga_config import colors
 
-method_understanding_q1 = [{
-    "question": "Welche Aussagen zur KWIC-Darstellung (Key Word in Context) sind korrekt?",
+multiple_choice_2 = [{
+    "question": """Welche Arten von Frequenzberechnungen werden im Notebook für die Analyse verwendet?""",
     "type": "multiple_choice",
     "answers": [
         {
-            "answer": "Die Kontextinformationen in KWIC helfen bei der Validierung des semantischen Feldes",
+            "answer": "Absolute Häufigkeiten pro Zeiteinheit",
             "correct": True,
-            "feedback": """✓ Richtig! KWIC ermöglicht:
-            - Überprüfung der Wortverwendung
-            - Identifikation von Mehrdeutigkeiten
-            - Verfeinerung des semantischen Feldes
-            - Qualitative Ergänzung zur Frequenzanalyse"""
+            "feedback": """✓ Richtig! Im Notebook werden absolute Häufigkeiten berechnet, die die tatsächliche Anzahl der Vorkommen der Suchbegriffe pro Zeiteinheit darstellen."""
         },
         {
-            "answer": "KWIC bietet nur eine quantitative Analyse der Wortverwendung",
-            "correct": False,
-            "feedback": """× Nicht korrekt. KWIC ist eine qualitativ-kontextuelle Methode:
-            - Zeigt Wortverwendung im Kontext
-            - Ermöglicht qualitative Interpretation
-            - Geht über reine Häufigkeitszählung hinaus
-            - Liefert Einblicke in Sprachgebrauch"""
-        },
-        {
-            "answer": "KWIC erlaubt eine detaillierte Untersuchung der Wortverwendung in verschiedenen Kontexten",
+            "answer": "Relative Häufigkeiten pro Zeiteinheit",
             "correct": True,
-            "feedback": """✓ Richtig! KWIC ist ein leistungsfähiges Analyseinstrument:
-            - Zeigt Variationen der Wortverwendung
-            - Ermöglicht kontextuelle Analyse
-            - Unterstützt semantische Feldforschung
-            - Liefert nuancierte Einblicke"""
+            "feedback": """✓ Richtig! Im Notebook werden auch relative Häufigkeiten berechnet, indem die absoluten Häufigkeiten durch die Gesamtzahl der Wörter in den jeweiligen Zeitabschnitten geteilt werden."""
         },
         {
-            "answer": "KWIC kann vollständig komplexe historische Diskurse rekonstruieren",
+            "answer": "Syntaktische Häufigkeiten",
             "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Bietet Einblicke in Sprachverwendung
-            - Ist eine ergänzende Analysemethode
-            - Kann nicht den gesamten Diskurs vollständig abbilden
-            - Erfordert Kombination mit anderen Methoden"""
+            "feedback": """× Nicht korrekt. Diese Art der Häufigkeitsberechnung wird im Notebook nicht erwähnt oder verwendet. Die Analyse konzentriert sich auf absolute und relative Worthäufigkeiten, nicht auf syntaktische Strukturen."""
+        },
+        {
+            "answer": "Kookkurrenzhäufigkeiten",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Art der Häufigkeitsberechnung wird im Notebook nicht erwähnt oder verwendet. Es werden keine Kookkurrenzen (gemeinsames Auftreten von Wörtern) analysiert, sondern nur das Vorkommen einzelner Wörter aus dem semantischen Feld."""
         }
     ]
 }]
 
-display_quiz(method_understanding_q1, colors=colors.jupyterquiz)
+display_quiz(multiple_choice_2, colors=colors.jupyterquiz)
 ```
 
 ## Frage 11
 
-Analysieren Sie folgenden KWIC-Ausschnitt:
-
-'... bleiben werden, tritt [Influenza] wieder recht heftig auf ...' (1918-19)
-
-(Wählen Sie alle zutreffenden Antworten aus)
-
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
-context_interpretation_q1 = [{
-    "question": "Welche Aspekte der kontextuellen Bedeutung lassen sich aus diesem Ausschnitt ableiten?",
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_3 = [{
+    "question": """Warum ist die Unterscheidung zwischen absoluten und relativen Häufigkeiten bei der diachronen Analyse wichtig?""",
     "type": "multiple_choice",
     "answers": [
         {
-            "answer": "Beschreibung des Krankheitsverlaufs durch Adjektive wie 'heftig'",
-            "correct": True,
-            "feedback": """✓ Richtig! Der Kontext zeigt:
-            - Krankheitsverlauf ('heftig')
-            - Intensität der Erkrankung
-            - Qualitative Beschreibung der Epidemie
-            - Sprachliche Nuancen des Zeitgeists"""
-        },
-        {
-            "answer": "Zeitliche Dimension durch Wörter wie 'wieder'",
-            "correct": True,
-            "feedback": """✓ Richtig! Der Kontext verdeutlicht:
-            - Zeitliche Entwicklung ('wieder')
-            - Wiederholende Natur der Krankheit
-            - Dynamik der Pandemie
-            - Historische Prozesshaftigkeit"""
-        },
-        {
-            "answer": "Bedeutung des Datums für die historische Einordnung",
-            "correct": True,
-            "feedback": """✓ Richtig! Das Datum (1918-10) ermöglicht:
-            - Zeitliche Einordnung
-            - Vergleich mit Pandemiewellen
-            - Korrelation mit Häufigkeitsanalyse
-            - Historische Kontextualisierung"""
-        },
-        {
-            "answer": "Präzise Beschreibung der Krankheitsursachen",
+            "answer": "Absolute Häufigkeiten sind präziser und sollten daher immer bevorzugt werden",
             "correct": False,
-            "feedback": """× Nicht korrekt. Der Ausschnitt:
-            - Liefert keine detaillierten Ursacheninformationen
-            - Beschreibt nur Auftreten und Intensität
-            - Erfordert breitere Kontextanalyse
-            - Zeigt nur einen kleinen Textausschnitt"""
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Absolute Häufigkeiten geben zwar die tatsächliche Anzahl der Vorkommen an, können aber bei unterschiedlichen Textmengen pro Zeitabschnitt zu verzerrten Ergebnissen führen."""
+        },
+        {
+            "answer": "Relative Häufigkeiten berücksichtigen unterschiedliche Textmengen in verschiedenen Zeitabschnitten",
+            "correct": True,
+            "feedback": """✓ Richtig! Relative Häufigkeiten setzen die Anzahl der Vorkommen ins Verhältnis zur Gesamttextmenge und ermöglichen dadurch einen faireren Vergleich zwischen Zeitabschnitten mit unterschiedlich vielen Texten oder unterschiedlichen Textlängen."""
+        },
+        {
+            "answer": "Absolute Häufigkeiten sind nur für die tägliche Analyse relevant, relative Häufigkeiten nur für die monatliche",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Sowohl absolute als auch relative Häufigkeiten können für alle zeitlichen Granularitäten (Tag, Woche, Monat) relevant sein, abhängig vom Analyseziel und der Beschaffenheit der Daten."""
+        },
+        {
+            "answer": "Die Unterscheidung ist nur wichtig, wenn unterschiedliche Zeitungen verglichen werden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist zu eingeschränkt. Die Unterscheidung zwischen absoluten und relativen Häufigkeiten ist bei jeder Art von diachroner Analyse wichtig, bei der die Textmenge über die Zeit variiert, nicht nur beim Vergleich verschiedener Zeitungen."""
         }
     ]
 }]
 
-display_quiz(context_interpretation_q1, colors=colors.jupyterquiz)
+display_quiz(multiple_choice_3, colors=colors.jupyterquiz)
 ```
 
 ## Frage 12
-(Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
-kwic_application_q1 = [{
-    "question": "Welche Rolle spielt KWIC bei der Validierung des semantischen Feldes?",
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_4 = [{
+    "question": """Welche Beobachtung lässt sich aus dem im Notebook erstellten diachronen Frequenzdiagramm der Grippe-Begriffe ableiten?""",
     "type": "multiple_choice",
     "answers": [
         {
-            "answer": "Überprüfung der Wortverwendung im Kontext",
+            "answer": "Die Häufigkeit der Grippe-Begriffe blieb über das gesamte Jahr 1918 konstant",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage widerspricht der Diskussion im Notebook, die von "zwei Wellen der Erwähnungen des Wortes 'Grippe'" spricht, was auf eine Veränderung und nicht auf Konstanz hindeutet."""
+        },
+        {
+            "answer": "Es zeigen sich zwei deutliche Wellen in der Häufigkeit der Grippe-Begriffe, die mit historischen Daten korrelieren",
             "correct": True,
-            "feedback": """✓ Richtig! KWIC ermöglicht:
-            - Überprüfung der Wortverwendung
-            - Identifikation zusätzlicher relevanter Begriffe
-            - Erkennung von Mehrdeutigkeiten
-            - Anpassung der Wortliste
-
-            Wichtig für:
-            - Qualitätssicherung der Analyse
-            - Verfeinerung der Suchbegriffe
-            - Vermeidung von Fehlinterpretationen
-            - Methodische Präzision"""
+            "feedback": """✓ Richtig! In der Diskussion im Notebook wird explizit erwähnt: "Unsere zwei Wellen der Erwähnungen des Wortes 'Grippe' scheinen den Sterblichkeitszahlen zu entsprechen", was auf eine Korrelation mit historischen Daten hindeutet."""
         },
         {
-            "answer": "Vollständige Ersetzung quantitativer Analysen",
+            "answer": "Die dritte Welle der Spanischen Grippe spiegelt sich deutlich in den Wortfrequenzen wider",
             "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Ergänzt quantitative Analysen
-            - Liefert qualitative Einblicke
-            - Ist Teil eines umfassenden Analyseansatzes
-            - Kann quantitative Methoden nicht vollständig ersetzen"""
+            "feedback": """× Nicht korrekt. Diese Aussage widerspricht der Diskussion im Notebook, die explizit erwähnt: "Die dritte Welle scheint nicht reproduziert zu werden, was eine weitere Untersuchung erfordert." """
         },
         {
-            "answer": "Identifikation zusätzlicher relevanter Begriffe",
-            "correct": True,
-            "feedback": """✓ Richtig! KWIC hilft bei:
-            - Erweiterung des semantischen Feldes
-            - Entdeckung neuer relevanter Begriffe
-            - Kontextueller Bedeutungsanalyse
-            - Wissenschaftlicher Präzision"""
-        },
-        {
-            "answer": "Vollständige Rekonstruktion historischer Sprachverwendung",
+            "answer": "Die Frequenzanalyse ergibt keine erkennbaren Muster im Zusammenhang mit der Spanischen Grippe",
             "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Bietet Einblicke in Sprachverwendung
-            - Kann nicht die gesamte Sprachverwendung rekonstruieren
-            - Ist eine ergänzende Methode
-            - Erfordert Kombination mit anderen Analyseansätzen"""
-        },
-        {
-            "answer": "Eliminierung aller Mehrdeutigkeiten im semantischen Feld",
-            "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Hilft bei der Identifikation von Mehrdeutigkeiten
-            - Kann Mehrdeutigkeiten nicht vollständig beseitigen
-            - Unterstützt die Präzisierung
-            - Ergänzt die semantische Feldanalyse"""
+            "feedback": """× Nicht korrekt. Diese Aussage widerspricht der Diskussion im Notebook, die deutliche Muster erkennt und diese mit historischen Daten in Verbindung bringt."""
         }
     ]
 }]
 
-display_quiz(kwic_application_q1, colors=colors.jupyterquiz)
+display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
 ```
+
 ## Frage 13
 
-(Wählen Sie alle zutreffenden Antworten aus)
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_5 = [{
+    "question": """Welche Hypothese wird im Notebook für das Fehlen einer dritten Welle in der Frequenzanalyse angeführt?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Die dritte Welle der Spanischen Grippe fand außerhalb des untersuchten Zeitraums statt",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Hypothese wird im Notebook nicht angeführt. Im Gegenteil, es wird davon ausgegangen, dass die dritte Welle Anfang 1919 stattfand, was im untersuchten Zeitraum liegt."""
+        },
+        {
+            "answer": "Nach dem Verlust des Krieges und der Revolution waren Grippetodesfälle kein relevantes Nachrichtenthema mehr",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook wird folgende Hypothese angeführt: "Dies könnte besonders für Anfang 1919 zutreffen, als nach dem Verlust des Krieges und der Revolution von 1918 Grippetodesfälle kein Nachrichtenthema mehr waren." """
+        },
+        {
+            "answer": "Die dritte Welle betraf hauptsächlich ländliche Gebiete und nicht Berlin",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Hypothese wird im Notebook nicht angeführt. Es gibt keinen Hinweis darauf, dass die dritte Welle geografisch anders verteilt war als die ersten beiden."""
+        },
+        {
+            "answer": "Das semantische Feld wurde nicht korrekt definiert, um die dritte Welle zu erfassen",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Hypothese wird im Notebook nicht direkt angeführt. Es wird nicht in Frage gestellt, ob das semantische Feld für die Erfassung der dritten Welle geeignet war."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
+```
+
+## Frage 14
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
-kwic_application_q2 = [{
-    "question": "Welche Aspekte der qualitativen Ergänzung werden durch KWIC ermöglicht?",
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_6 = [{
+    "question": """Welche Zeiteinheiten werden im Notebook für die Aggregation der Frequenzdaten angeboten?""",
     "type": "multiple_choice",
     "answers": [
         {
-            "answer": "Analyse spezifischer Berichterstattung",
+            "answer": "Tage, Wochen und Monate",
             "correct": True,
-            "feedback": """✓ Richtig! KWIC ermöglicht:
-            - Untersuchung spezifischer Textpassagen
-            - Detaillierte Berichterstattungsanalyse
-            - Erfassung nuancierter Darstellungen
-            - Tiefere Textinterpretation"""
+            "feedback": """✓ Richtig! Im Notebook werden drei Zeiteinheiten für die Analyse verwendet: "frequency_parameters = ["M", "W-MON", "D"]", was für Monate, Wochen (beginnend am Montag) und Tage steht."""
         },
         {
-            "answer": "Vollständige Rekonstruktion historischer Ereignisse",
+            "answer": "Stunden, Tage und Wochen",
             "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Bietet Ausschnitte, keine vollständige Rekonstruktion
-            - Ist eine ergänzende Analysemethode
-            - Erfordert Kombination mit anderen Methoden
-            - Liefert Einblicke, keine umfassende Darstellung"""
+            "feedback": """× Nicht korrekt. Diese Kombination ist nicht korrekt. Das Notebook verwendet Tage, Wochen und Monate, nicht Stunden."""
         },
         {
-            "answer": "Untersuchung der Wortwahl und des Diskurses",
-            "correct": True,
-            "feedback": """✓ Richtig! KWIC ermöglicht:
-            - Analyse der Sprachverwendung
-            - Erfassung diskursiver Muster
-            - Untersuchung sprachlicher Nuancen
-            - Kontextuelle Bedeutungsanalyse
-
-            Ermöglicht:
-            - Tiefere Einblicke
-            - Nuancierte Interpretation
-            - Historische Kontextualisierung
-            - Ergänzung quantitativer Daten"""
-        },
-        {
-            "answer": "Präzise Vorhersage zukünftiger Sprachentwicklung",
+            "answer": "Wochen, Monate und Quartale",
             "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Analysiert historische Sprachverwendung
-            - Kann keine Sprachentwicklung vorhersagen
-            - Bietet Einblicke in vergangene Sprachnutzung
-            - Ist eine interpretierende, keine prognostische Methode"""
+            "feedback": """× Nicht korrekt. Diese Kombination ist nicht korrekt. Das Notebook verwendet Tage, Wochen und Monate, nicht Quartale."""
         },
         {
-            "answer": "Vollständige linguistische Grammatikanalyse",
+            "answer": "Nur Monate, da kleinere Zeiteinheiten zu viel Rauschen enthalten",
             "correct": False,
-            "feedback": """× Nicht korrekt. KWIC:
-            - Fokussiert auf Wortverwendung und Kontext
-            - Ist keine umfassende Grammatikanalyse
-            - Bietet Einblicke in Sprachgebrauch
-            - Erfordert ergänzende linguistische Methoden"""
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Das Notebook bietet drei verschiedene Zeiteinheiten an (Tage, Wochen und Monate), und der Benutzer kann zwischen ihnen wählen."""
         }
     ]
 }]
 
-display_quiz(kwic_application_q2, colors=colors.jupyterquiz)
+display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
 ```
 
+## Frage 15
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_7 = [{
+    "question": """Welche Schritte werden im Notebook durchgeführt, um die Daten für die Frequenzanalyse vorzubereiten?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Hinzufügen von Datumsinformationen zu den Annotationen",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook wird die Funktion add_date_to_corpus_annotations verwendet, um Datumsinformationen aus den Metadaten zu den annotierten Texten hinzuzufügen."""
+        },
+        {
+            "answer": "Zusammenführen aller annotierten Texte in eine gemeinsame Datenstruktur",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook werden alle annotierten Texte mit pd.concat(corpus_annotations.values()) in einen gemeinsamen DataFrame zusammengeführt."""
+        },
+        {
+            "answer": "Lemmatisierung der Texte während der Analyse",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Die Lemmatisierung wurde bereits in einem früheren Schritt durchgeführt, und die Texte liegen bereits als lemmatisierte CSV-Dateien vor."""
+        },
+        {
+            "answer": "Manuelle Klassifikation der Texte nach Relevanz",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Es findet keine manuelle Klassifikation der Texte während der Analyse statt."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_7, colors=colors.jupyterquiz)
+```
+
+## Frage 16
+
+Analysieren Sie folgendes Szenario:
+
+Sie planen eine diachrone Frequenzanalyse zu Berichten über eine historische Naturkatastrophe in deutschen Zeitungen. Sie haben bereits ein Korpus mit annotierten Texten und Metadaten sowie ein semantisches Feld mit relevanten Begriffen erstellt.
+
+1. Beschreiben Sie die notwendigen Schritte zur Durchführung der Frequenzanalyse.
+2. Erläutern Sie, wann und warum Sie absolute bzw. relative Häufigkeiten verwenden würden.
+3. Welche Zeiteinheiten würden Sie für die Aggregation wählen und warum?
+4. Wie würden Sie die Ergebnisse visualisieren und interpretieren?
+
+```{code-cell} ipython3
+:tags: [remove-input]
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
+
+create_answer_box('frequency-analysis')
+```
+
+````{admonition} Lösung
+:class: solution, dropdown
+**Beispiellösung zur Selbstbewertung:**
+
+**1. Notwendige Schritte zur Frequenzanalyse:**
+- Einlesen des annotierten Korpus (CSV-Dateien mit Token und Lemmata)
+- Einlesen der Metadaten mit Datumsinformationen
+- Einlesen des semantischen Feldes zur Naturkatastrophe
+- Zusammenführen der Datumsinformationen mit den Annotationen
+- Zusammenführen aller Texte in eine gemeinsame Datenstruktur
+- Filterung der Lemmata nach dem semantischen Feld
+- Gruppierung der Vorkommen nach Zeiteinheiten
+- Berechnung der absoluten und relativen Häufigkeiten
+- Visualisierung der Ergebnisse in einem Liniendiagramm
+
+**2. Verwendung von absoluten vs. relativen Häufigkeiten:**
+- Absolute Häufigkeiten würde ich verwenden, wenn ich an der tatsächlichen Anzahl der Erwähnungen interessiert bin, z.B. um die reine Medienpräsenz zu quantifizieren
+- Relative Häufigkeiten würde ich für den Vergleich zwischen Zeitabschnitten mit unterschiedlicher Textmenge verwenden
+- Bei der Analyse über einen längeren Zeitraum mit schwankender Verfügbarkeit von Zeitungsausgaben sind relative Häufigkeiten unverzichtbar
+- Idealerweise würde ich beide Werte berechnen und die Möglichkeit bieten, zwischen beiden Darstellungen zu wechseln
+
+**3. Wahl der Zeiteinheiten:**
+- Tägliche Aggregation: für detaillierte Analysen, besonders bei plötzlichen Ereignissen wie Naturkatastrophen
+- Wöchentliche Aggregation: für mittelfristige Trends, reduziert tägliche Schwankungen
+- Monatliche Aggregation: für langfristige Trends über mehrere Jahre
+- Bei einer Naturkatastrophe würde ich alle drei Ebenen anbieten, aber den Fokus auf die tägliche und wöchentliche Aggregation legen, da die mediale Aufmerksamkeit für solche Ereignisse typischerweise schnell ansteigt und dann allmählich abnimmt
+
+**4. Visualisierung und Interpretation:**
+- Interaktives Liniendiagramm mit der Möglichkeit, zwischen Zeiteinheiten und absoluten/relativen Häufigkeiten zu wechseln
+- Markierung wichtiger Ereignisse im Zusammenhang mit der Katastrophe im Diagramm
+- Vergleich der medialen Aufmerksamkeitskurve mit Daten zur tatsächlichen Intensität der Katastrophe
+- Interpretation potenzieller Diskrepanzen zwischen medialer Aufmerksamkeit und tatsächlichem Geschehen
+- Analyse von Faktoren, die die mediale Aufmerksamkeit beeinflussen könnten (andere wichtige Ereignisse, politische Situation, etc.)
+- Bei Naturkatastrophen erwarte ich einen schnellen Anstieg der Berichterstattung unmittelbar nach dem Ereignis und dann einen allmählichen Rückgang, möglicherweise mit kleineren Spitzen bei Folgeberichten oder Jahrestagen
+````
+
+
+## Frage 17
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+"""
+Lernziel: Sie können die Darstellungsmethode Keywords in Context beschreiben, Wörter zur Anzeige auswählen und diese anzeigen lassen.
+Format: Multiple Choice
+"""
+
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_1 = [{
+    "question": """Was ist der Hauptzweck der KWIC-Darstellung (Keyword in Context) in der Textanalyse?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Die automatische Lemmatisierung von Texten",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung dient nicht der Lemmatisierung von Texten. Die Lemmatisierung ist ein separater Vorverarbeitungsschritt, der bereits vor der KWIC-Analyse durchgeführt wird."""
+        },
+        {
+            "answer": "Die Anzeige von Suchbegriffen mit ihrem unmittelbaren textuellen Kontext",
+            "correct": True,
+            "feedback": """✓ Richtig! Die KWIC-Darstellung zeigt Suchbegriffe zusammen mit ihrem unmittelbaren Kontext an, typischerweise in einer dreispaltigen Tabelle mit dem Kontext vor dem Suchbegriff, dem Suchbegriff selbst und dem Kontext nach dem Suchbegriff."""
+        },
+        {
+            "answer": "Die statistische Berechnung von Wortfrequenzen",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung berechnet keine statistischen Werte wie Wortfrequenzen. Sie dient vielmehr der kontextuellen Einbettung von bereits identifizierten Suchbegriffen."""
+        },
+        {
+            "answer": "Die grafische Visualisierung von Wortfrequenzen über Zeit",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung ist keine grafische Visualisierung von Frequenzen über Zeit. Für diesen Zweck werden typischerweise Linien- oder Balkendiagramme verwendet, wie im vorherigen Abschnitt zur diachronen Analyse gezeigt."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
+```
+
+## Frage 18
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_2 = [{
+    "question": """Welche Informationen werden typischerweise in einer KWIC-Darstellung angezeigt?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Nur das Suchwort und seine Häufigkeit",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung zeigt mehr als nur das Suchwort und seine Häufigkeit. Sie stellt den Suchbegriff in seinem textuellen Kontext dar."""
+        },
+        {
+            "answer": "Das Suchwort, seine Lemmatisierung und seine Wortart",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Obwohl das Suchwort angezeigt wird, fokussiert sich die KWIC-Darstellung nicht primär auf linguistische Eigenschaften wie Lemmatisierung oder Wortart, sondern auf den textuellen Kontext."""
+        },
+        {
+            "answer": "Der linke Kontext, das Suchwort und der rechte Kontext sowie zusätzliche Metadaten",
+            "correct": True,
+            "feedback": """✓ Richtig! Die KWIC-Darstellung besteht typischerweise aus drei Hauptspalten: dem Kontext vor dem Suchwort (linker Kontext), dem Suchwort selbst und dem Kontext nach dem Suchwort (rechter Kontext). Zusätzlich können Metadaten wie Datum oder Quelle angezeigt werden."""
+        },
+        {
+            "answer": "Eine statistische Zusammenfassung aller Vorkommen des Suchwortes",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die KWIC-Darstellung bietet keine statistische Zusammenfassung, sondern zeigt jedes einzelne Vorkommen des Suchwortes in seinem Kontext."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_2, colors=colors.jupyterquiz)
+```
+
+## Frage 19
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_3 = [{
+    "question": """Welcher Schritt muss vor der Erstellung einer KWIC-Darstellung durchgeführt werden?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Einlesen und Vorbereiten des Korpus und der Metadaten",
+            "correct": True,
+            "feedback": """✓ Richtig! Wie im Notebook gezeigt, müssen zunächst das Korpus und die Metadaten eingelesen und vorbereitet werden, bevor eine KWIC-Suche durchgeführt werden kann."""
+        },
+        {
+            "answer": "Manuelle Annotation aller Texte",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Eine manuelle Annotation ist nicht zwingend erforderlich. Im Notebook wurden bereits annotierte Texte verwendet, die aus früheren Verarbeitungsschritten stammen."""
+        },
+        {
+            "answer": "Grafische Darstellung der Wortfrequenzen",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die grafische Darstellung von Wortfrequenzen ist kein notwendiger Vorbereitungsschritt für eine KWIC-Darstellung. Diese beiden Analysemethoden können unabhängig voneinander durchgeführt werden."""
+        },
+        {
+            "answer": "Statistische Berechnung der Signifikanz aller Wörter",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Eine statistische Signifikanzberechnung ist kein notwendiger Schritt vor der KWIC-Darstellung. Die KWIC-Methode zeigt alle Vorkommen eines Suchbegriffs an, unabhängig von ihrer statistischen Signifikanz."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_3, colors=colors.jupyterquiz)
+```
+
+## Frage 20
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_4 = [{
+    "question": """Welche Funktion erfüllt der Parameter n_words in der KWIC-Darstellung im Notebook?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Er gibt die maximale Anzahl der anzuzeigenden Suchwörter an",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Der Parameter n_words bezieht sich nicht auf die Anzahl der Suchwörter, sondern auf den Umfang des Kontexts."""
+        },
+        {
+            "answer": "Er definiert die minimale Frequenz, die ein Wort haben muss, um angezeigt zu werden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Der Parameter n_words bezieht sich nicht auf Frequenzen, sondern auf den Umfang des Kontexts."""
+        },
+        {
+            "answer": "Er bestimmt die Anzahl der Wörter, die links und rechts vom Suchwort angezeigt werden",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook wird der Parameter n_words=5 verwendet, um festzulegen, dass jeweils 5 Wörter vor und nach dem Suchwort als Kontext angezeigt werden sollen."""
+        },
+        {
+            "answer": "Er gibt die Gesamtzahl der anzuzeigenden KWIC-Ergebnisse an",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Der Parameter n_words bezieht sich nicht auf die Anzahl der Ergebnisse, sondern auf den Umfang des Kontexts pro Ergebnis."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
+```
+
+## Frage 21
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_5 = [{
+    "question": """Warum ist die KWIC-Darstellung eine sinnvolle Ergänzung zur quantitativen Frequenzanalyse?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Sie ist schneller durchzuführen als die Frequenzanalyse",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Die Geschwindigkeit ist nicht der Hauptvorteil der KWIC-Darstellung gegenüber der Frequenzanalyse. Beide Methoden ergänzen sich in ihren analytischen Möglichkeiten."""
+        },
+        {
+            "answer": "Sie erlaubt einen Einblick in den tatsächlichen Gebrauch der Suchwörter im Kontext",
+            "correct": True,
+            "feedback": """✓ Richtig! Während die Frequenzanalyse quantitative Daten liefert, ermöglicht die KWIC-Darstellung einen qualitativen Einblick in den tatsächlichen Gebrauch der Suchwörter in ihrem Kontext, was für die Interpretation der Daten sehr wertvoll ist."""
+        },
+        {
+            "answer": "Sie ist genauer als die Frequenzanalyse",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Es geht nicht um Genauigkeit, sondern um unterschiedliche Perspektiven. Die KWIC-Darstellung und die Frequenzanalyse bieten unterschiedliche, sich ergänzende Ansätze."""
+        },
+        {
+            "answer": "Sie kann ohne vorherige Annotation der Texte durchgeführt werden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Auch die KWIC-Darstellung profitiert von annotierten Texten, wie im Notebook gezeigt wurde, wo auf tokenisierte und lemmatisierte Texte zugegriffen wird."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
+```
+
+## Frage 22
+
+```{code-cell} ipython3
+:tags: [remove-input]
+from jupyterquiz import display_quiz
+
+import sys
+sys.path.append("..")
+from quadriga_config import colors
+
+multiple_choice_6 = [{
+    "question": """Welche Aussage zur Auswahl von Suchwörtern für die KWIC-Darstellung ist korrekt?""",
+    "type": "multiple_choice",
+    "answers": [
+        {
+            "answer": "Es sollten immer nur einzelne Wörter und keine Wortgruppen gesucht werden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Je nach Forschungsfrage können sowohl einzelne Wörter als auch Wortgruppen oder Phrasen für die KWIC-Suche relevant sein."""
+        },
+        {
+            "answer": "Die Suchwörter müssen immer aus dem vordefinierten semantischen Feld stammen",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Obwohl im Beispiel ein semantisches Feld verwendet wird, ist dies keine zwingende Voraussetzung. Die Suchwörter können frei nach Forschungsinteresse gewählt werden."""
+        },
+        {
+            "answer": "Die Suchwörter können einzeln oder als Liste übergeben werden, wie am Beispiel von word_list gezeigt",
+            "correct": True,
+            "feedback": """✓ Richtig! Im Notebook wird gezeigt, wie die gesamte Wortliste des semantischen Feldes "Grippe" als Parameter für die KWIC-Suche übergeben wird, aber es könnten auch einzelne Wörter oder andere Wortlisten verwendet werden."""
+        },
+        {
+            "answer": "Die Suchwörter müssen vorher auf ihre statistische Signifikanz geprüft werden",
+            "correct": False,
+            "feedback": """× Nicht korrekt. Eine statistische Signifikanzprüfung ist keine Voraussetzung für die Auswahl von Suchwörtern für die KWIC-Darstellung. Die Auswahl richtet sich nach dem Forschungsinteresse."""
+        }
+    ]
+}]
+
+display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
+```
+
+## Frage 23
+
+Stellen Sie sich vor, Sie möchten eine KWIC-Analyse zum Thema "Schutzmaßnahmen gegen die Spanische Grippe" durchführen.
+
+1. Welche spezifischen Wörter würden Sie für Ihre KWIC-Suche auswählen und warum?
+2. Welchen Kontextumfang (Anzahl der Wörter links und rechts vom Suchwort) würden Sie wählen und warum?
+3. Beschreiben Sie, wie Sie die KWIC-Ergebnisse nutzen würden, um Ihr Verständnis des Themas zu vertiefen.
+4. Wie würden Sie die KWIC-Analyse mit der quantitativen Frequenzanalyse kombinieren?
+
+```{code-cell} ipython3
+:tags: [remove-input]
+import sys
+sys.path.append("../quadriga_config")  # Adjust path as needed
+from assessment import create_answer_box
+
+create_answer_box('kwic-analysis')
+```
+
+````{admonition} Lösung
+:class: solution, dropdown
+**Beispiellösung zur Selbstbewertung:**
+
+**1. Auswahl der Suchwörter:**
+- Ich würde folgende Wörter wählen: "Schutzmaske", "Desinfektion", "Quarantäne", "Isolierung", "Schutzmaßnahme", "Seuchenschutz"
+- Diese Wörter beziehen sich direkt auf Schutzmaßnahmen gegen die Spanische Grippe
+- Ich würde auch verwandte Begriffe wie "Schließung" (von Schulen, öffentlichen Einrichtungen) und "Verbot" (von Versammlungen) hinzufügen
+- Die Auswahl basiert auf dem im Notebook gezeigten semantischen Feld und wurde um weitere schutzmaßnahmenbezogene Begriffe ergänzt
+
+**2. Wahl des Kontextumfangs:**
+- Ich würde einen Kontextumfang von 7-10 Wörtern wählen
+- Dies bietet mehr Kontext als die 5 Wörter im Beispiel, was bei komplexeren Themen wie Schutzmaßnahmen hilfreich sein kann
+- Ein größerer Kontext ermöglicht es, nicht nur die unmittelbare Umgebung des Suchbegriffs zu sehen, sondern auch breitere syntaktische und semantische Zusammenhänge zu erfassen
+- Bei zu großem Kontext könnte die Übersichtlichkeit leiden, daher ist eine Begrenzung auf 7-10 Wörter sinnvoll
+
+**3. Nutzung der KWIC-Ergebnisse:**
+- Identifikation der konkreten Schutzmaßnahmen, die während der Pandemie ergriffen wurden
+- Analyse der Bewertung dieser Maßnahmen (positiv, negativ, neutral) im Kontext
+- Untersuchung, ob bestimmte Maßnahmen mit bestimmten Akteuren (Behörden, Ärzte, Bürger) assoziiert werden
+- Erkennung von zeitlichen Mustern: Wann wurden welche Maßnahmen thematisiert?
+- Vergleich der Darstellung verschiedener Maßnahmen in unterschiedlichen Zeitungen
+
+**4. Kombination mit quantitativer Frequenzanalyse:**
+- Zunächst Identifikation von zeitlichen Mustern durch Frequenzanalyse (wann wurden Schutzmaßnahmen besonders häufig thematisiert?)
+- Gezielte KWIC-Analyse für diese Zeiträume, um qualitative Einblicke zu gewinnen
+- Überprüfung, ob Häufigkeitsspitzen mit bestimmten Ereignissen oder Maßnahmen korrelieren
+- Nutzung der KWIC-Ergebnisse zur Verfeinerung des semantischen Feldes für weitere Frequenzanalysen
+- Kombinierte Darstellung von quantitativen Trends und exemplarischen KWIC-Auszügen in einer Forschungspräsentation
+````
