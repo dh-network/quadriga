@@ -11,6 +11,7 @@ parts:
     - file: markdown/research-question_research-question
     - file: markdown/research-question_operationalization
     - file: markdown/research-question_summary
+    - file: markdown/fragestellung_assessment
   - caption: Korpusaufbau. Auswählen, sammeln, dokumentieren
     chapters:
     - file: markdown/corpus-collection_intro    
@@ -19,6 +20,7 @@ parts:
     - file: markdown/corpus-collection_metadata
     - file: markdown/corpus-collection_building-our-corpus
     - file: markdown/corpus-collection_summary
+    - file: markdown/korpusaufbau_assessment
   - caption: OCR. Von Bild zu Text
     chapters:
     - file: markdown/ocr_intro
@@ -27,6 +29,7 @@ parts:
     - file: markdown/ocr-quality
     - file: data-input/FS_1_MVP_OCR_Quality
     - file: markdown/ocr_summary
+    - file: markdown/ocr_assessment
   - caption: OCR-Nachbereitung. Manuell, automatisch, LLMs
     chapters:
     - file: markdown/post-correcting_intro
@@ -34,12 +37,14 @@ parts:
     - file: data-input/FS_1_MVP_Post_Correcting_OCR
     - file: markdown/post-correcting_llm
     - file: markdown/post-correcting_summary
+    - file: markdown/post-correcting_assessment
   - caption: Korpusverarbeitung. Von Strings zu Token
     chapters:
     - file: markdown/corpus-processing_intro
     - file: markdown/corpus-processing_intro-to-nlp
     - file: nlp-enrichment/NLP-Enrichment
     - file: markdown/corpus-processing_resumee
+    - file: markdown/corpus-processing_assessment
   - caption: Korpusanalyse. Von Häufigkeiten zu Diagrammen
     chapters:
     - file: markdown/corpus-analysis_intro
@@ -47,6 +52,7 @@ parts:
     - file: word_search/FS_1_MVP_Analysis_Diachronic_Frequencies_Plots
     - file: word_search/FS_1_MVP_Analysis_KWIC
     - file: markdown/corpus-analysis_resumee
+    - file: markdown/corpus-analysis_assessment
   - caption: Reflexion und Resümee
     chapters:
     - file: markdown/reflection_reflection

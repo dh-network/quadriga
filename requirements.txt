@@ -69,8 +69,8 @@ Levenshtein==0.25.0
 linkify-it-py==2.0.3
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
-matplotlib==3.5.2
-matplotlib-inline==0.1.6
+matplotlib
+matplotlib-inline
 mdit-py-plugins==0.4.0
 mdurl==0.1.2
 mistune==3.0.2
@@ -173,3 +173,4 @@ webencodings==0.5.1
 websocket-client==1.7.0
 widgetsnbextension==4.0.10
 zipp==3.18.0
+jupyterquiz==2.8.*
