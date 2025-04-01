@@ -99,7 +99,7 @@ multiple_choice_2 = [{
         {
             "answer": "Absolute Häufigkeit misst das Vorkommen in Qualitätszeitungen, relative Häufigkeit in allen verfügbaren Medien",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Der Unterschied zwischen absoluter und relativer Häufigkeit bezieht sich nicht auf unterschiedliche Medientypen, sondern auf die Art der Berechnung."""
+            "feedback": """× Nicht korrekt. Der Unterschied zwischen absoluter und relativer Häufigkeit bezieht sich nicht auf unterschiedliche Medientypen, sondern auf die Art der Berechnung."""
         },
         {
             "answer": "Absolute Häufigkeit ist die tatsächliche Anzahl des Vorkommens eines Wortes, relative Häufigkeit setzt diese ins Verhältnis zur Textlänge",
@@ -109,7 +109,7 @@ multiple_choice_2 = [{
         {
             "answer": "Absolute Häufigkeit bezieht sich auf ein einzelnes Wort, relative Häufigkeit auf ein ganzes semantisches Feld",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Sowohl absolute als auch relative Häufigkeit können sich auf einzelne Wörter oder auf semantische Felder beziehen. Der Unterschied liegt in der Berechnungsmethode, nicht im betrachteten Objekt."""
+            "feedback": """× Nicht korrekt. Sowohl absolute als auch relative Häufigkeit können sich auf einzelne Wörter oder auf semantische Felder beziehen. Der Unterschied liegt in der Berechnungsmethode, nicht im betrachteten Objekt."""
         }
     ]
 }]
@@ -144,7 +144,7 @@ multiple_choice_3 = [{
         {
             "answer": "Weil absolute Häufigkeiten nur in Prozentangaben aussagekräftig sind",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Absolute Häufigkeiten sind durchaus aussagekräftig, allerdings nicht für den Vergleich von Texten unterschiedlicher Länge. Prozentangaben sind eine Form der relativen Häufigkeit, nicht der absoluten."""
+            "feedback": """× Nicht korrekt. Absolute Häufigkeiten sind durchaus aussagekräftig, allerdings nicht für den Vergleich von Texten unterschiedlicher Länge. Prozentangaben sind eine Form der relativen Häufigkeit, nicht der absoluten."""
         },
         {
             "answer": "Weil verschiedene Zeitungen unterschiedliche Erscheinungszyklen haben",
@@ -200,46 +200,6 @@ display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
 ```
 
 ## Frage 5
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-multiple_choice_5 = [{
-    "question": """Welche Funktion erfüllt die KWIC-Darstellung (Keyword in Context) in der Textanalyse?""",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Sie ermöglicht die automatische Berechnung der relativen Häufigkeiten",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Die KWIC-Darstellung ist kein Berechnungswerkzeug für Häufigkeiten, sondern eine Visualisierungsmethode, die den Kontext von Suchbegriffen zeigt."""
-        },
-        {
-            "answer": "Sie bildet eine Brücke zwischen quantitativer und qualitativer Analyse, indem sie den Kontext der Suchbegriffe zeigt",
-            "correct": True,
-            "feedback": """✓ Richtig! Im Text heißt es: "Die KWIC-Darstellung bildet eine Brücke von der quantitativen zur qualitativen Analyse, da die Grundlage der Häufigkeitenanalyse genauer in Betracht genommen werden kann." Sie ermöglicht es, Muster im Wortgebrauch zu erkennen und die Qualität des semantischen Feldes zu überprüfen."""
-        },
-        {
-            "answer": "Sie dient ausschließlich der grafischen Darstellung von Häufigkeitsverläufen über die Zeit",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Die grafische Darstellung von Häufigkeitsverläufen wird durch Linien- oder Balkendiagramme erreicht, nicht durch die KWIC-Darstellung. KWIC zeigt den textuellen Kontext von Suchbegriffen."""
-        },
-        {
-            "answer": "Sie erlaubt die automatische Identifikation aller Wörter des semantischen Feldes",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Die KWIC-Darstellung identifiziert nicht automatisch alle Wörter eines semantischen Feldes, sondern zeigt den Kontext bereits identifizierter Suchbegriffe. Sie kann jedoch zur Verbesserung eines semantischen Feldes beitragen."""
-        }
-    ]
-}]
-
-display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
-```
-
-## Frage 6
 Betrachten Sie folgende drei Texte und ihre Häufigkeitswerte:
 
 - Text A: 30 Grippewörter bei 600 Wörtern Gesamtlänge 
@@ -266,7 +226,7 @@ multiple_choice_6 = [{
         {
             "answer": "0,075 (7,5%)",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Antwort ist falsch. Die korrekte Berechnung ist: Summe aller Grippewörter geteilt durch Summe aller Wörter: (30+25+20)/(600+400+500) = 75/1500 = 0,05 (5%)."""
+            "feedback": """× Nicht korrekt. Die korrekte Berechnung ist: Summe aller Grippewörter geteilt durch Summe aller Wörter: (30+25+20)/(600+400+500) = 75/1500 = 0,05 (5%)."""
         },
         {
             "answer": "0,0625 (6,25%)",
@@ -284,7 +244,7 @@ multiple_choice_6 = [{
 display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
 ```
 
-## Frage 7
+## Frage 6
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -324,7 +284,7 @@ multiple_choice_7 = [{
 display_quiz(multiple_choice_7, colors=colors.jupyterquiz)
 ```
 
-## Frage 8
+## Frage 7
 
 Analysieren Sie das folgende Szenario:
 
@@ -357,7 +317,7 @@ create_answer_box('semantic-field')
 
 **2. Bedeutung relativer Häufigkeiten für den Zeitungsvergleich:**
 - Zeitungen haben unterschiedliche Formate, Umfänge und Erscheinungsweisen
-- Absolute Häufigkeiten wären stark von der Gesamttextmenge abhängig
+- Absolute Häufigkeiten wären stark von den Gesamttextlängen abhängig
 - Relative Häufigkeiten ermöglichen fairen Vergleich unabhängig von Textlänge
 - Beispiel: Eine Zeitung mit 50 COVID-Begriffen in 1000 Wörtern (5%) vs. eine Zeitung mit 100 COVID-Begriffen in 4000 Wörtern (2,5%)
 
@@ -377,7 +337,7 @@ create_answer_box('semantic-field')
 ````
 
 
-## Frage 9
+## Frage 8
 (Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
@@ -430,7 +390,7 @@ multiple_choice_1 = [{
 display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
 
-## Frage 10
+## Frage 9
 (Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
@@ -471,7 +431,7 @@ multiple_choice_2 = [{
 display_quiz(multiple_choice_2, colors=colors.jupyterquiz)
 ```
 
-## Frage 11
+## Frage 10
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -488,22 +448,22 @@ multiple_choice_3 = [{
         {
             "answer": "Absolute Häufigkeiten sind präziser und sollten daher immer bevorzugt werden",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Absolute Häufigkeiten geben zwar die tatsächliche Anzahl der Vorkommen an, können aber bei unterschiedlichen Textmengen pro Zeitabschnitt zu verzerrten Ergebnissen führen."""
+            "feedback": """× Nicht korrekt. Absolute Häufigkeiten geben zwar die tatsächliche Anzahl der Vorkommen an, können aber bei unterschiedlichen Textlängen pro Zeitabschnitt zu verzerrten Ergebnissen führen."""
         },
         {
-            "answer": "Relative Häufigkeiten berücksichtigen unterschiedliche Textmengen in verschiedenen Zeitabschnitten",
+            "answer": "Relative Häufigkeiten berücksichtigen unterschiedliche Textlängen in verschiedenen Zeitabschnitten",
             "correct": True,
-            "feedback": """✓ Richtig! Relative Häufigkeiten setzen die Anzahl der Vorkommen ins Verhältnis zur Gesamttextmenge und ermöglichen dadurch einen faireren Vergleich zwischen Zeitabschnitten mit unterschiedlich vielen Texten oder unterschiedlichen Textlängen."""
+            "feedback": """✓ Richtig! Relative Häufigkeiten setzen die Anzahl der Vorkommen ins Verhältnis zur Gesamttextlänge und ermöglichen dadurch einen faireren Vergleich zwischen Zeitabschnitten mit unterschiedlich vielen Texten oder unterschiedlichen Textlängen."""
         },
         {
             "answer": "Absolute Häufigkeiten sind nur für die tägliche Analyse relevant, relative Häufigkeiten nur für die monatliche",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Sowohl absolute als auch relative Häufigkeiten können für alle zeitlichen Granularitäten (Tag, Woche, Monat) relevant sein, abhängig vom Analyseziel und der Beschaffenheit der Daten."""
+            "feedback": """× Nicht korrekt. Sowohl absolute als auch relative Häufigkeiten können für alle zeitlichen Granularitäten (Tag, Woche, Monat) relevant sein, abhängig vom Analyseziel und der Beschaffenheit der Daten."""
         },
         {
             "answer": "Die Unterscheidung ist nur wichtig, wenn unterschiedliche Zeitungen verglichen werden",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist zu eingeschränkt. Die Unterscheidung zwischen absoluten und relativen Häufigkeiten ist bei jeder Art von diachroner Analyse wichtig, bei der die Textmenge über die Zeit variiert, nicht nur beim Vergleich verschiedener Zeitungen."""
+            "feedback": """× Nicht korrekt. Diese Aussage ist zu eingeschränkt. Die Unterscheidung zwischen absoluten und relativen Häufigkeiten ist bei jeder Art von diachroner Analyse wichtig, bei der die Textlängen und die Textanzahl über die Zeit variiert, nicht nur beim Vergleich verschiedener Zeitungen."""
         }
     ]
 }]
@@ -511,7 +471,7 @@ multiple_choice_3 = [{
 display_quiz(multiple_choice_3, colors=colors.jupyterquiz)
 ```
 
-## Frage 12
+## Frage 11
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -551,7 +511,7 @@ multiple_choice_4 = [{
 display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
 ```
 
-## Frage 13
+## Frage 12
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -591,7 +551,7 @@ multiple_choice_5 = [{
 display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
 ```
 
-## Frage 14
+## Frage 13
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -623,7 +583,7 @@ multiple_choice_6 = [{
         {
             "answer": "Nur Monate, da kleinere Zeiteinheiten zu viel Rauschen enthalten",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Das Notebook bietet drei verschiedene Zeiteinheiten an (Tage, Wochen und Monate), und der Benutzer kann zwischen ihnen wählen."""
+            "feedback": """× Nicht korrekt. Das Notebook bietet drei verschiedene Zeiteinheiten an (Tage, Wochen und Monate), und Benutzer:innen können zwischen ihnen wählen."""
         }
     ]
 }]
@@ -631,7 +591,7 @@ multiple_choice_6 = [{
 display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
 ```
 
-## Frage 15
+## Frage 14
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -671,7 +631,7 @@ multiple_choice_7 = [{
 display_quiz(multiple_choice_7, colors=colors.jupyterquiz)
 ```
 
-## Frage 16
+## Frage 15
 
 Analysieren Sie folgendes Szenario:
 
@@ -707,16 +667,16 @@ create_answer_box('frequency-analysis')
 - Visualisierung der Ergebnisse in einem Liniendiagramm
 
 **2. Verwendung von absoluten vs. relativen Häufigkeiten:**
-- Absolute Häufigkeiten würde ich verwenden, wenn ich an der tatsächlichen Anzahl der Erwähnungen interessiert bin, z.B. um die reine Medienpräsenz zu quantifizieren
-- Relative Häufigkeiten würde ich für den Vergleich zwischen Zeitabschnitten mit unterschiedlicher Textmenge verwenden
+- Absolute Häufigkeiten können verwendet werden, wenn die tatsächlichen Anzahl der Erwähnungen von Interesse ist, z.B. um die reine Medienpräsenz zu quantifizieren
+- Relative Häufigkeiten können für den Vergleich zwischen Zeitabschnitten mit unterschiedlicher Textmenge verwendet werden
 - Bei der Analyse über einen längeren Zeitraum mit schwankender Verfügbarkeit von Zeitungsausgaben sind relative Häufigkeiten unverzichtbar
-- Idealerweise würde ich beide Werte berechnen und die Möglichkeit bieten, zwischen beiden Darstellungen zu wechseln
+- Idealerweise werden beide Werte berechnet, da dies die Möglichkeit bietet, zwischen beiden Darstellungen zu wechseln
 
 **3. Wahl der Zeiteinheiten:**
 - Tägliche Aggregation: für detaillierte Analysen, besonders bei plötzlichen Ereignissen wie Naturkatastrophen
 - Wöchentliche Aggregation: für mittelfristige Trends, reduziert tägliche Schwankungen
 - Monatliche Aggregation: für langfristige Trends über mehrere Jahre
-- Bei einer Naturkatastrophe würde ich alle drei Ebenen anbieten, aber den Fokus auf die tägliche und wöchentliche Aggregation legen, da die mediale Aufmerksamkeit für solche Ereignisse typischerweise schnell ansteigt und dann allmählich abnimmt
+- Bei einer Naturkatastrophe könnten alle drei Ebenen angeboten werden, aber der Fokus sollte auf der täglichen und wöchentlichen Aggregation legen, da die mediale Aufmerksamkeit für solche Ereignisse typischerweise schnell ansteigt und dann allmählich abnimmt
 
 **4. Visualisierung und Interpretation:**
 - Interaktives Liniendiagramm mit der Möglichkeit, zwischen Zeiteinheiten und absoluten/relativen Häufigkeiten zu wechseln
@@ -724,11 +684,11 @@ create_answer_box('frequency-analysis')
 - Vergleich der medialen Aufmerksamkeitskurve mit Daten zur tatsächlichen Intensität der Katastrophe
 - Interpretation potenzieller Diskrepanzen zwischen medialer Aufmerksamkeit und tatsächlichem Geschehen
 - Analyse von Faktoren, die die mediale Aufmerksamkeit beeinflussen könnten (andere wichtige Ereignisse, politische Situation, etc.)
-- Bei Naturkatastrophen erwarte ich einen schnellen Anstieg der Berichterstattung unmittelbar nach dem Ereignis und dann einen allmählichen Rückgang, möglicherweise mit kleineren Spitzen bei Folgeberichten oder Jahrestagen
+- Bei Naturkatastrophen wird ein schneller Anstieg der Berichterstattung unmittelbar nach dem Ereignis erwartet und dann ein allmählicher Rückgang, möglicherweise mit kleineren Spitzen bei Folgeberichten oder Jahrestagen
 ````
 
 
-## Frage 17
+## Frage 16
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -774,7 +734,7 @@ multiple_choice_1 = [{
 display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
 
-## Frage 18
+## Frage 17
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -814,7 +774,7 @@ multiple_choice_2 = [{
 display_quiz(multiple_choice_2, colors=colors.jupyterquiz)
 ```
 
-## Frage 19
+## Frage 18
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -854,7 +814,7 @@ multiple_choice_3 = [{
 display_quiz(multiple_choice_3, colors=colors.jupyterquiz)
 ```
 
-## Frage 20
+## Frage 19
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -894,7 +854,7 @@ multiple_choice_4 = [{
 display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
 ```
 
-## Frage 21
+## Frage 20
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -911,7 +871,7 @@ multiple_choice_5 = [{
         {
             "answer": "Sie ist schneller durchzuführen als die Frequenzanalyse",
             "correct": False,
-            "feedback": """× Nicht korrekt. Die Geschwindigkeit ist nicht der Hauptvorteil der KWIC-Darstellung gegenüber der Frequenzanalyse. Beide Methoden ergänzen sich in ihren analytischen Möglichkeiten."""
+            "feedback": """× Nicht korrekt. Die Geschwindigkeit ist kein Vorteil der KWIC-Darstellung gegenüber der Frequenzanalyse. Beide Methoden ergänzen sich in ihren analytischen Möglichkeiten."""
         },
         {
             "answer": "Sie erlaubt einen Einblick in den tatsächlichen Gebrauch der Suchwörter im Kontext",
@@ -934,7 +894,7 @@ multiple_choice_5 = [{
 display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
 ```
 
-## Frage 22
+## Frage 21
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -974,7 +934,7 @@ multiple_choice_6 = [{
 display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
 ```
 
-## Frage 23
+## Frage 22
 
 Stellen Sie sich vor, Sie möchten eine KWIC-Analyse zum Thema "Schutzmaßnahmen gegen die Spanische Grippe" durchführen.
 

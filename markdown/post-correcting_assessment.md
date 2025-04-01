@@ -262,7 +262,7 @@ sys.path.append("..")
 from quadriga_config import colors
 
 multiple_choice_6 = [{
-    "question": """Welche Aussagen zur Korrektur historischer Schreibweisen (wie 'ſ') sind korrekt?""",
+    "question": """Welche Aussagen zur Änderung historischer Schreibweisen (wie 'ſ' zu 's') sind korrekt?""",
     "type": "multiple_choice",
     "answers": [
         {
@@ -271,12 +271,12 @@ multiple_choice_6 = [{
             "feedback": """× Nicht korrekt. Bei der Umwandlung historischer Schreibweisen wie 'ſ' zu 's' handelt es sich nicht um eine Fehlerkorrektur, sondern um eine Normalisierung, da die ursprüngliche Form keine fehlerhafte Erkennung darstellt."""
         },
         {
-            "answer": "Die Korrektur kann durch einfache Zeichenersetzung erfolgen",
+            "answer": "Die Änderung kann durch einfache Zeichenersetzung erfolgen",
             "correct": True,
             "feedback": """✓ Richtig! Diese Art der Normalisierung kann systematisch durch direkte Zeichenersetzung im gesamten Text umgesetzt werden."""
         },
         {
-            "answer": "Diese Art der Korrektur ist wichtig für moderne NLP-Werkzeuge",
+            "answer": "Diese Art der Änderung ist wichtig für moderne NLP-Werkzeuge",
             "correct": True,
             "feedback": """✓ Richtig! Moderne Textanalysewerkzeuge sind oft für gegenwärtige Sprachformen optimiert, weshalb die Normalisierung historischer Schreibweisen die Verarbeitungsqualität verbessert."""
         },
@@ -609,28 +609,28 @@ sys.path.append("..")
 from quadriga_config import colors
 
 multiple_choice_14 = [{
-    "question": """Welche Probleme können durch ungenaue Prompts bei der LLM-basierten OCR-Nachbearbeitung entstehen?""",
+    "question": """Welche orthographischen und inhaltlichen Probleme können bei der LLM-basierten OCR-Nachbearbeitung entstehen?""",
     "type": "multiple_choice",
     "answers": [
         {
             "answer": "Zu starke Normalisierung historischer Schreibweisen",
             "correct": True,
-            "feedback": """✓ Richtig! Ohne präzise Anweisungen könnten LLMs historische Schreibweisen zu stark modernisieren und damit wichtige historische Sprachmerkmale verlieren."""
+            "feedback": """✓ Richtig! Ohne präzise Anweisungen im Prompt könnten LLMs historische Schreibweisen zu stark modernisieren und damit wichtige historische Sprachmerkmale verlieren."""
         },
         {
             "answer": "Unbeabsichtigte Veränderung des Originaltextes",
             "correct": True,
-            "feedback": """✓ Richtig! LLMs könnten bei ungenauen Anweisungen den ursprünglichen Text inhaltlich verändern, was besonders bei historischen oder wissenschaftlichen Texten problematisch ist."""
+            "feedback": """✓ Richtig! LLMs könnten den ursprünglichen Text inhaltlich verändern, was besonders bei historischen oder wissenschaftlichen Texten problematisch ist."""
         },
         {
             "answer": "Einführung anachronistischer Begriffe",
             "correct": True,
-            "feedback": """✓ Richtig! Ohne klare Einschränkungen könnten LLMs moderne Begriffe in historische Texte einfügen, die zur Entstehungszeit nicht existierten."""
+            "feedback": """✓ Richtig! Ohne klare Einschränkungen im Prompt könnten LLMs moderne Begriffe in historische Texte einfügen, die zur Entstehungszeit nicht existierten."""
         },
         {
             "answer": "Bessere Erkennung von Fachtermini",
             "correct": False,
-            "feedback": """× Nicht korrekt. Ungenaue Prompts führen nicht zu einer besseren Erkennung, sondern erhöhen das Risiko, dass Fachbegriffe falsch interpretiert oder ersetzt werden."""
+            "feedback": """× Nicht korrekt. Die Anwendung von LLMs bei der Nachbereitung führt nicht zu einer besseren Erkennung, sondern erhöht das Risiko, dass Fachbegriffe falsch interpretiert oder ersetzt werden."""
         }
     ]
 }]

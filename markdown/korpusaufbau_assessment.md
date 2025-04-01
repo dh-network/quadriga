@@ -232,12 +232,12 @@ display_quiz(statements, colors=colors.jupyterquiz)
 
 ## Frage 3
 
-**Szenario:** Ein Forschungsprojekt möchte einen historischen Zeitungskorpus erstellen, der:
+**Szenario:** Ein Forschungsprojekt möchte ein historisches Zeitungskorpus erstellen, das:
 - für automatische Textanalysen nutzbar ist
 - die ursprüngliche Seitengestaltung dokumentiert
 - langfristig archiviert werden soll
 
-**Frage:** Welche Kombination von Formaten würden Sie empfehlen?
+**Frage:** Welches Format oder Kombination von Formaten würden Sie empfehlen?
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -250,14 +250,21 @@ create_answer_box('korpus-1')
 
 ````{admonition}  Lösungen
 :class: solution, dropdown
-**Musterlösung:** Kombination aus Bilddigitalisaten (PDF) und Plain Text
+**Musterlösung:** XML oder Kombination aus Bilddigitalisaten (PDF) und Plain Text
 
 **Begründung:**
+XML:
+- kann sowohl Text als auch Informationen zum originalen Layout in spezialisierten Tags speichern
+- kann Text und Bildinformationen verknüpfen
+- ermöglicht automatische Textanalysen
+- eignet sich zur Langzeitarchivierung
+- Nachteil: Die Verarbeitung ist komplexer als die von Plain Text
 
 Bilddigitalisate (PDF):
 - Bewahren das originale Layout
 - Dienen als Referenz
 - Eignen sich für die Langzeitarchivierung
+- Nachteil: automatische Prozessierung und Verknüpfung zu Plain Text ist nicht möglich
 
 Plain Text (nach OCR):
 - Ermöglicht automatische Textanalysen  
@@ -265,9 +272,9 @@ Plain Text (nach OCR):
 - Geringer Speicherbedarf
 
 Alternative Ansätze:
-- XML/TEI wäre zu aufwendig für große Korpora
 - CSV ist nicht geeignet für Volltext
 - Nur Bilddigitalisate würden Analysen erschweren
+- Nur Plain Text dokumentiert die ursprüngliche Seitengestaltung nicht
 ````
 ## Frage 4
 (Wählen Sie alle zutreffenden Antworten aus)
@@ -326,7 +333,7 @@ from quadriga_config import colors
 
 format_questions = [
     {
-        "question": "Welche der folgenden Formate können Formatierungen darstellen oder speichern? (Mehrere Antworten können korrekt sein)",
+        "question": "Welche der folgenden Formate können Formatierungen (z.B. Kursivierung / Fettung) darstellen oder speichern? (Mehrere Antworten können korrekt sein)",
         "type": "multiple_choice",
         "answers": [
             {
@@ -408,7 +415,7 @@ from quadriga_config import colors
 
 format_questions = [
     {
-        "question": "Welche der folgenden Formate sind besonders speichereffizient? (Mehrere Antworten können korrekt sein)",
+        "question": "Zusatzfrage: Welche der folgenden Formate sind besonders speichereffizient? (Mehrere Antworten können korrekt sein)",
         "type": "multiple_choice",
         "answers": [
             {
@@ -619,46 +626,6 @@ metadata_questions = [
 display_quiz(metadata_questions, colors=colors.jupyterquiz)
 ```
 ### Frage 6(c)
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-metadata_questions = [
-    {
-        "question": """Auf welcher Beschreibungsebene wird das "teiHeader"-Element verwendet?""",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Nur auf Korpus-Level",
-                "correct": False,
-                "feedback": """× Falsch. Der "teiHeader" wird nicht ausschließlich für die Beschreibung des gesamten Korpus verwendet."""
-            },
-            {
-                "answer": "Nur auf Dokument-Level",
-                "correct": False,
-                "feedback": """× Falsch. Der "teiHeader" wird nicht ausschließlich für einzelne Dokumente verwendet."""
-            },
-            {
-                "answer": "Sowohl auf Korpus- als auch auf Dokument-Level",
-                "correct": True,
-                "feedback": """✓ Richtig. Der "teiHeader" ist flexibel und kann Metadaten sowohl für ein einzelnes Dokument als auch für eine Sammlung (Korpus) aufnehmen. Er enthält strukturierte Metadaten und kann je nach Kontext angepasst werden."""
-            },
-            {
-                "answer": "Auf keiner der genannten Ebenen",
-                "correct": False,
-                "feedback": """× Falsch. Der "teiHeader" ist ein zentrales Element für die Metadatenbeschreibung in TEI."""
-            }
-        ]
-    }
-]
-
-display_quiz(metadata_questions, colors=colors.jupyterquiz)
-```
-### Frage 6(d)
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
@@ -908,66 +875,6 @@ display_quiz(metadata_schema_questions, colors=colors.jupyterquiz)
 ```
 
 ## Frage 9
-
-### Frage 9(a)
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-"""
-Lernziel:
-    Sie können den schrittweisen Prozess des praktischen Korpusaufbaus (Konzeptentwicklung, Metadatenerstellung und Datensammlung) am Beispiel eines Zeitungskorpus beschreiben.
-Bloom-Stufe: Verstehen
-Format: Multiple Choice + Projektplanung
-Geschätzte Zeit: 30 Minuten
-Schwerpunkte:
-    - Planung des Korpusaufbaus
-    - Berücksichtigung praktischer Einschränkungen
-    - Qualitätssicherung im Aufbauprozess
-"""
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-sequence_questions = [
-    {
-        "question": "Welcher Schritt kommt beim Korpusaufbau an ERSTER Stelle?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Durchführung der Datensammlung",
-                "correct": False,
-                "feedback": """× Falsch. Die Datensammlung kann erst erfolgen, nachdem konzeptionelle Grundlagen gelegt wurden."""
-            },
-            {
-                "answer": "Entwicklung des Korpuskonzepts",
-                "correct": True,
-                "feedback": """✓ Richtig. Das Korpuskonzept legt die Grundlage für alle weiteren Schritte, definiert den Umfang und die Kriterien und berücksichtigt praktische Einschränkungen. Ohne klares Konzept fehlt die Orientierung für alle folgenden Schritte."""
-            },
-            {
-                "answer": "Festlegung der Metadatenstruktur",
-                "correct": False,
-                "feedback": """× Falsch. Die Metadatenstruktur baut auf dem zuvor entwickelten Konzept auf."""
-            },
-            {
-                "answer": "Test der Sammlungsmethodik",
-                "correct": False,
-                "feedback": """× Falsch. Der Test setzt voraus, dass Konzept, Kriterien und Metadatenstruktur bereits definiert sind."""
-            },
-            {
-                "answer": "Dokumentation der Auswahlkriterien",
-                "correct": False,
-                "feedback": """× Falsch. Die Auswahlkriterien können erst dokumentiert werden, nachdem das Grundkonzept entwickelt wurde."""
-            }
-        ]
-    }
-]
-
-display_quiz(sequence_questions, colors=colors.jupyterquiz)
-```
-
-### Frage 9(b)
 ```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
@@ -976,161 +883,37 @@ import sys
 sys.path.append("..")
 from quadriga_config import colors
 
-sequence_questions = [
+sequence_question = [
     {
-        "question": "Welcher Schritt folgt beim Korpusaufbau unmittelbar nach der Entwicklung des Korpuskonzepts?",
+        "question": "In welcher Reihenfolge werden die folgenden Schritte beim Korpusaufbau durchgeführt?",
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "Durchführung der Datensammlung",
+                "answer": "1. Durchführung der Datensammlung → 2. Dokumention der Auswahlkriterien → 3. Testen der Sammlungsmethodik",
                 "correct": False,
-                "feedback": """× Falsch. Vor der eigentlichen Datensammlung müssen weitere vorbereitende Schritte erfolgen."""
+                "feedback": """× Falsch. Die Datensammlung kann erst durchgeführt werden, wenn ein Korpuskonzept erstellt wurde. Außerdem muss eine Metadatenstruktur festgelegt werden."""
             },
             {
-                "answer": "Dokumentation der Auswahlkriterien",
+                "answer": "1. Entwicklung des Korpuskonzepts → 2. Dokumentation der Auswahlkriterien → 3. Festlegung des Metadatenstruktur → 4. Test der Sammlungsmethodik → Durchführung der Datensammlung",
                 "correct": True,
-                "feedback": """✓ Richtig. Nach der Entwicklung des Grundkonzepts werden die konkreten Auswahlkriterien dokumentiert. Dies macht den Prozess nachvollziehbar, sichert die wissenschaftliche Qualität und ermöglicht eine spätere Nachnutzung des Korpus."""
+                "feedback": """✓ Richtig! Dies ist die korrekte Reihenfolge: Die Erstellung des Konzept muss an erster Stelle erfolgen. Bevor ein erster Test zur Machbarkeit der Sammlungsmethodik durchgeführt werden kann, müssen die Kriterien zur Auswahl der Daten festgelegt werden sowie eine Struktur, in der die Metadaten gespeichert werden. Wenn erste Tests der Sammlungsmethodik erfolgreich waren, kann die Sammlung der kompletten Daten ausgeführt werden."""
             },
             {
-                "answer": "Festlegung der Metadatenstruktur",
+                "answer": "1. Festlegung des Metadatenschemas → 2. Dokumentation der Auswahlkriterien → 3. Test der Sammlungsmethodik → 4. Durchführung der Datensammlung",
                 "correct": False,
-                "feedback": """× Falsch. Die Metadatenstruktur wird erst festgelegt, nachdem die Auswahlkriterien dokumentiert wurden."""
+                "feedback": """× Falsch. Es muss zuerst ein Korpuskonzept festgelegt werden, damit eine Metadatenstruktur und die Auswahlkriterien festgelegt werden können."""
             },
             {
-                "answer": "Test der Sammlungsmethodik",
+                "answer": "1. Entwicklung des Korpuskonzepts → 2. Festlegung des Metadatenschemas → 3. Durchführung der Datensammlung → 4. Test der Sammlungsmethodik → 5. Dokumentation der Auswahlkriterien",
                 "correct": False,
-                "feedback": """× Falsch. Der Test erfolgt erst nach der Konzeption der Methodik und der Metadatenstruktur."""
+                "feedback": """× Falsch. Die Datensammlung kann nicht durchgeführt werden, ohne dass die Auswahlkriterien zur Sammlung festgelegt wurden. Auch sollte die Sammlungsmethodik getestet werden, bevor sie auf den gesamten Daten ausgeführt wird."""
             }
         ]
     }
 ]
 
-display_quiz(sequence_questions, colors=colors.jupyterquiz)
+display_quiz(question5, colors=colors.jupyterquiz, max_width=1000)
 ```
-
-### Frage 9(c)
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-sequence_questions = [
-    {
-        "question": "Welcher Schritt folgt beim Korpusaufbau nach der Dokumentation der Auswahlkriterien?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Durchführung der Datensammlung",
-                "correct": False,
-                "feedback": """× Falsch. Die Datensammlung erfolgt erst nach weiteren vorbereitenden Schritten."""
-            },
-            {
-                "answer": "Festlegung der Metadatenstruktur",
-                "correct": True,
-                "feedback": """✓ Richtig. Nach der Dokumentation der Auswahlkriterien wird die Metadatenstruktur festgelegt. Diese basiert auf dem Konzept und den Kriterien, strukturiert die Datenerfassung und ermöglicht eine systematische Sammlung."""
-            },
-            {
-                "answer": "Test der Sammlungsmethodik",
-                "correct": False,
-                "feedback": """× Falsch. Der Test der Methodik erfolgt erst nach der Festlegung der Metadatenstruktur."""
-            }
-        ]
-    }
-]
-
-display_quiz(sequence_questions, colors=colors.jupyterquiz)
-```
-
-### Frage 9(d)
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-sequence_questions = [
-    {
-        "question": "Welcher Schritt kommt beim Korpusaufbau vor der eigentlichen Durchführung der Datensammlung?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Entwicklung des Korpuskonzepts",
-                "correct": False,
-                "feedback": """× Falsch. Das Korpuskonzept steht ganz am Anfang des Prozesses, nicht unmittelbar vor der Datensammlung."""
-            },
-            {
-                "answer": "Dokumentation der Auswahlkriterien",
-                "correct": False,
-                "feedback": """× Falsch. Die Dokumentation der Auswahlkriterien erfolgt nach der Konzeptentwicklung, aber nicht direkt vor der Datensammlung."""
-            },
-            {
-                "answer": "Festlegung der Metadatenstruktur",
-                "correct": False,
-                "feedback": """× Falsch. Die Metadatenstruktur wird nach der Dokumentation der Auswahlkriterien festgelegt, aber es folgt noch ein weiterer Schritt vor der eigentlichen Datensammlung."""
-            },
-            {
-                "answer": "Test der Sammlungsmethodik",
-                "correct": True,
-                "feedback": """✓ Richtig. Vor der eigentlichen Datensammlung wird die Sammlungsmethodik getestet. Dies prüft die technische Machbarkeit, identifiziert mögliche Probleme und ermöglicht Anpassungen vor der Hauptsammlung."""
-            }
-        ]
-    }
-]
-
-display_quiz(sequence_questions, colors=colors.jupyterquiz)
-```
-
-### Frage 9(e)
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-sequence_questions = [
-    {
-        "question": "Welcher Schritt kommt beim Korpusaufbau an LETZTER Stelle?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "Entwicklung des Korpuskonzepts",
-                "correct": False,
-                "feedback": """× Falsch. Das Korpuskonzept steht am Anfang des Prozesses."""
-            },
-            {
-                "answer": "Dokumentation der Auswahlkriterien",
-                "correct": False,
-                "feedback": """× Falsch. Die Dokumentation der Auswahlkriterien erfolgt früh im Prozess."""
-            },
-            {
-                "answer": "Festlegung der Metadatenstruktur",
-                "correct": False,
-                "feedback": """× Falsch. Die Metadatenstruktur wird vor der Testphase festgelegt."""
-            },
-            {
-                "answer": "Test der Sammlungsmethodik",
-                "correct": False,
-                "feedback": """× Falsch. Der Test erfolgt vor der eigentlichen Datensammlung."""
-            },
-            {
-                "answer": "Durchführung der Datensammlung",
-                "correct": True,
-                "feedback": """✓ Richtig. Die eigentliche Datensammlung bildet den Abschluss des Prozesses. Sie folgt dem definierten Prozess, nutzt die getesteten Methoden und dokumentiert die Sammlung systematisch."""
-            }
-        ]
-    }
-]
-
-display_quiz(sequence_questions, colors=colors.jupyterquiz)
-```
-
 
 ## Frage 10
 

@@ -62,7 +62,7 @@ multiple_choice_1 = [{
             "feedback": """✓ Richtig! NLP (Natural Language Processing) ermöglicht es, Texte mit linguistischen Informationen anzureichern und damit für Computer "verständlich" zu machen. Computer sehen Text zunächst nur als Zeichenkette, während NLP-Methoden semantische Strukturen hinzufügen und Analysen auf Wortebene ermöglichen."""
         },
         {
-            "answer": "NLP ist ein Verfahren zur manuellen Annotation von Texten durch Sprachwissenschaftler",
+            "answer": "NLP ist ein Verfahren zur manuellen Annotation von Texten durch Sprachwissenschaftler:innen",
             "correct": False,
             "feedback": """× Nicht korrekt. NLP bezieht sich auf automatisierte Verfahren zur Textverarbeitung durch Computer, nicht auf manuelle Annotation. Während manuelle Annotation durchaus für Training und Evaluation von NLP-Systemen wichtig sein kann, ist NLP selbst ein computergestützter Prozess."""
         },
@@ -238,49 +238,9 @@ display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
 ```
 
 ## Frage 6
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-multiple_choice_6 = [{
-    "question": """Was unterscheidet die Lemmatisierung von der einfacheren Methode des Stemmings?""",
-    "type": "multiple_choice",
-    "answers": [
-        {
-            "answer": "Stemming wird nur für englische Texte verwendet, Lemmatisierung für alle Sprachen",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Sowohl Stemming als auch Lemmatisierung können grundsätzlich auf verschiedene Sprachen angewendet werden, wobei es für beide Methoden sprachspezifische Implementierungen gibt. Der Unterschied liegt nicht in der Sprachunterstützung."""
-        },
-        {
-            "answer": "Lemmatisierung berücksichtigt den linguistischen Kontext und erzeugt echte Wörter, Stemming kürzt Wörter oft nur mechanisch",
-            "correct": True,
-            "feedback": """✓ Richtig! Die Lemmatisierung unterscheidet sich vom Stemming dadurch, dass sie den linguistischen Kontext berücksichtigt und Wörter auf ihre tatsächliche Grundform (Lemma) zurückführt. Stemming wendet dagegen oft nur mechanische Regeln an, um Wortendungen zu entfernen, was zu nicht-existierenden "Wortstämmen" führen kann. Lemmatisierung ist linguistisch präziser, aber auch rechenintensiver."""
-        },
-        {
-            "answer": "Lemmatisierung kann nur auf moderne Texte angewendet werden, Stemming auch auf historische",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Sowohl Lemmatisierung als auch Stemming können grundsätzlich auf Texte jeder Epoche angewendet werden. Die Herausforderungen bei historischen Texten (wie Sprachveränderungen) betreffen beide Methoden, wobei kontextsensitive Lemmatisierung bei historischen Texten sogar Vorteile haben kann."""
-        },
-        {
-            "answer": "Stemming ist genauer, aber rechenintensiver als Lemmatisierung",
-            "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Tatsächlich verhält es sich umgekehrt: Lemmatisierung ist in der Regel genauer, aber rechenintensiver als Stemming. Stemming ist eine einfachere, regelbasierte Methode, die schneller arbeitet, aber oft weniger präzise Ergebnisse liefert."""
-        }
-    ]
-}]
-
-display_quiz(multiple_choice_6, colors=colors.jupyterquiz)
-```
-
-## Frage 7
 Analysieren Sie den folgenden Satz mit NLP-Methoden und beschreiben Sie die Ergebnisse:
 
-Originaltext: "Die Forscher untersuchten verschiedene Zeitungsartikel zur Spanischen Grippe."
+Originaltext: "Die Forschenden untersuchten verschiedene Zeitungsartikel zur Spanischen Grippe."
 
 1.	Führen Sie eine Tokenisierung durch.
 2.	Bestimmen Sie die Lemmata der einzelnen Token.
@@ -300,13 +260,13 @@ create_answer_box('process-1')
 :class: solution, dropdown
 
 **Beispiellösung zur Selbstbewertung:**
-1.	Tokenisierung: ["Die", "Forscher", "untersuchten", "verschiedene", "Zeitungsartikel", "zur", "Spanischen", "Grippe", "."]
-2.	Lemmatisierung: ["die", "Forscher", "untersuchen", "verschieden", "Zeitungsartikel", "zu", "spanisch", "Grippe", "."]
+1.	Tokenisierung: ["Die", "Forschenden", "untersuchten", "verschiedene", "Zeitungsartikel", "zur", "Spanischen", "Grippe", "."]
+2.	Lemmatisierung: ["der", "Forschende", "untersuchen", "verschieden", "Zeitungsartikel", "zu", "spanisch", "Grippe", "."]
 
 **Reflexion:**
 - Die Tokenisierung ermöglicht die Analyse auf Wortebene und bereitet den Text für weitere Verarbeitung vor
 - Die Lemmatisierung würde alle Formen von "untersuchen" zusammenfassen, was bei einer Frequenzanalyse hilfreich ist
-- Durch die Lemmatisierung werden verschiedene Flexionsformen (wie "Spanischen" zu "spanisch") vereinheitlicht
+- Durch die Lemmatisierung werden verschiedene Flexionsformen (wie "Spanischen" zu "spanisch") vereinheitlicht ('die' wird standardmäßig zu 'der' lemmatisiert).
 - Bei einer größeren Textsammlung würden verschiedene grammatikalische Formen desselben Wortes nicht als unterschiedliche Begriffe gezählt
 - Diese Normalisierung verbessert die Qualität von Häufigkeitsanalysen, Keyword-Extraktion und thematischen Analysen
 - Die Informationen über die ursprüngliche Form bleiben erhalten und können für detailliertere linguistische Analysen genutzt werden
@@ -321,7 +281,7 @@ create_answer_box('process-1')
 
 
 
-## Frage 8
+## Frage 7
 (Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
@@ -355,7 +315,7 @@ multiple_choice_1 = [{
         {
             "answer": "Auswahl der relevanten Analysekomponenten",
             "correct": True,
-            "feedback": """✓ Richtig! Im Notebook werden nicht benötigte Komponenten deaktiviert: disable_components = ['ner', 'morphologizer', 'attribute_ruler', 'sentencizer'], um die Verarbeitungsgeschwindigkeit zu erhöhen."""
+            "feedback": """✓ Richtig! Im Notebook werden nicht benötigte Komponenten deaktiviert: disable_components = ['ner', 'morphologizer', 'attribute_ruler', 'sentencizer'], um die Verarbeitungsgeschwindigkeit zu erhöhen. Dieser Schritt kann bei geringer Textmenge übersprungen werden."""
         },
         {
             "answer": "Manuelle Korrektur der Tokenisierungsfehler",
@@ -373,7 +333,7 @@ multiple_choice_1 = [{
 display_quiz(multiple_choice_1, colors=colors.jupyterquiz)
 ```
 
-## Frage 9
+## Frage 8
 (Wählen Sie alle zutreffenden Antworten aus)
 
 ```{code-cell} ipython3
@@ -405,8 +365,8 @@ multiple_choice_2 = [{
         },
         {
             "answer": "Sie ermöglicht die Lemmatisierung der Tokens",
-            "correct": True,
-            "feedback": """✓ Richtig! Das Notebook demonstriert, wie spaCy nicht nur tokenisiert, sondern auch lemmatisiert: "Um flektierte Wörter aufeinander abbildbar zu machen (Lemmatisierung), wird der Text im folgenden durch die Bibliothek spaCy annotiert." """
+            "correct": False,
+            "feedback": """x Nicht korrekt: Auch wenn im Notebook die Tokenisierung und die Lemmatisierung im selben Schritt erfolgen, ist die Lemmatisierung kein Teil der Tokenisierung, sondern erfolgt aufbauend auf dieser.""" 
         },
         {
             "answer": "Sie korrigiert automatisch OCR-Fehler im Text",
@@ -419,7 +379,7 @@ multiple_choice_2 = [{
 display_quiz(multiple_choice_2, colors=colors.jupyterquiz)
 ```
 
-## Frage 10
+## Frage 9
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -459,7 +419,7 @@ multiple_choice_3 = [{
 display_quiz(multiple_choice_3, colors=colors.jupyterquiz)
 ```
 
-## Frage 11
+## Frage 10
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -476,7 +436,7 @@ multiple_choice_4 = [{
         {
             "answer": "TXT, weil es am wenigsten Speicherplatz benötigt",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Laut Notebook werden die annotierten Texte nicht als TXT-Dateien gespeichert."""
+            "feedback": """× Nicht korrekt. Laut Notebook werden die annotierten Texte nicht als TXT-Dateien gespeichert."""
         },
         {
             "answer": "CSV, weil es gut für die Speicherung tabellarischer Daten geeignet ist",
@@ -486,12 +446,12 @@ multiple_choice_4 = [{
         {
             "answer": "JSON, weil es die hierarchische Struktur der Annotation am besten abbildet",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Im Notebook wird JSON nicht als Speicherformat erwähnt."""
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt, da die Annotationen nicht hierarchisch strukturiert sind. Im Notebook wird JSON nicht als Speicherformat erwähnt, ist aber auch ein mögliches Format, um annotierte Daten zu speichern. """
         },
         {
             "answer": "XML, weil es von den meisten Textanalysewerkzeugen unterstützt wird",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Im Notebook wird XML nicht als Speicherformat erwähnt."""
+            "feedback": """× Nicht korrekt. XML ist in den Digital Humanities zwar ein Standardformat, um Annotationen zu speichern, allerdings sind nicht die meisten Analysewerkzeuge auf das Format ausgelegt. XML eignet sich für die Speicherung von komplexeren Annotationen oder Textauszeichnungen besser."""
         }
     ]
 }]
@@ -499,7 +459,7 @@ multiple_choice_4 = [{
 display_quiz(multiple_choice_4, colors=colors.jupyterquiz)
 ```
 
-## Frage 12
+## Frage 11
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -516,7 +476,7 @@ multiple_choice_5 = [{
         {
             "answer": "Der tokenisierte Text ist kürzer, weil Stoppwörter entfernt wurden",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt. Im Notebook gibt es keinen Hinweis darauf, dass Stoppwörter entfernt wurden. Im Gegenteil, die Tokenzahl erhöht sich."""
+            "feedback": """× Nicht korrekt. Diese Aussage ist nicht korrekt, da es im Notebook keinen Hinweis darauf gibt, dass Stoppwörter entfernt wurden. Im Gegenteil, die Tokenzahl erhöht sich."""
         },
         {
             "answer": "Der tokenisierte Text enthält mehr Elemente, weil Satzzeichen als eigene Token erkannt werden",
@@ -539,7 +499,7 @@ multiple_choice_5 = [{
 display_quiz(multiple_choice_5, colors=colors.jupyterquiz)
 ```
 
-## Frage 13
+## Frage 12
 Ordnen Sie die Schritte in die richtige Reihenfolge, um einen Text mit spaCy zu annotieren:
 
 1. Speichern der Annotation als CSV-Datei
@@ -568,7 +528,7 @@ multiple_choice_6 = [{
         {
             "answer": "3 → 4 → 2 → 5 → 1",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Reihenfolge stimmt nicht mit dem Ablauf im Notebook überein, wo zuerst der Text eingelesen wird."""
+            "feedback": """× Nicht korrekt. Diese Reihenfolge stimmt nicht mit dem Ablauf im Notebook überein, in dem zuerst der Text eingelesen wird."""
         },
         {
             "answer": "4 → 3 → 2 → 5 → 1",
@@ -578,7 +538,7 @@ multiple_choice_6 = [{
         {
             "answer": "4 → 5 → 3 → 2 → 1",
             "correct": False,
-            "feedback": """× Nicht korrekt. Diese Reihenfolge ist nicht korrekt. Das Sprachmodell muss vor der Annotation geladen werden, wie im Notebook gezeigt."""
+            "feedback": """× Nicht korrekt. Das Sprachmodell muss vor der Annotation geladen werden, wie im Notebook gezeigt."""
         }
     ]
 }]

@@ -30,92 +30,7 @@ Es erfolgt keine Bewertung oder Speicherung Ihrer Ergebnisse. Nutzen Sie dieses 
 Viel Erfolg!
 ````
 
-
 ## Frage 1
-
-(Wählen Sie alle zutreffenden Antworten aus)
-
-```{code-cell} ipython3
-:tags: [remove-input]
-from jupyterquiz import display_quiz
-
-import sys
-sys.path.append("..")
-from quadriga_config import colors
-
-""" 
-Lernziel: 
-    Sie können an einem konkreten Beispiel (Spanische Grippe) nachvollziehen, wie eine qualitative Forschungsfrage für quantitative Analyse operationalisiert wird.
-Bloom-Stufe: Verstehen
-Format: Multiple Choice + Selbsteinschätzung
-Geschätzte Zeit: 30 Minuten
-"""
-
-question1 = [
-    {
-        "question": "Welche der folgenden Aussagen über Korpora in den Digital Humanities sind korrekt?",
-        "type": "multiple_choice",
-        "answers": [
-                {
-                    "answer": "Korpora sind Sammlungen von maschinenlesbaren Textdokumenten",
-                    "correct": True,
-                    "feedback": """✓ Korrekt! Diese Definition ist grundlegend richtig, weil:
-                    - Maschinenlesbarkeit ist ein zentrales Merkmal für DH-Korpora
-                    - Dies ermöglicht die computergestützte Analyse
-                    - Es unterscheidet DH-Korpora von traditionellen Textsammlungen"""
-                },
-                {
-                    "answer": "Jedes Korpus muss alle verfügbaren Texte zu einem Thema enthalten",
-                    "correct": False,
-                    "feedback": """× Nicht korrekt, weil:
-                    - Es gibt verschiedene Strategien des Korpusaufbaus
-                    - Vollständige Korpora sind nur eine mögliche Option
-                    - Vollständigkeit ist nur bei klar begrenzten, kleinen Bereichen sinnvoll
-                    - Repräsentative Stichproben können ebenso valide sein"""
-                },
-                {
-                    "answer": "Die Zusammenstellung eines Korpus erfolgt nach bestimmten Kriterien",
-                    "correct": True,
-                    "feedback": """✓ Korrekt! Dies ist ein wesentliches Merkmal, weil:
-                    - Kriterien sichern die wissenschaftliche Qualität
-                    - Sie machen die Auswahl nachvollziehbar
-                    - Sie orientieren sich an der Forschungsfrage
-                    - Sie ermöglichen systematische Analysen"""
-                },
-                {
-                    "answer": "Ein Referenzkorpus muss immer digital vorliegen",
-                    "correct": False,
-                    "feedback": """× Nicht korrekt, weil:
-                    - Referenzkorpora sind durch ihre Repräsentativität definiert
-                    - Das Format (digital/analog) ist nicht entscheidend
-                    - Die Repräsentativität für eine bestimmte Domäne ist das Hauptmerkmal
-                    - Digitalisierung kann später erfolgen"""
-                },
-                {
-                    "answer": "Die Größe eines Korpus bestimmt seine wissenschaftliche Qualität",
-                    "correct": False,
-                    "feedback": """× Nicht korrekt, weil:
-                    - Die Qualität hängt von der Auswahlstrategie ab
-                    - Auch kleine Korpora können wissenschaftlich wertvoll sein
-                    - Entscheidend ist die Passung zur Forschungsfrage
-                    - Die systematische Zusammenstellung ist wichtiger als die Größe"""
-                },
-                {
-                    "answer": "Ein Korpus kann nach verschiedenen Strategien aufgebaut werden",
-                    "correct": True,
-                    "feedback": """✓ Korrekt! Dies ist wichtig, weil:
-                    - Verschiedene Forschungsfragen erfordern verschiedene Ansätze
-                    - Es gibt vollständige und repräsentative Korpora
-                    - Die Wahl der Strategie hängt von praktischen Faktoren ab
-                    - Unterschiedliche Strategien haben spezifische Vor- und Nachteile"""
-                }
-        ]
-    }
-]
-display_quiz(question1, colors=colors.jupyterquiz, max_width=1000)
-```
-
-## Frage 2
 
 Eine Forschungsfrage im Bereich der Digital Humanities lautet: "Wie entwickelte sich die öffentliche Aufmerksamkeit für Umweltthemen in deutschen Tageszeitungen zwischen 1960-1980?"
 
@@ -185,10 +100,10 @@ question2 = [
 display_quiz(question2, colors=colors.jupyterquiz, max_width=1000)
 ```
 
-## Frage 3
+## Frage 2
 Entwickeln Sie eine Operationalisierung für folgende Forschungsfrage: "Wie veränderte sich die Berichterstattung über wissenschaftliche Themen in der Wochenzeitung 'Die Zeit' zwischen 1950-1970?"
 
-### Frage 3(a)
+### Frage 2(a)
 Formulieren Sie zunächst selbst eine mögliche Operationalisierung
 
 ```{code-cell} ipython3
@@ -200,7 +115,7 @@ from assessment import create_answer_box
 create_answer_box('1')
 ```
 
-### Frage 3(b)
+### Frage 2(b)
 Vergleichen Sie Ihre Antwort mit den folgenden Kriterien für eine geeignete Operationalisierung. Bewerten Sie Ihre eigene Antwort anhand dieser Kriterien
 
 

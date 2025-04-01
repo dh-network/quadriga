@@ -508,7 +508,6 @@ question4 = [
                 "feedback": """× Diese Aussage ist falsch, weil:
                 - Automatisierung für große Korpora notwendig
                 - Manuelle Verarbeitung zeitaufwändig
-                - Fehleranfälligkeit bei manueller Arbeit
                 - Systematische Verarbeitung vorteilhaft"""
             },
             {
@@ -731,7 +730,7 @@ precision_question = [
             {
                 "answer": "Weniger Korrekturaufwand ist notwendig",
                 "correct": True,
-                "feedback": """✓ Richtig. Hohe Präzision bedeutet, dass die meisten erkannten Zeichen korrekt sind, was den Korrekturaufwand reduziert."""
+                "feedback": """✓ Teilweise Richtig. Hohe Präzision bedeutet, dass die meisten erkannten Zeichen korrekt sind, was den Korrekturaufwand reduziert. Allerdings sagt die Präzision nichts darüber aus, wie viel Text unerkannt geblieben ist, der nachkorrigiert werden muss."""
             },
             {
                 "answer": "Es entstehen viele falsch positive Erkennungen",
@@ -782,7 +781,7 @@ precision_applications = [
                 "feedback": """✓ Richtig. In kritischen Anwendungen sind zuverlässige, fehlerfreie Daten wichtiger als vollständige Erfassung."""
             },
             {
-                "answer": "Datenmining-Projekte, bei denen einzelne Fehler tolerierbar sind",
+                "answer": "Datenmining-Projekte (Projekte, die meist auf einem großen Datenbestand arbeiten), bei denen einzelne Fehler tolerierbar sind",
                 "correct": False,
                 "feedback": """× Falsch. Beim Datenmining ist oft eine umfassende Erfassung (hoher Recall) wichtiger als absolute Präzision."""
             },
@@ -1016,7 +1015,7 @@ Bedingt geeignet, weil:
 - Suchfunktionen tolerieren gewisse Fehler
 
 **Empfehlung:**
-- Einsatz von Fuzzy-Suche
+- Einsatz von unscharfen Suche (Fuzzy Search), in der die Daten nicht genau mit dem Suchbegriff übereinstimmen müssen
 - Berücksichtigung häufiger OCR-Fehler
 - Mögliche manuelle Nachkorrektur wichtiger Passagen
 ````
