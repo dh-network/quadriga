@@ -912,7 +912,7 @@ sequence_question = [
     }
 ]
 
-display_quiz(question5, colors=colors.jupyterquiz, max_width=1000)
+display_quiz(sequence_question, colors=colors.jupyterquiz, max_width=1000)
 ```
 
 ## Frage 10
