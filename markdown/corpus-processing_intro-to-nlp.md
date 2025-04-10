@@ -1,7 +1,7 @@
 # NLP als Methode zur "Semantisierung" von Text
 ```{admonition} Feinlernziel(e) dieses Kapitels
 :class: lernziele
-Sie verfügen über ein Grundverständnis des Natural Language Processing, sind vertraut mit den Methoden der Tokenisierung und Lemmatisierung und kennen ausgewählte NLP-Tools.
+Sie können die Grundkonzepte des Natural Language Processing erklären und die Funktionen von Tokenisierung und Lemmatisierung für die Textanalyse beschreiben.
 ```
 
 ## 1. Was ist NLP und warum benutzen wir es?

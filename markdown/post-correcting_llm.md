@@ -1,7 +1,7 @@
 # LLM-basierte OCR-Nachbearbeitung
 ```{admonition} Feinlernziel(e) dieses Kapitels
 :class: lernziele
-Sie kennen das Konzept einer OCR-Nachbearbeitung unter Zuhilfenahme von Large Language Models.
+Sie können die grundlegenden Herausforderungen beim Einsatz von Large Language Models für die OCR-Nachbearbeitung beschreiben.
 ```
 
 Natürlich gibt es auch intelligentere Methoden zur Nachbearbeitung von OCR-Ergebnissen. Diese Methoden basieren auf datengesteuerten maschinellen Lerntechniken. Zum Beispiel können große Sprachmodelle manchmal sehr gut bei der Nachkorrektur von OCR-Ergebnissen abschneiden. Es ist jedoch wichtig, sich ihrer Risiken und Einschränkungen bewusst zu sein.
