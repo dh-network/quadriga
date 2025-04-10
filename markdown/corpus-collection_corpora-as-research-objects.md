@@ -2,7 +2,7 @@
 # Korpora als Forschungsobjekte der Digital Humanities
 ```{admonition} Feinlernziel(e) dieses Kapitels
 :class: lernziele
-Sie verfügen über Basiswissen über Korpora als geisteswissenschaftliche Forschungsobjekte und kennen Typen von Korpora. 
+Sie können Korpora als geisteswissenschaftliche Forschungsobjekte definieren und ihre wesentlichen Merkmale beschreiben.
 ```
 
 Für die Forschung in den textbasierten Digital Humanities hat sich das Korpus als das wichtigste epistemische Objekt herauskristallisiert. Korpora lassen sich dabei vereinfacht verstehen als 
@@ -12,14 +12,14 @@ Für die Forschung in den textbasierten Digital Humanities hat sich das Korpus a
 
 Eine besondere Variante von Korpora sind Referenzkorpora, bei deren Zusammenstellung besondere Aufmerksamkeit darauf gelegt wurde, dass diese Korpora für eine bestimmte Domäne repräsentativ sein können. 
 
-In welchen Formaten die Texte in einem Korpus vorliegen, hängt davon ab, für welche Zwecke ein Korpus aufgebaut wird (siehe zu Formaten auch den nächsten Abschnitt ["Texte als digitales Objekte"](corpus-collection_text_as_digital_objects)). 
+In welchen Formaten die Texte in einem Korpus vorliegen, hängt davon ab, für welche Zwecke ein Korpus aufgebaut wird (siehe zu Formaten auch den nächsten Abschnitt ["Texte als digitale Objekte"](corpus-collection_text_as_digital_objects)). 
 
-Die Elemente eines Korpus können nach unterschiedlichen Strategien mit jeweils spezifischen Kriterien ausgewählt werden. Für Datensammlung insgesamt (und damit auch für Korpora als besonderer Typus der Datensammlung) hat {cite:p}`schoech2017` vier Strategien unterschieden: 
+Die Elemente eines Korpus können nach unterschiedlichen Strategien mit jeweils spezifischen Kriterien ausgewählt werden. Für Datensammlungen insgesamt (und damit auch für Korpora als besonderer Typus der Datensammlung) hat {cite:p}`schoech2017` vier Strategien unterschieden: 
 
 ## 1.	Vollständiges Korpus
 Ein vollständiges Korpus umfasst alle verfügbaren Textobjekte zu einem spezifischen Gegenstandsbereich.
 
-- **Voraussetzung:** Möglich bei klar begrenzten und gut dokumentierten 
+- **Voraussetzung:** Möglich bei klar begrenzten und gut dokumentierten Untersuchungsbereichen. 
 - **Anwendung:** Geeignet in der Regel nur für kleine, klar definierbare Untersuchungsbereiche.
 - **Beispiel:** Alle Gedichte von Friederike Mayröcker oder alle Ausgaben der Berliner Morgenpost aus dem Jahr 1918
 	
@@ -34,7 +34,7 @@ Eine Stichprobe, die die gesamte [Variabilität](https://de.wikipedia.org/wiki/S
 Eine gezielt nach bestimmten Kriterien zusammengestellte Auswahl, die alle wesentlichen Merkmale des Gegenstandsbereichs möglichst gleichmäßig abdeckt.
 
 - **Voraussetzung:** Klar definierte Kriterien und gezielte Auswahl, um statistische Korrelationen zu vermeiden.
-- **Anwendung:** Ideal für Studien, die Unterschiede und Entwicklungen innerhalb einer Kategorie analysieren wollen, z.B. die Entwicklung literarischer 
+- **Anwendung:** Ideal für Studien, die Unterschiede und Entwicklungen innerhalb einer Kategorie analysieren wollen, z.B. die Entwicklung literarischer Untergattungen des Romans. 
 - **Beispiel:** Eine Sammlung von Romanen aus verschiedenen Jahrzehnten und Untergattungen, mit breiter Variation in Autoren, Erzählperspektiven und Handlungsorten, Untergattungen.
 	
 ## 4.	Opportunistisches Korpus
