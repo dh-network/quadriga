@@ -6,7 +6,7 @@
 * **Korrekturansätze:**
 Die [Nachbearbeitung](post-correcting_ocr) von OCR-Ergebnissen kann sowohl [regelbasiert](../data-input/FS_1_MVP_Post_Correcting_OCR) als auch mit [KI-gestützten Methoden](post-correcting_llm) erfolgen, wobei jeder Ansatz spezifische Vor- und Nachteile aufweist.
 * **Messbare Verbesserungen:** 
-Die regelbasierte Korrektur führte zu einer nachweisbaren [Qualitätsverbesserung](../data-input/FS_1_MVP_Post_Correcting_OCR.html#messung-der-verbesserung), mit einem Anstieg des F1-Scores von 0.78 auf 0.82, was die Effektivität systematischer Nachbearbeitung demonstriert.
+Die regelbasierte Korrektur führte zu einer nachweisbaren [Qualitätsverbesserung](../data-input/FS_1_MVP_Post_Correcting_OCR), mit einem Anstieg des F1-Scores von 0.78 auf 0.82, was die Effektivität systematischer Nachbearbeitung demonstriert.
 * **Methodische Grenzen:**
 Während regelbasierte Ansätze gut kontrollierbar sind, zeigen LLM-basierte Methoden zwar Potential, bringen aber auch erhebliche [Herausforderungen](post-correcting_llm) mit sich, insbesondere hinsichtlich Ressourcenbedarf und Zuverlässigkeit.
 ```
