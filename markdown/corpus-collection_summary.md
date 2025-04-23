@@ -2,19 +2,19 @@
 
 ```{admonition} Key points des Kapitels
 :class: keypoint
-* **Korpora als Forschungsobjekte**
+**Korpora als Forschungsobjekte**
 
 Korpora sind systematisch zusammengestellte Sammlungen maschinenlesbarer Textdokumente. Je nach Forschungszweck können [verschiedene Strategien](corpus-collection_corpora-as-research-objects) zum Aufbau gewählt werden, von vollständigen bis hin zu repräsentativen Stichproben.
 
-* **Digitale Textformate**
+**Digitale Textformate**
 
 Für die Korpuserstellung stehen [unterschiedliche Formate](corpus-collection_text_as_digital_objects) zur Verfügung: Bilddigitalisate (PDF, PNG) für visuelle Authentizität, Plain Text (TXT) für einfache Verarbeitung, XML/TEI für strukturierte Auszeichnung und CSV für tabellarische Annotationen.
 
-* **Metadaten*
+**Metadaten**
 
 Die systematische Dokumentation erfolgt durch [Metadaten](corpus-collection_metadata) auf zwei Ebenen: Korpus-Metadaten beschreiben die Gesamtsammlung, Element-Metadaten die einzelnen Dokumente. Etablierte Standards wie Dublin Core bieten hierfür standardisierte Schemata.
 
-* **Praktische Umsetzung**
+**Praktische Umsetzung**
 
 Der praktische Korpusaufbau erfolgt in drei Schritten: Konzeptentwicklung, Metadatenerstellung und [Datensammlung](corpus-collection_building-our-corpus). Dabei müssen sowohl forschungsmethodische Anforderungen als auch praktische Beschränkungen berücksichtigt werden.
 ```
