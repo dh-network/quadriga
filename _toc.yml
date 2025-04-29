@@ -57,5 +57,3 @@ parts:
     chapters:
     - file: markdown/reflection_reflection
     - file: word_search/FS_1_MVP_LLM_postcorr_demo
-    - file: markdown/reflection_outlook
-    - file: markdown/reflection_resumee
