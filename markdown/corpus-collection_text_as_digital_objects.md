@@ -59,7 +59,7 @@ Die Zahl der Grippefälle ist in den letzten beiden Tagen auch in Groß-Berlin n
 - **Repräsentation:** XML (Extensible Markup Language) ermöglicht eine strukturierte Darstellung von Texten mit verschachtelten Tags, die die semantische Struktur und Metadaten enthalten. TEI (Text Encoding Initiative) ist ein spezieller XML-Standard für die Kodierung von literarischen und linguistischen Texten.
 - **Formate:** Dateien im XML-Format, oft mit der Endung .xml.
 - **Nutzung:** XML/TEI wird häufig in den Geisteswissenschaften verwendet, um komplexe Textstrukturen und Annotationen zu kodieren, wie z.B. Kapitelüberschriften, Fußnoten, Zitate und sprachliche Besonderheiten.
-- 	**Einschränkungen:** Die Erstellung und Verarbeitung von XML/TEI-Dokumenten erfordert eine genaue Kenntnis der [TEI Guidelines](https://tei-c.org/guidelines/). Zudem ist die Erstellung in den entsprechende Editoren unterschiedlich, etwa des weit verbreiteten [Oxygen XML Editors](https://www.oxygenxml.com/), [Notepad++](https://notepad-plus-plus.org) oder [Atom](https://atom-editor.cc/), was den Einstieg erschwert.
+- 	**Einschränkungen:** Die Erstellung und Verarbeitung von XML/TEI-Dokumenten erfordert eine genaue Kenntnis der <a href="https://tei-c.org/guidelines/" class="external-link" target="_blank">TEI Guidelines</a>. Zudem ist die Erstellung in den entsprechende Editoren unterschiedlich, etwa des weit verbreiteten <a href="https://www.oxygenxml.com/" class="external-link" target="_blank">Oxygen XML Editors</a>, <a href="https://notepad-plus-plus.org" class="external-link" target="_blank">Notepad++</a> oder <a href="https://atom-editor.cc/" class="external-link" target="_blank">Atom</a>, was den Einstieg erschwert.
 
 **Beispiel:** 
 
