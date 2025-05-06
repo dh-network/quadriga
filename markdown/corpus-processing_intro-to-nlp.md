@@ -5,8 +5,8 @@ Sie können die Grundkonzepte des Natural Language Processing erklären und die 
 ```
 
 ## 1. Was ist NLP und warum benutzen wir es?
-Für den Computer ist ein Text eine Liste von Zeichen, die nicht aus semantischen Einheiten wie z.B. Wörtern oder Sätzen besteht. Sobald die Operationalisierung einer Forschungsfrage von diesen semantischen Einheiten ausgeht, z.B. auf der Häufigkeit eines Wortes aufbaut, ist es sinnvoll Methoden des [Natural Language Processing](https://en.wikipedia.org/wiki/Natural_language_processing) (NLP) anzuwenden, um den Text mit zusätzlichen linguistischen Informationen anzureichern.  
-NLP ist ein interdisziplinäres Feld, das sich zwischen der Linguistik und der Informatik ansiedelt und verschiedene Methoden (regelbasiert, statistisch, [maschinelles Lernen](https://en.wikipedia.org/wiki/Machine_learning)) zur automatischen Verarbeitung natürlicher Sprache umfasst. Diese reichen von der Aufteilung eines Texts in Wörter ([Tokenisierung](https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization)) über die Analyse von Emotionen in Texten ([Emotion / Sentiment Analysis](https://en.wikipedia.org/wiki/Sentiment_analysis)) bis hin zu der Erstellung von Chatbots ([Dialogue Systems](https://en.wikipedia.org/wiki/Dialogue_system)). 
+Für den Computer ist ein Text eine Liste von Zeichen, die nicht aus semantischen Einheiten wie z.B. Wörtern oder Sätzen besteht. Sobald die Operationalisierung einer Forschungsfrage von diesen semantischen Einheiten ausgeht, z.B. auf der Häufigkeit eines Wortes aufbaut, ist es sinnvoll Methoden des <a href="https://en.wikipedia.org/wiki/Natural_language_processing" class="external-link" target="_blank">Natural Language Processing (NLP)</a>  anzuwenden, um den Text mit zusätzlichen linguistischen Informationen anzureichern.  
+NLP ist ein interdisziplinäres Feld, das sich zwischen der Linguistik und der Informatik ansiedelt und verschiedene Methoden (regelbasiert, statistisch, <a href="https://en.wikipedia.org/wiki/Machine_learning" class="external-link" target="_blank">maschinelles Lernen</a>) zur automatischen Verarbeitung natürlicher Sprache umfasst. Diese reichen von der Aufteilung eines Texts in Wörter (<a href="https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization" class="external-link" target="_blank">Tokenisierung</a>) über die Analyse von Emotionen in Texten (<a href="https://en.wikipedia.org/wiki/Sentiment_analysis" class="external-link" target="_blank">Emotion / Sentiment Analysis</a>) bis hin zu der Erstellung von Chatbots (<a href="https://en.wikipedia.org/wiki/Dialogue_system" class="external-link" target="_blank">Dialogue Systems</a>). 
 
 (corpus-processing-intro-2)=
 ## 2. Verwendete NLP-Methoden
@@ -33,7 +33,7 @@ In tokenisierter und lemmatisierter Form:
 
 ### 3.1 nltk und spaCy 
 In Programmiersprachen gibt es Bibliotheken, die Methoden z.B. zur Textverarbeitung, bündeln. Die Bibliotheken können installiert, in den Programmcode geladen und dann angewendet werden.
-Für Python gibt es verschiedene Bibliotheken, mit denen die Verarbeitung von Texten mittels NLP möglich ist. Am weitesten vebreitet sind die Bibliotheken [spaCy](https://spacy.io) und [nltk](https://www.nltk.org/), die in Tabelle {ref}`cmp-spacy-nltk` verglichen werden.
+Für Python gibt es verschiedene Bibliotheken, mit denen die Verarbeitung von Texten mittels NLP möglich ist. Am weitesten vebreitet sind die Bibliotheken <a href="https://spacy.io" class="external-link" target="_blank">spaCy</a> und <a href="https://www.nltk.org/" class="external-link" target="_blank">nltk</a>, die in Tabelle {ref}`cmp-spacy-nltk` verglichen werden.
 
 ```{table} Vergleich von spaCy und nltk
 :name: cmp-spacy-nltk
@@ -48,7 +48,7 @@ Die verschiedenen NLP-Methoden bauen teilweise aufeinander auf. Grundlegend wird
 `````
 
 ### NLP mit spaCy 
-Da die Vorverarbeitung der Texte keinerlei spezialisierter NLP-Methoden bedarf und auf Grund der leichten Benutzbarkeit sowie der Geschwindigkeit benutzen wir spaCy für die Tokenisierung und Lemmatisierung des Textkorpus. spaCy stellt unterschiedliche Methoden für die Vorverarbeitung bereit, die meisten basieren auf maschinellem Lernen. Da die Vorverarbeitun sprachabhängig ist, stellt spaCy für die unterstützen Sprachen (über 20) verschiedene Analyse-Modelle zur Verfügung. Eine Übersicht über die von spaCy unterstützen Sprachen gibt es [hier](https://spacy.io/models).
+Da die Vorverarbeitung der Texte keinerlei spezialisierter NLP-Methoden bedarf und auf Grund der leichten Benutzbarkeit sowie der Geschwindigkeit benutzen wir spaCy für die Tokenisierung und Lemmatisierung des Textkorpus. spaCy stellt unterschiedliche Methoden für die Vorverarbeitung bereit, die meisten basieren auf maschinellem Lernen. Da die Vorverarbeitun sprachabhängig ist, stellt spaCy für die unterstützen Sprachen (über 20) verschiedene Analyse-Modelle zur Verfügung. Eine Übersicht über die von spaCy unterstützen Sprachen gibt es <a href="https://spacy.io/models" class="external-link" target="_blank">hier</a>.
 Die zur Verfügung gestellte Modelle unterscheiden sich in der Geschwindigkeit und in der Akkuratheit der Annotation. Da wir auf einem verhältnismäßig großem Korpus operieren ()und sich die Leistung der Modelle für die Tokenisierung gar nicht und für die Lemmatisierung nur wenig (0.02%) unterscheidet, verwenden wir ein Modell, das auf Geschwindigkeit ausgelegt ist (`de_core_news_sm`). 
 
 `````{admonition} Leistung von spaCy auf unserem Korpus 
