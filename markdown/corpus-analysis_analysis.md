@@ -22,7 +22,7 @@ Um diese mit quantitativen Methoden zu bearbeiten, wurde die Forschungsfrage zun
 Das Ziel der Analyse ist es, zu quantifizieren, wie viel über die Spanische Grippe berichtet wird. Dafür sollen möglichst alle und nur die Textstellen erfasst werden, in denen die Spanische Grippe erwähnt wird. Eine Erwähnung liegt dann vor, wenn ein Wort vorkommt, das mit der Spanischen Grippe im Zusammenhang steht. Die Sammlung dieser Wörter nennen wir **Semantisches Feld**. Da die Wörter losgelöst von ihrem Kontext analysiert werden, sollten sie so gewählt sein, dass sie sich auf die Spanische Grippe und nur auf diese beziehen.
 
 ### 2.2 Erstellung des semantischen Felds
-Da [Large Language Models](https://en.wikipedia.org/wiki/Large_language_model) sehr gut dazu in der Lage sind, semantisch ähnliche Wörter zu erzeugen, haben wir das semantische Feld mit Hilfe des Chatbots [ChatGPT](https://openai.com/index/chatgpt/) erstellt.
+Da <a href="https://en.wikipedia.org/wiki/Large_language_model" class="external-link" target="_blank">Large Language Models</a> sehr gut dazu in der Lage sind, semantisch ähnliche Wörter zu erzeugen, haben wir das semantische Feld mit Hilfe des Chatbots <a href="https://openai.com/index/chatgpt/" class="external-link" target="_blank">ChatGPT</a> erstellt.
 
 ```{admonition} Spezifikation zur ChatGPT-Nutzung
 :class: tip
