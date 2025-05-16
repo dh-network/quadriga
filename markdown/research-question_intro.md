@@ -16,7 +16,7 @@ name: Flussdiagramm der Fallstudie
 Flussdiagramm der Fallstudie. Wir befinden uns im ersten Arbeitspaket.
 ```
 
-In einem ersten Schritt wird in diesem Kapitel zunächst die Forschungsfrage formuliert und expliziert. Die im anschließenden Schritt erfolgende Operationalisierung ist ein für Digital Humanities-Projekte entscheidender Vorgang, werden in solchen Projekten doch häufig quantitative Methoden für die Beantwortung traditionell qualitativer Fragestellungen angewendet. Die Brücke "from numbers to meaning" {cite:p}`heuser_quantitative_2012` baut dabei die Operationalisierung. 
+In einem ersten Schritt wird in diesem Kapitel zunächst die Forschungsfrage formuliert und expliziert. Die im anschließenden Schritt erfolgende Operationalisierung ist ein für Digital Humanities-Projekte entscheidender Vorgang, werden in solchen Projekten doch häufig quantitative Methoden für die Beantwortung traditionell qualitativer Fragestellungen angewendet. Die Brücke "from numbers to meaning" {cite:p}`heuser_learning_2011` baut dabei die Operationalisierung. 
 
 
 ## Bibliographie
