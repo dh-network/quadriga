@@ -2,7 +2,7 @@
 # Fragestellung
 Dass Pandemien ihre je eigenen Verlaufsprofile entwickeln, konnte Zeitgenoss:innen vor wenigen Jahren am Verlauf der COVID19-Pandemie miterleben. Schnell wurde die Rede von den "Wellen" der Corona-Pandemie sprichwörtlich. Auch während der Spanischen Grippe wurde bereits von "Wellen" bzw. von "Waves" gesprochen und diese spezifische Verlaufsform graphisch dokumentiert (siehe Fig. 1). 
 
-```{figure} ../book_images/Plague-versus-Spanish-Flu.jpg
+```{figure} ../assets/images/Plague-versus-Spanish-Flu.jpg
 ---
 height: 300px
 name: Vergleichende Grafik zum Verlauf der Pest (1665) und der Spanischen Grippe (1918/19) in London
@@ -21,7 +21,7 @@ Lassen sich für die Spanische Grippe 1918/1919 mit Fokus auf den Berliner Raum 
 
 Als eine Orientierungsgröße für ein wellenartiges Muster nehmen wir – in Form einer Hypothese – das Verlaufsprofil der medizinischen Welle der Spanischen Grippe, wie es für Großbritannien berechnet und visualisiert wurde (Fig. 3).
 
-```{figure} ../book_images/Drei-Wellen-1918-19-UK.png
+```{figure} ../assets/images/Drei-Wellen-1918-19-UK.png
 ---
 height: 300px
 name: Drei Wellen der Spanischen Grippe im Vereinigten Königreich.

@@ -16,7 +16,7 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 
 ```
 ````
-```{figure} ../book_images/grippeocr.gif
+```{figure} ../assets/images/grippeocr.gif
 ---
 height: 200px
 name: Zeitungssnippet mit simuliertem OCR-Overlay
@@ -38,7 +38,7 @@ Die Fallstudie richtet sich an Geisteswissenschaftler:innen auf fortgeschrittene
 ### Struktur der Fallstudie
 Die Gliederung der Fallstudie lässt sich jederzeit durch die Menüleiste links im Browser nachvollziehen. Insgesamt vollzieht die Fallstudie 6 Schritte: 
 
-```{figure} ../book_images/flow-chart.gif
+```{figure} ../assets/images/flow-chart.gif
 ---
 height:
 name: Flussdiagramm der Fallstudie

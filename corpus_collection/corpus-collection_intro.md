@@ -23,7 +23,7 @@ Sie kennen unterschiedliche Ansätze des Korpusaufbaus und sind mit der Erstellu
 
 Nachdem im [vorherigen Kapitel](introduction_intro) die **Fragestellung** dieser Fallstudie und deren **Operationalisierung** erläutert wurde, muss nun der Forschungsgegenstand im Sinne der Operationalisierung vorbereitet werden. In unserem Fall bedeutet dies, dass wir ein **Korpus zusammenstellen** müssen, anhand dessen sich (wie es in unserer Operationalisierung heißt) "die Texte in Berliner Tageszeitungen" untersuchen lassen. 
 
-```{figure} ../book_images/flow-chart_corpus-collection.png
+```{figure} ../assets/images/flow-chart_corpus-collection.png
 ---
 height:
 name: Flussdiagramm der Fallstudie

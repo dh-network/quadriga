@@ -23,7 +23,7 @@ Texte können digital auf sehr unterschiedliche Weisen gespeichert, prozessiert 
 
 **Beispiel:**
 
-```{figure} ../book_images/corpus-collection_text_as_digital_objects_image-example.png
+```{figure} ../assets/images/corpus-collection_text_as_digital_objects_image-example.png
 ---
 height: 200
 name: Snippet eines Bilddigitalisats

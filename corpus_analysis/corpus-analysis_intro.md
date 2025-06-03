@@ -24,7 +24,7 @@ Sie können die auf einem Korpus ausgeführten Frequenzanalysen zu semantischen 
 Für die Ausführung einer digitalen Analyse, in diesem Fall der Analyse der Spanischen Grippe in einem Berliner Zeitungskorpus (1918-20) durch Worthäufigkeiten über Zeit, wird ein Korpus benötigt, das in Wörter (Token) aufgeteilt und mit Lemmata angereichtert ist. Wir haben gezeigt, wie mittels OCR ein aus PDF-Dateien bestehendes Zeitungskorpus in ein Textkorpus konvertiert werden kann (siehe die Kapitel ["Korpusaufbau"](corpus-collection_intro) und ["OCR — Vom Bild zum Text"](ocr_intro)). Das Textkorpus wurde dann mit der Python-Bibliothek spaCy unter Anwendung von NLP-Methoden (Tokenisierung und Lemmatisierung) angereichtert (siehe Kapitel ["Korpusverarbeitung – Von Strings zu Token"](corpus-processing_intro)). Das angereichterte Korpus liegt im Tabellenformat (CSV) vor. In jeder Zeile steht ein Wort und die Grundform des Wortes.
 
 
-```{figure} ../book_images/flow-chart_corpus-analysis.jpeg
+```{figure} ../assets/images/flow-chart_corpus-analysis.jpeg
 ---
 height:
 name: Flussdiagramm der Fallstudie

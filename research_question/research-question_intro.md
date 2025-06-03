@@ -23,7 +23,7 @@ Sie kennen Grundfragen der geisteswissenschaftlichen Forschung mit Korpora nach 
 
 Dieses Kapitel bildet den Auftakt der Fallstudie und dient der Klärung des Erkenntnisinteresses, das die dann folgende Vorbereitung und Aufbereitung des Forschungsgegenstands (Korpus) und schließlich die Analyse leitet. 
 
-```{figure} ../book_images/flow-chart_research-question.png
+```{figure} ../assets/images/flow-chart_research-question.png
 ---
 height:
 name: Flussdiagramm der Fallstudie
