@@ -1,12 +1,27 @@
 (ocr_intro)=
 
-# Einführung
+# OCR. Von Bild zu Text
+
+````{margin}
+```{admonition} Fragen oder Feedback 
+:class: frage-feedback
+
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=question&projects=&template=frage.yml" class="external-link" target="_blank">
+    Stellen Sie eine Frage
+</a> <br>
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=feedback&projects=&template=feedback.yml" class="external-link" target="_blank">
+    Geben Sie uns Feedback
+</a>
+
+Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre Bedürfnisse anpassen.
+
+```
+````
 ```{admonition} Groblernziel dieses Kapitels
 :class: lernziele
 Sie können Schritte zur Erstellung eines Forschungskorpus aus Bilddaten  mittels Optical Character Recognition (OCR) aufzählen und die Qualität der Datensammlung anhand eines Samples bewerten.
 ```
 
-## Zu diesem Kapitel
 Nach dem vorherigen [Kapitel](corpus-collection_summary) haben wir also ein Korpus als Sammlung gescannter Bilder. Ein Korpus in dieser Form ist jedoch noch **nicht maschinenlesbar** und kann nicht direkt verarbeitet werden. In diesem Kapitel lernen wir, wie man mit OCR **Bilder in Text umwandelt**.
 
 ```{figure} ../book_images/flow-chart_ocr.jpeg

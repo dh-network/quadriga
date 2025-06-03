@@ -1,5 +1,21 @@
 (research-question_intro)=
-# Einführung
+# Fragestellung und Operationalisierung. Einführung in die Fallstudie
+
+````{margin}
+```{admonition} Fragen oder Feedback 
+:class: frage-feedback
+
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=question&projects=&template=frage.yml" class="external-link" target="_blank">
+    Stellen Sie eine Frage
+</a> <br>
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=feedback&projects=&template=feedback.yml" class="external-link" target="_blank">
+    Geben Sie uns Feedback
+</a>
+
+Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre Bedürfnisse anpassen.
+
+```
+````
 ```{admonition} Groblernziel dieses Kapitels
 :class: lernziele
 Sie kennen Grundfragen der geisteswissenschaftlichen Forschung mit Korpora nach dem qualitativen Methodenparadigma und wissen um das Konzept der "Operationalisierung"

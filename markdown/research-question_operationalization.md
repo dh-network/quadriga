@@ -15,7 +15,7 @@ Für die Operationalisierung unserer Forschungsfrage müssen insbesondere zwei F
 Entlang dieser beiden Fragen kommen wir zur folgenden Operationalisierung:
 
 `````{admonition} Operationalisierung
-:class: tip
+:class: hinweis
 Als öffentliche Aufmerksamkeit im Berliner Raum sollen in unserer Fallstudie die Texte in Berliner Tageszeitungen gelten. Wir messen diese öffentliche Aufmerksamkeit, indem wir die Häufigkeit von Wörtern ermitteln. Eine besonders hohe öffentliche Aufmerksamkeit für die spanische Grippe in einem bestimmten Zeitraum läge demnach dann vor, wenn wir in den Zeitungen für diesen Zeitraum besonders viele Wörter nachweisen können, die direkt oder indirekt auf die spanische Grippe verweisen. 
 `````
 
