@@ -15,7 +15,7 @@ Die Fallstudie lässt sich vollständig in jedem gängigen Browser auf einem ein
 
 
 `````{admonition} Tutorials
-:class: tip
+:class: seealso
 - Tutorial zur Arbeit mit Jupyter Books
 - Tutorial zur Arbeit mit Jupyter Notebooks 
 - Tutorial zur Installation und Nutzung von Anaconda

@@ -1,11 +1,26 @@
 (post-correcting_intro)=
-# Einführung
+# OCR-Nachbereitung. Manuell, automatisch, LLMs
+
+````{margin}
+```{admonition} Fragen oder Feedback 
+:class: frage-feedback
+
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=question&projects=&template=frage.yml" class="external-link" target="_blank">
+    Stellen Sie eine Frage
+</a> <br>
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=feedback&projects=&template=feedback.yml" class="external-link" target="_blank">
+    Geben Sie uns Feedback
+</a>
+
+Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre Bedürfnisse anpassen.
+
+```
+````
 ```{admonition} Groblernziel dieses Kapitels
 :class: lernziele
 Sie kennen unterschiedliche Verfahren der Nachbearbeitung von OCR-Output zur Qualitätsverbesserung.
 ```
 
-## Zu diesem Kapitel
 Im vorigen [Kapitel](ocr) haben wir die Scans der Zeitungen per OCR automatisch in Klartext umgewandelt. In diesem Kapitel werden wir die Ergebnisse der OCR nachbearbeiten. 
 
 ```{figure} ../book_images/flow-chart_ocr-postprocessing.jpeg
