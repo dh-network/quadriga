@@ -1,59 +1,59 @@
 format: jb-book
-root: markdown/intro
+root: front_page/intro
 parts:
   - caption: Präambel
     chapters:
-    - file: markdown/introduction_learning-outcomes
-    - file: markdown/introduction_requirements
+    - file: introduction/introduction_learning-outcomes
+    - file: introduction/introduction_requirements
   - caption: Fragestellung und Operationalisierung. Einführung in die Fallstudie
     chapters:
-    - file: markdown/research-question_intro
-    - file: markdown/research-question_research-question
-    - file: markdown/research-question_operationalization
-    - file: markdown/research-question_summary
-    - file: markdown/fragestellung_assessment
+    - file: research_question/research-question_intro
+    - file: research_question/research-question_research-question
+    - file: research_question/research-question_operationalization
+    - file: research_question/research-question_summary
+    - file: research_question/research-question_assessment
   - caption: Korpusaufbau. Auswählen, sammeln, dokumentieren
     chapters:
-    - file: markdown/corpus-collection_intro    
-    - file: markdown/corpus-collection_corpora-as-research-objects
-    - file: markdown/corpus-collection_text_as_digital_objects
-    - file: markdown/corpus-collection_metadata
-    - file: markdown/corpus-collection_building-our-corpus
-    - file: markdown/corpus-collection_summary
-    - file: markdown/korpusaufbau_assessment
+    - file: corpus_collection/corpus-collection_intro    
+    - file: corpus_collection/corpus-collection_corpora-as-research-objects
+    - file: corpus_collection/corpus-collection_text_as_digital_objects
+    - file: corpus_collection/corpus-collection_metadata
+    - file: corpus_collection/corpus-collection_building-our-corpus
+    - file: corpus_collection/corpus-collection_summary
+    - file: corpus_collection/korpusaufbau_assessment
   - caption: OCR. Von Bild zu Text
     chapters:
-    - file: markdown/ocr_intro
-    - file: markdown/ocr
-    - file: data-input/FS_1_MVP_OCR
-    - file: markdown/ocr-quality
-    - file: data-input/FS_1_MVP_OCR_Quality
-    - file: markdown/ocr_summary
-    - file: markdown/ocr_assessment
+    - file: ocr/ocr_intro
+    - file: ocr/ocr
+    - file: ocr/ocr_pytesseract_intro
+    - file: ocr/ocr-quality
+    - file: ocr/ocr_ocr-quality
+    - file: ocr/ocr_summary
+    - file: ocr/ocr_assessment
   - caption: OCR-Nachbereitung. Manuell, automatisch, LLMs
     chapters:
-    - file: markdown/post-correcting_intro
-    - file: markdown/post-correcting_ocr
-    - file: data-input/FS_1_MVP_Post_Correcting_OCR
-    - file: markdown/post-correcting_llm
-    - file: markdown/post-correcting_summary
-    - file: markdown/post-correcting_assessment
+    - file: ocr_post_correction/post-correcting_intro
+    - file: ocr_post_correction/post-correcting_ocr
+    - file: ocr_post_correction/post-correcting_correction
+    - file: ocr_post_correction/post-correcting_llm
+    - file: ocr_post_correction/post-correcting_summary
+    - file: ocr_post_correction/post-correcting_assessment
   - caption: Korpusverarbeitung. Von Strings zu Token
     chapters:
-    - file: markdown/corpus-processing_intro
-    - file: markdown/corpus-processing_intro-to-nlp
-    - file: nlp-enrichment/NLP-Enrichment
-    - file: markdown/corpus-processing_resumee
-    - file: markdown/corpus-processing_assessment
+    - file: corpus_processing/corpus-processing_intro
+    - file: corpus_processing/corpus-processing_intro-to-nlp
+    - file: corpus_processing/corpus-processing_nlp-annotation
+    - file: corpus_processing/corpus-processing_resumee
+    - file: corpus_processing/corpus-processing_assessment
   - caption: Korpusanalyse. Von Häufigkeiten zu Diagrammen
     chapters:
-    - file: markdown/corpus-analysis_intro
-    - file: markdown/corpus-analysis_analysis
-    - file: word_search/FS_1_MVP_Analysis_Diachronic_Frequencies_Plots
-    - file: word_search/FS_1_MVP_Analysis_KWIC
-    - file: markdown/corpus-analysis_resumee
-    - file: markdown/corpus-analysis_assessment
+    - file: corpus_analysis/corpus-analysis_intro
+    - file: corpus_analysis/corpus-analysis_analysis
+    - file: corpus_analysis/corpus-analysis_diachronic-analysis
+    - file: corpus_analysis/corpus-analysis_KWIC
+    - file: corpus_analysis/corpus-analysis_resumee
+    - file: corpus_analysis/corpus-analysis_assessment
   - caption: Reflexion und Resümee
     chapters:
-    - file: markdown/reflection_reflection
-    - file: word_search/FS_1_MVP_LLM_postcorr_demo
+    - file: reflection/reflection_reflection
+    - file: reflection/reflection_LLM-post-correction 
