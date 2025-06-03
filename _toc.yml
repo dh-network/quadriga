@@ -1,59 +1,61 @@
 format: jb-book
 root: front_page/intro
-parts:
-  - caption: Präambel
-    chapters:
+options:
+  numbered: 3
+chapters:
+  - file: präambel/einführung
+    sections:
     - file: introduction/introduction_learning-outcomes
     - file: introduction/introduction_requirements
-  - caption: Fragestellung und Operationalisierung. Einführung in die Fallstudie
-    chapters:
-    - file: research_question/research-question_intro
+  - file: research_question/research-question_intro
+    sections:
     - file: research_question/research-question_research-question
     - file: research_question/research-question_operationalization
     - file: research_question/research-question_summary
     - file: research_question/research-question_assessment
-  - caption: Korpusaufbau. Auswählen, sammeln, dokumentieren
-    chapters:
-    - file: corpus_collection/corpus-collection_intro    
+  - file: corpus_collection/corpus-collection_intro    
+    sections:
     - file: corpus_collection/corpus-collection_corpora-as-research-objects
     - file: corpus_collection/corpus-collection_text_as_digital_objects
     - file: corpus_collection/corpus-collection_metadata
     - file: corpus_collection/corpus-collection_building-our-corpus
     - file: corpus_collection/corpus-collection_summary
     - file: corpus_collection/korpusaufbau_assessment
-  - caption: OCR. Von Bild zu Text
-    chapters:
-    - file: ocr/ocr_intro
+  - file: ocr/ocr_intro
+    sections:
     - file: ocr/ocr
     - file: ocr/ocr_pytesseract_intro
     - file: ocr/ocr-quality
     - file: ocr/ocr_ocr-quality
     - file: ocr/ocr_summary
     - file: ocr/ocr_assessment
-  - caption: OCR-Nachbereitung. Manuell, automatisch, LLMs
-    chapters:
-    - file: ocr_post_correction/post-correcting_intro
+  - file: ocr_post_correction/post-correcting_intro
+    sections:
     - file: ocr_post_correction/post-correcting_ocr
     - file: ocr_post_correction/post-correcting_correction
     - file: ocr_post_correction/post-correcting_llm
     - file: ocr_post_correction/post-correcting_summary
     - file: ocr_post_correction/post-correcting_assessment
-  - caption: Korpusverarbeitung. Von Strings zu Token
-    chapters:
-    - file: corpus_processing/corpus-processing_intro
+  - file: corpus_processing/corpus-processing_intro
+    sections:
     - file: corpus_processing/corpus-processing_intro-to-nlp
     - file: corpus_processing/corpus-processing_nlp-annotation
     - file: corpus_processing/corpus-processing_resumee
     - file: corpus_processing/corpus-processing_assessment
-  - caption: Korpusanalyse. Von Häufigkeiten zu Diagrammen
-    chapters:
-    - file: corpus_analysis/corpus-analysis_intro
+  - file: corpus_analysis/corpus-analysis_intro
+    sections:
     - file: corpus_analysis/corpus-analysis_analysis
     - file: corpus_analysis/corpus-analysis_diachronic-analysis
     - file: corpus_analysis/corpus-analysis_KWIC
     - file: corpus_analysis/corpus-analysis_resumee
     - file: corpus_analysis/corpus-analysis_assessment
-  - caption: Reflexion und Resümee
-    chapters:
-    - file: reflection/reflection_reflection
+  - file: reflection/reflection_reflection
+    sections:
     - file: reflection/reflection_LLM-post-correction 
+  - file: epilog/toc
+    sections:
+      - file: epilog/fragen_und_feedback
+      - file: epilog/literaturverzeichnis
+      - file: epilog/authors
+      - file: epilog/quadriga
+      - file: epilog/impressum
