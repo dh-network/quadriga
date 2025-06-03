@@ -1,4 +1,20 @@
 # NLP als Methode zur "Semantisierung" von Text
+
+````{margin}
+```{admonition} Fragen oder Feedback 
+:class: frage-feedback
+
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=question&projects=&template=frage.yml" class="external-link" target="_blank">
+    Stellen Sie eine Frage
+</a> <br>
+<a href="https://github.com/dh-network/quadriga/issues/new?assignees=&labels=feedback&projects=&template=feedback.yml" class="external-link" target="_blank">
+    Geben Sie uns Feedback
+</a>
+
+Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre Bedürfnisse anpassen.
+
+```
+````
 ```{admonition} Feinlernziel(e) dieses Kapitels
 :class: lernziele
 Sie können die Grundkonzepte des Natural Language Processing erklären und die Funktionen von Tokenisierung und Lemmatisierung für die Textanalyse beschreiben.
@@ -13,7 +29,7 @@ NLP ist ein interdisziplinäres Feld, das sich zwischen der Linguistik und der I
 Ein Phänomen, wie die Spanische Grippe, kann in einem Textkorpus untersucht werden, indem das Phänomen durch eine Sammlung an Worten im Sinne eines semantischen Felds umrissen wird. Für diese Worte kann dann die Häufigkeit errechnet und über die Zeit analysiert werden. Dafür muss das Korpus zuerst mittels **Tokenisierung** in Worte sogenannte Token aufgeteilt werden. Verschiedene Wortformen (z.B. Krankenhäuser, Krankenghauses) sollen bei der Analyse mittels **Lemmatisierung** auf dasselbe Wort (hier: Krankenhaus) zurückgeführt werden, sodass die errechneten Häufigkeiten besser zu interpretieren sind. 
 
 `````{admonition} Beispiel
-:class: tip
+:class: hinweis
 Ursprünglicher Satz: "Die Grippe wütet weiter." \
 In tokenisierter und lemmatisierter Form:
 
@@ -43,7 +59,7 @@ Für Python gibt es verschiedene Bibliotheken, mit denen die Verarbeitung von Te
 | nltk | <ul><li>flexibel in der Anpassung an spezielle Anwendungsfälle</li><li>Transparenz einzelner Schritte in einer Pipeline</li></ul> | <ul><li>Lange Verarbeitungsdauer</li><li>Höhere Einstiegshürde</li></ul>|
 ```
 `````{admonition} Zum Begriff der Pipeline
-:class: tip, dropdown
+:class: hinweis, dropdown
 Die verschiedenen NLP-Methoden bauen teilweise aufeinander auf. Grundlegend wird ein Text zuerst tokenisiert, dann folgt PoS-Tagging und die Lemmatisierung. Diese Abfolge der einzelnen Prozess wird im NLP häufig mit der Metapher einer Pipeline beschrieben. 
 `````
 
@@ -52,7 +68,7 @@ Da die Vorverarbeitung der Texte keinerlei spezialisierter NLP-Methoden bedarf u
 Die zur Verfügung gestellte Modelle unterscheiden sich in der Geschwindigkeit und in der Akkuratheit der Annotation. Da wir auf einem verhältnismäßig großem Korpus operieren ()und sich die Leistung der Modelle für die Tokenisierung gar nicht und für die Lemmatisierung nur wenig (0.02%) unterscheidet, verwenden wir ein Modell, das auf Geschwindigkeit ausgelegt ist (`de_core_news_sm`). 
 
 `````{admonition} Leistung von spaCy auf unserem Korpus 
-:class: warning
+:class: caution
 Die Modelle in spaCy sind auf zeitgenössische Zeitungs- und Medientexte ausgelegt, die eine hohe Qualität haben. Historische Sprachverwendung sowie und vor allem eine geringe Datenqualität führen zu einer weit geringeren Annotationsleistung.  
 
 `````
