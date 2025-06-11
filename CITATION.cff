@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://citation-file-format.github.io/1.2.0/schema.json
+cff-version: 1.2.0
+title: 'Quantitative Analyse der Medienwellen der Spanischen Grippe (1918/19). Eine Fallstudie'
+abstract: Die vorliegende Fallstudie bereitet – in Form eines “Jupyter Books” – den Prozess und 
+  die Ergebnisse eines Forschungsprojekts aus den Digital Humanities didaktisch auf.
+type: software
+message: Please cite this software using the metadata from `preferred-citation` in
+  `CITATION.cff`.
+authors: &id001
+- given-names: Daniil
+  family-names: Skorinkin
+  orcid: https://orcid.org/0000-0002-1845-9974
+  affiliation: Universität Potsdam
+- given-names: Henny
+  family-names: Sluyter-Gäthje
+  orcid: https://orcid.org/0000-0003-2969-3237
+  affiliation: Universität Potsdam
+- given-names: Peer
+  family-names: Trilcke
+  orcid: https://orcid.org/0000-0002-1421-4320
+  affiliation: Universität Potsdam
+# TODO: Add these identifiers after the book is published
+# identifiers:
+# - type: doi
+#   value: 10.5281/zenodo.14970672
+#   description: Zenodo
+repository-code: https://github.com/dh-network/quadriga
+url: https://dh-network.github.io/quadriga/
+keywords:
+- open educational resource
+license: CC-BY-SA-4.0
+references:
+- title: Jupyter Book
+  type: software
+  authors:
+  - name: The Jupyter Book Community
+    website: https://github.com/jupyter-book/jupyter-book/graphs/contributors
+preferred-citation:
+  year: 2024
+  authors: *id001
+  title: 'Quantitative Analyse der Medienwellen der Spanischen Grippe (1918/19). Eine Fallstudie'
+  type: book
+  # doi: 10.5281/zenodo.14970672
+  url: https://dh-network.github.io/quadriga/
+  repository-code: https://github.com/dh-network/quadriga
+  license: CC-BY-SA-4.0
+  languages:
+  - deu
+  copyright: CC-BY-SA-4.0
+  keywords:
+  - Open Educational Resource
