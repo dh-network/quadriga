@@ -1,19 +1,80 @@
 (introduction_learning-outcomes)=
-# Groblernziele dieser Fallstudie
+# Lernziele
 
-```{admonition} Groblernziele
-:class: lernziele
-Nach erfolgreichem Durchlaufen dieser Fallstudie können im Erfolgsfall die folgenden Groblernziele erreicht werden:
+```{admonition} [Grundlagen korpusbasierter geisteswissenschaftlicher Forschung](research-question_intro)
+:class: lernziele, dropdown
 
-1. Sie kennen Grundfragen der geisteswissenschaftlichen Forschung mit Korpora nach dem qualitativen Methodenparadigma und wissen um das Konzept der "Operationalisierung" (siehe v.a. Kapitel ["Fragestellung und Operationalisierung"](research-question_intro)). 
+1. Die Entwicklung einer Digital Humanities-Fragestellung kann am Beispiel der Medienwellen-Forschung zur Spanischen Grippe nachvollzogen und erläutert werden.
 
-2. Sie kennen unterschiedliche Ansätze des Korpusaufbaus und sind mit der Erstellung basaler Metadaten vertraut (siehe v.a. Kapitel ["Korpusaufbau"](corpus-collection_intro)).
+2. Der Operationalisierungsprozess kann am Beispiel der Spanischen Grippe nachvollzogen und auf andere Forschungsfragen übertragen werden.
+```
 
-3. Sie können Schritte zur Erstellung eines Forschungskorpus aus Bilddaten  mittels Optical Character Recognition (OCR) aufzählen und die Qualität der Datensammlung anhand eines Samples bewerten (siehe v.a. Kapitel ["OCR — Vom Bild zum Text"](ocr_intro)).
 
-4. Sie kennen unterschiedliche Verfahren der Nachbearbeitung von OCR-Output zur Qualitätsverbesserung (siehe v.a. Kapitel ["Nachkorrektur der OCR-Ergebnisse"](post-correcting_intro)).
 
-5. Sie kennen Verfahren der Korpusverarbeitung mit Tools des Natural Language Processing und können Schritte zur Anwendung der Tools zur Tokenisierung und Lemmatisierung benennen (siehe v.a. Kapitel ["Korpusverarbeitung – Von Strings zu Token"](corpus-processing_intro)).
+```{admonition} [Ansätze des Korpusaufbaus und Erstellung basaler Metadaten](corpus-collection_intro)
+:class: lernziele, dropdown
 
-6. Sie können die auf einem Korpus ausgeführten Frequenzanalysen zu semantischen Feldern erklären und die Ergebnisse interpretieren (siehe v.a. Kapitel ["Korpusanalyse"](corpus-analysis_intro)). 
+1. Korpora können als geisteswissenschaftliche Forschungsobjekte definiert und deren wesentliche Merkmale beschrieben werden.
+
+2. Die vier Hauptformate digitaler Texte (Bilddigitalisate, Plain Text, XML/TEI, CSV) können anhand ihrer charakteristischen Eigenschaften unterschieden und deren Vor- und Nachteile für spezifische Anwendungsfälle analysiert werden.
+
+3. Die grundlegenden Metadatenschemata (Dublin Core, TEI, MODS, METS) und deren charakteristische Elemente für Korpora und Einzeldokumente können beschrieben werden.
+
+4. Der schrittweise Prozess des praktischen Korpusaufbaus (Konzeptentwicklung, Metadatenerstellung und Datensammlung) kann am Beispiel eines Zeitungskorpus beschrieben werde
+```
+
+
+
+```{admonition} [OCR-basierte Korpuserstellung und Qualitätsbewertung](ocr_intro)
+:class: lernziele, dropdown
+
+1. Der Prozess der Optical Character Recognition (OCR) für die Korpuserstellung kann beschrieben und Tools zur Durchführung der OCR aufgezählt werden.
+
+2. Die notwendigen Schritte zur Verarbeitung ein- und mehrseitiger PDFs zu Text können aufgezählt und die Unterschiede zwischen Ursprungs- und Zielformat erklärt werden.
+
+3. Die grundlegenden Metriken zur OCR-Qualitätsevaluation (Präzision, Recall, F1-Score) können erläutert und deren Bedeutung für die Bewertung von OCR-Systemen beschrieben werden.
+
+4. Die Schritte zur Qualitätsmessung eines OCR-Outputs können aufgezählt und die Qualitätsmaße interpretiert werden.
+```
+
+
+
+```{admonition} [OCR-Nachbearbeitung und Qualitätsverbesserung](post-correcting_intro)
+:class: lernziele, dropdown
+
+1. Verschiedene Verfahren der OCR-Nachbearbeitung können beschrieben und deren Einsatzzwecke unterschieden werden.
+
+2. Regelbasierte Ansätze zur OCR-Nachkorrektur können beschrieben und deren Auswirkungen auf die OCR-Qualität anhand von Metriken erläutert werden.
+
+3. Die grundlegenden Herausforderungen beim Einsatz von Large Language Models für die OCR-Nachbearbeitung können beschrieben werden.
+```
+
+
+
+```{admonition} [Korpusverarbeitung mit Natural Language Processing](corpus-processing_intro)
+:class: lernziele, dropdown
+
+1. Die Grundkonzepte des Natural Language Processing können erklärt und die Funktionen von Tokenisierung und Lemmatisierung für die Textanalyse beschrieben werden.
+
+2. Die notwendigen Schritte zur automatischen Annotation eines Texts können aufgezählt und Vorteile der Tokenisierung gegenüber einfacheren Methoden der Worttrennung genannt werden.
+```
+
+
+
+```{admonition} [Frequenzanalysen semantischer Felder](corpus-analysis_intro)
+:class: lernziele, dropdown
+
+1. Das Konzept des semantischen Feldes kann erklärt, der Unterschied zwischen absoluten und relativen Häufigkeiten beschrieben und die Darstellungsmethoden des Liniendiagramms und der Key Word in Context (KWIC)-Anzeige interpretiert werden.
+
+2. Die notwendigen Schritte zur Frequenzanalyse eines semantischen Felds können aufgezählt, Unterschiede in der Berechnung der Häufigkeiten benannt und die Ergebnisse reflektiert werden.
+
+3. Die Darstellungsmethode Keywords in Context kann beschrieben, Wörter zur Anzeige ausgewählt und diese angezeigt werden.
+```
+
+
+
+```{admonition} [Kritische Bewertung der Reichweite und Limitationen](reflection_reflection)
+:class: lernziele, dropdown
+
+1. Die methodischen Limitationen einer Digital Humanities-Fallstudie können benannt werden.
 ```

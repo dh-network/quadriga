@@ -16,9 +16,14 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 
 ```
 ````
-```{admonition} Groblernziel dieses Kapitels
+```{admonition} OCR-Nachbearbeitung und Qualitätsverbesserung
 :class: lernziele
-Sie kennen unterschiedliche Verfahren der Nachbearbeitung von OCR-Output zur Qualitätsverbesserung.
+
+1. Verschiedene Verfahren der OCR-Nachbearbeitung können beschrieben und deren Einsatzzwecke unterschieden werden.
+
+2. Regelbasierte Ansätze zur OCR-Nachkorrektur können beschrieben und deren Auswirkungen auf die OCR-Qualität anhand von Metriken erläutert werden.
+
+3. Die grundlegenden Herausforderungen beim Einsatz von Large Language Models für die OCR-Nachbearbeitung können beschrieben werden.
 ```
 
 Im vorigen [Kapitel](ocr) haben wir die Scans der Zeitungen per OCR automatisch in Klartext umgewandelt. In diesem Kapitel werden wir die Ergebnisse der OCR nachbearbeiten. 

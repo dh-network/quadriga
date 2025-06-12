@@ -17,12 +17,10 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 ```
 ````
 
-```{admonition} Feinlernziel(e) dieses Kapitels
+```{admonition} Kritische Bewertung der Reichweite und Limitationen
 :class: lernziele
-Die methodischen Grenzen und Ergebnisse der Fallstudie können zusammengefasst und reflektiert werden:
 
-1. Die identifizierten Limitationen der Korpusauswahl, OCR-Qualität und Analysemethoden können benannt werden.
-2. Die @LLM-Nachkorrektur als alternative Methode zur Verbesserung der OCR-Qualität kann nachvollzogen werden.
+1. Die methodischen Limitationen einer Digital Humanities-Fallstudie können benannt werden.
 ```
 
 

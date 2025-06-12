@@ -16,9 +16,12 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 
 ```
 ````
-```{admonition} Groblernziel dieses Kapitels
+```{admonition} Grundlagen korpusbasierter geisteswissenschaftlicher Forschung
 :class: lernziele
-Sie kennen Grundfragen der geisteswissenschaftlichen Forschung mit Korpora nach dem qualitativen Methodenparadigma und wissen um das Konzept der "Operationalisierung"
+
+1. Die Entwicklung einer Digital Humanities-Fragestellung kann am Beispiel der Medienwellen-Forschung zur Spanischen Grippe nachvollzogen und erläutert werden.
+
+2. Der Operationalisierungsprozess kann am Beispiel der Spanischen Grippe nachvollzogen und auf andere Forschungsfragen übertragen werden.
 ```
 
 Dieses Kapitel bildet den Auftakt der Fallstudie und dient der Klärung des Erkenntnisinteresses, das die dann folgende Vorbereitung und Aufbereitung des Forschungsgegenstands (Korpus) und schließlich die Analyse leitet. 
