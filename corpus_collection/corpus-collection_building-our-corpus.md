@@ -12,10 +12,6 @@ kernelspec:
 
 (corpus-collection_building-our-corpus)=
 # Aufbau des Forschungskorpus
-```{admonition} Groblernziel dieses Kapitels
-:class: lernziele
-Sie können den schrittweisen Prozess des praktischen Korpusaufbaus (Konzeptentwicklung, Metadatenerstellung und Datensammlung) am Beispiel eines Zeitungskorpus beschreiben.
-```
 
 Um das Korpus für unser Forschungsprojekt aufzubauen, müssen nun drei Punkte abgearbeitet werden: 
 1. Das **Korpuskonzept**, also auch die Sammlungsstrategie, muss ausgearbeitet und im besten Fall in den Korpus-Metadaten festgehalten werden.

@@ -1,8 +1,4 @@
 # Einführung in die OCR-Nachbearbeitung
-```{admonition} Feinlernziel(e) dieses Kapitels
-:class: lernziele
-Sie können verschiedene Verfahren der OCR-Nachbearbeitung beschreiben und deren Einsatzzwecke unterscheiden.
-```
 
 Während OCR-Software heutzutage sehr leistungsfähig ist, sind die Ergebnisse nicht immer perfekt und erfordern häufig eine Nachbearbeitung, um Fehler zu korrigieren und die Textqualität zu verbessern.
 
