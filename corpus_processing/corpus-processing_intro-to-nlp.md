@@ -15,10 +15,6 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 
 ```
 ````
-```{admonition} Feinlernziel(e) dieses Kapitels
-:class: lernziele
-Sie können die Grundkonzepte des Natural Language Processing erklären und die Funktionen von Tokenisierung und Lemmatisierung für die Textanalyse beschreiben.
-```
 
 ## 1. Was ist NLP und warum benutzen wir es?
 Für den Computer ist ein Text eine Liste von Zeichen, die nicht aus semantischen Einheiten wie z.B. Wörtern oder Sätzen besteht. Sobald die Operationalisierung einer Forschungsfrage von diesen semantischen Einheiten ausgeht, z.B. auf der Häufigkeit eines Wortes aufbaut, ist es sinnvoll Methoden des <a href="https://en.wikipedia.org/wiki/Natural_language_processing" class="external-link" target="_blank">Natural Language Processing (NLP)</a>  anzuwenden, um den Text mit zusätzlichen linguistischen Informationen anzureichern.  

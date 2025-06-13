@@ -1,8 +1,4 @@
 # Messung der OCR-Qualität
-```{admonition} Feinlernziel(e) dieses Kapitels
-:class: lernziele
-Sie können die grundlegenden Metriken zur OCR-Qualitätsevaluation (Präzision, Recall, F1-Score) erläutern und ihre Bedeutung für die Bewertung von OCR-Systemen beschreiben.
-```
 
 In Bezug auf die optische Zeichenerkennung (OCR) werden Präzision, Recall und F-Maß zur Bewertung der Genauigkeit und Effizienz von OCR-Systemen verwendet. Diese Metriken helfen zu verstehen, wie gut ein OCR-System arbeitet, insbesondere in Bezug auf die korrekte Identifizierung von Zeichen, Wörtern oder spezifischen Informationen in Dokumenten. Hier ist, wie diese Metriken auf die Qualitätsevaluation von OCR angewendet werden:
 
