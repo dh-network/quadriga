@@ -5,7 +5,8 @@ lang: de-DE
 
 <h2>Autor:innen der Inhalte</h2>
 
-<h3>Daniil Skorinkin <a href="https://orcid.org/0000-0002-1845-9974" target="_blank"><img src="../assets/images/ORCID_iD.png" alt="ORCID Logo"></a></h3>
+<h3>Daniil Skorinkin <a href="https://orcid.org/0000-0002-1845-9974" target="_blank"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID iD"></a></h3>
+
 <table style="margin-left: 0">
 <tr>
 <td><b>Rolle in QUADRIGA:</b></td>
@@ -21,7 +22,7 @@ lang: de-DE
 </tr>
 </table>
 
-<h3>Henny Sluyter-Gäthje <a href="https://orcid.org/0000-0003-2969-3237" target="_blank"><img src="../assets/images/ORCID_iD.png" alt="ORCID Logo"></a></h3>
+<h3>Henny Sluyter-Gäthje <a href="https://orcid.org/0000-0003-2969-3237" target="_blank"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID Logo"></a></h3>
 <table style="margin-left: 0">
 <tr>
 <td><b>Rolle in QUADRIGA:</b></td>
@@ -37,7 +38,7 @@ lang: de-DE
 </tr>
 </table>
 
-<h3>Peer Trilcke <a href="https://orcid.org/0000-0002-1421-4320" target="_blank"><img src="../assets/images/ORCID_iD.png" alt="ORCID Logo"></a></h3>
+<h3>Peer Trilcke <a href="https://orcid.org/0000-0002-1421-4320" target="_blank"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID Logo"></a></h3>
 <table style="margin-left: 0">
 <tr>
 <td><b>Rolle in QUADRIGA:</b></td>
@@ -55,7 +56,7 @@ lang: de-DE
 
 <h2>Weitere Beteiligte</h2>
 
-<h3>Hannes Schnaitter <span style="font-size:8pt">(er/ihm/sein)</span> <a href="https://orcid.org/0000-0002-1602-6032" target="_blank"><img src="../assets/images/ORCID_iD.png" alt="ORCID Logo"></a></h3>
+<h3>Hannes Schnaitter <span style="font-size:8pt">(er/ihm/sein)</span> <a href="https://orcid.org/0000-0002-1602-6032" target="_blank"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID Logo"></a></h3>
 <table style="margin-left: 0">
 <tr>
 <td><b>Rolle in QUADRIGA:</b></td>
@@ -75,7 +76,7 @@ lang: de-DE
 </tr>
 </table>
 
-<h3> Evgenia Samoilova <a href="https://orcid.org/0000-0003-3858-901X" target="_blank"><img src="../assets/images/ORCID_iD.png" alt="ORCID Logo"></a></h3>
+<h3> Evgenia Samoilova <a href="https://orcid.org/0000-0003-3858-901X" target="_blank"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" alt="ORCID Logo"></a></h3>
 <table style="margin-left: 0">
 <tr>
 <td><b>Rolle in QUADRIGA:</b></td>
