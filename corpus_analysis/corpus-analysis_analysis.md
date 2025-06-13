@@ -1,6 +1,7 @@
+(corpus-analysis_analysis)=
 # Häufigkeitenanalyse, Visualierung und KWIC 
 
-## 1. Forschungsfrage und Operationalisierung
+## Forschungsfrage und Operationalisierung
 Wir gehen von folgender Forschungsfrage aus: 
 `````{admonition} Forschungsfrage
 :class: keypoint
@@ -12,12 +13,12 @@ Um diese mit quantitativen Methoden zu bearbeiten, wurde die Forschungsfrage zun
 3. Der **Verlauf** der öffentliche Aufmerksamkeit wird über die sich entwickelte Häufigkeit des Wortfelds untersucht. Eine erhöhte Häufigkeit deutet auf eine erhöhte Aufmerksamkeit hin. 
 
 
-## 2. Das semantische Feld der Spanischen Grippe
+## Das semantische Feld der Spanischen Grippe
 
-### 2.1 Erläuterung: Semantisches Feld
+### Erläuterung: Semantisches Feld
 Das Ziel der Analyse ist es, zu quantifizieren, wie viel über die Spanische Grippe berichtet wird. Dafür sollen möglichst alle und nur die Textstellen erfasst werden, in denen die Spanische Grippe erwähnt wird. Eine Erwähnung liegt dann vor, wenn ein Wort vorkommt, das mit der Spanischen Grippe im Zusammenhang steht. Die Sammlung dieser Wörter nennen wir **Semantisches Feld**. Da die Wörter losgelöst von ihrem Kontext analysiert werden, sollten sie so gewählt sein, dass sie sich auf die Spanische Grippe und nur auf diese beziehen.
 
-### 2.2 Erstellung des semantischen Felds
+### Erstellung des semantischen Felds
 Da <a href="https://en.wikipedia.org/wiki/Large_language_model" class="external-link" target="_blank">Large Language Models</a> sehr gut dazu in der Lage sind, semantisch ähnliche Wörter zu erzeugen, haben wir das semantische Feld mit Hilfe des Chatbots <a href="https://openai.com/index/chatgpt/" class="external-link" target="_blank">ChatGPT</a> erstellt.
 
 ```{admonition} Spezifikation zur ChatGPT-Nutzung
@@ -39,12 +40,12 @@ Als Resultat haben wir eine Liste mit 25 Nomen erhalten:
 Influenza, Grippe, Grippeepidemie, Grippewelle, Grippekranke, Grippepandemie, Lungenentzündung, Krankheitswelle, Seuchenzug, Krankheitsausbruch, Fieberanfall, Schüttelfrost, Atemnot, Körpererschöpfung, Genesungszeit, Ansteckungsgefahr, Seuchenschutz, Desinfektionsmittel, Schutzmaske, Krankenstation, Isolationsstation, Sanitätsdienst, Krankheitsverlauf, Todesopfer, Krankheitssymptom, Erkrankungsfall, Lungeninfektion
 
 
-## 3. Häufigkeit als Analysemethode 
+## Häufigkeit als Analysemethode 
 
-### 3.1 Warum die Häufigkeit analysieren?
+### Warum die Häufigkeit analysieren?
 Die Analyse von Worthäufigkeiten ist sowohl in der Korpuslinguistik als auch in den Digital Humanities [p. 73] weit verbreitet. Für die Analyse von Inhaltswörtern (Nomen, Verben, Adjektive, Adverben) wird angenommen, dass ein hohes Vorkommen mit der Wichtigkeit der Wörter im Text korreliert. Besonders bei einer vergleichenden Analyse (etwa von zwei Zeitungen oder einem Thema über Zeit) ist die Häufigkeitsanalyse sinnvoll, da der Vergleich so quantisierbar wird. 
 
-### 3.2 Häufigkeit von Grippe
+### Häufigkeit von Grippe
 Um die Wichtigkeit eines Themenfelds wie der Spanischen Grippe zu untersuchen, bietet es sich an, nicht nur das Vorkommen eines einzelnen Wortes wie "Grippe" zu untersuchen, sondern andere, mit Grippe im Zusammenhang stehende Wörter zu sammeln. Die Wörter werden in der Grundform angegeben, sodass sie mit den Lemmata im Text verglichen werden können.
 Für jedes Wort wird dann die Häufigkeit errechnet, diese nennt sich **absolute Häufigkeit**. Die absoluten Häufigkeiten werden addiert, sodass sich pro Text eine Zahl ergibt, die die Summe aller Häufigkeiten der Grippenbezogenen Wörter angibt.
 
@@ -67,7 +68,7 @@ Für jedes Wort wird dann die Häufigkeit errechnet, diese nennt sich **absolute
 
 `````
 
-### 3.3 Vergleichbarkeit von Häufigkeiten
+### Vergleichbarkeit von Häufigkeiten
 Für die Vergleichbarkeit von Worthäufigkeiten in Texten ist wichtig, dass die Texte auch ansonsten vergleichbar sind. Stammen die Texte z. B. aus unterschiedlichen Zeiträumen müssten ggf. zeitspezifische semantische Felder erstellt werden, um für den Sprachwandel Rechnung zu tragen. Auch sollten die Texte eine ähnliche Länge haben, sodass eine erhöhte Häufigkeit tatsächlich auf eine erhöhte Wichtigkeit zurückgeführt werden kann.
 Wenn Texte verschieden lang sind, sollten die Häufigkeiten **normalisiert** werden, das heißt sie werden in Bezug zur Textlänge gesetzt. Dafür wird die absolute Häufigkeit durch die Textlänge dividiert, daraus ergibt sich die **relative Frequenz**. Die relative Frequenz des semantischen Felds "Grippe" kann als Anteil der Grippewörter am Gesamttext gesehen werden. 
 
@@ -80,7 +81,7 @@ $ f = {4 \over 69} = {0.05797101449} $$.
 Das heißt: Jedes zwangstigste Wort im Text steht im Zusammenhang mit der Spanischen Grippe. 
 `````
 
-### 3.4 Analyse des gesamten Korpus 
+### Analyse des gesamten Korpus 
 Um den Verlauf der Aufmerksamkeit nachzuvollziehen, wird für jeden Text im Korpus die relative Frequenz des semantischen Felds "Grippe" berechnet und in einer Tabelle gespeichert. Die Frequenzen werden dann über die Zeit verglichen. 
 
 `````{admonition} Beispiel
@@ -119,7 +120,7 @@ Eine zweite Möglichkeit, die Häufigkeiten über eine Zeitraum zusammenzufassen
 Mit der zweiten Methode ist die relative Häufigkeit um 0.005 Prozentpunkte höher.
 `````
 
-## 4. Visuelle Darstellung 
+## Visuelle Darstellung 
 
 Im diesen Schritt werden die extrahierten absoluten oder relativen Häufigkeiten mit einem Liniendiagramm visualisert. Liniendiagramme eignen sich gut, um zeitliche Verläufe darzustellen, da lokale und globale Minima und Maxima leicht erkennbar sind und sie die Kontinuität der Daten unterstreichen. 
 
@@ -136,9 +137,9 @@ Wir erstellen eine ähnliche Visualierung mit dem Unterschied, dass die y-Achse 
 Die Häufigkeiten über Zeit ließen sich auch in einem Balkendiagramm darstellen. Diese sind nützlich, um Häufigkeiten in diskreten Zeitintervallen zu visualisieren, sie eignen sich aber weniger gut, um eine zeitliche Entwicklung zu zeigen. 
 
 
-## 5. Keyword in Context (KWIC) 
+## Keyword in Context (KWIC) 
 
-### 5.1 Was ist KWIC?
+### Was ist KWIC?
 Die Keyword in Context (KWIC)-Darstellung basiert auf der Suche eines oder meherer Worte oder einer Phrase innerhalb eines Korpus und zeigt den gesuchten Term sowie den textuellen Kontext des Terms an. Es kann dabei definiert werden, wie groß der Kontext ist (z. B. 5 Wörter, ein Satz, etc.). Wie in [der Tabelle](tab-kwic) zu sehen ist, hat die Darstellung die Form einer Tabelle mit drei Spalten: der Kontext auf der linken Seite, der gesuchte Term (meist farblich hervorgehoben), der Kontekt auf der rechten Seite. Zusätzlich können noch Metadaten gegeben sein, wie die Quelle (wenn in einem Korpus gesucht wird) oder das Datum.
 
 ```{table}
@@ -150,11 +151,11 @@ Die Keyword in Context (KWIC)-Darstellung basiert auf der Suche eines oder meher
 |   Am 19. Okiober .d . 45 , Wir büten voten , ...     | Grippe   | 3. verſchied in einem Feld- 8 lazarett info...    | 1918-10 |
  
 ```
-### 5.2 Der Gebrauch von KWIC
+### Der Gebrauch von KWIC
 Die KWIC-Darstellung bildet eine Brücke von der quantitativen zur qualitativen Analyse, da die Grundlage der Häufigkeitenanalyse genauer in Betracht genommen werden kann. Die Kontexte geben eine Überblick über den Gebrauch des Wortes und bieten so die Möglichkeit, Muster im Wortgebrauch festzustellen. Die zusätzlichen Metadaten erlauben es, in interessanten oder in Zweifelsfällen einen Blick in die Quelle zu werfen und so den Analysekontext zu erweitern.   
 Mit Hilfe der Darstellung kann außerdem die Annahme überprüft werden, dass sich die Wörter im semantischen Feld "Grippe" tatsächlich auf die Grippe beziehen. Das semantische Feld kann in einem iterativen Prozess manuell verbessert werden, indem mehrdeutige Wörter, die häufig nicht auf die Grippe verweisen, aus dem Feld gelöscht werden und Wörter, die häufig im Kontext der Grippe vorkommen, aber nicht Teil des Felds sind, hinzugefügt werden.  
 
-## 6. Zusammenfassung und nächste Schritte 
+## Zusammenfassung und nächste Schritte 
 Mit diesem Kapitel sind wir zur Operationalisierung der Forschungsfrage zurückgekehrt. Es wurde herausgestellt, dass die Grippe durch ein semantisches Feld untersucht und wie dieses erstellt wurde. Dann wurde die Methode der Häufigkeitenanalyse vorgestellt und in die Visualierung der Häufigkeiten eingeführt. Zum Schluss wurde die Darstellung Keyword in Context erklärt und der Gebrauch erläutert.
 
 Im nächsten Abschnitt wird die Häufigkeitsanalyse durchgeführt, dabei besteht die Möglichkeit mit einem eigens erstellten semantischen Feld zu arbeiten. Die berchneten Häufikeiten werden dann in einem Liniendiagramm visualisiert.

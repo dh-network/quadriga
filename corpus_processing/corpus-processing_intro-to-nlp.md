@@ -16,12 +16,12 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 ```
 ````
 
-## 1. Was ist NLP und warum benutzen wir es?
+## Was ist NLP und warum benutzen wir es?
 Für den Computer ist ein Text eine Liste von Zeichen, die nicht aus semantischen Einheiten wie z.B. Wörtern oder Sätzen besteht. Sobald die Operationalisierung einer Forschungsfrage von diesen semantischen Einheiten ausgeht, z.B. auf der Häufigkeit eines Wortes aufbaut, ist es sinnvoll Methoden des <a href="https://en.wikipedia.org/wiki/Natural_language_processing" class="external-link" target="_blank">Natural Language Processing (NLP)</a>  anzuwenden, um den Text mit zusätzlichen linguistischen Informationen anzureichern.  
 NLP ist ein interdisziplinäres Feld, das sich zwischen der Linguistik und der Informatik ansiedelt und verschiedene Methoden (regelbasiert, statistisch, <a href="https://en.wikipedia.org/wiki/Machine_learning" class="external-link" target="_blank">maschinelles Lernen</a>) zur automatischen Verarbeitung natürlicher Sprache umfasst. Diese reichen von der Aufteilung eines Texts in Wörter (<a href="https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization" class="external-link" target="_blank">Tokenisierung</a>) über die Analyse von Emotionen in Texten (<a href="https://en.wikipedia.org/wiki/Sentiment_analysis" class="external-link" target="_blank">Emotion / Sentiment Analysis</a>) bis hin zu der Erstellung von Chatbots (<a href="https://en.wikipedia.org/wiki/Dialogue_system" class="external-link" target="_blank">Dialogue Systems</a>). 
 
 (corpus-processing-intro-2)=
-## 2. Verwendete NLP-Methoden
+## Verwendete NLP-Methoden
 Ein Phänomen, wie die Spanische Grippe, kann in einem Textkorpus untersucht werden, indem das Phänomen durch eine Sammlung an Worten im Sinne eines semantischen Felds umrissen wird. Für diese Worte kann dann die Häufigkeit errechnet und über die Zeit analysiert werden. Dafür muss das Korpus zuerst mittels **Tokenisierung** in Worte sogenannte Token aufgeteilt werden. Verschiedene Wortformen (z.B. Krankenhäuser, Krankenghauses) sollen bei der Analyse mittels **Lemmatisierung** auf dasselbe Wort (hier: Krankenhaus) zurückgeführt werden, sodass die errechneten Häufigkeiten besser zu interpretieren sind. 
 
 `````{admonition} Beispiel
@@ -41,9 +41,9 @@ In tokenisierter und lemmatisierter Form:
 ```
 `````
 
-## 3. NLP mit Python 
+## NLP mit Python 
 
-### 3.1 nltk und spaCy 
+### nltk und spaCy 
 In Programmiersprachen gibt es Bibliotheken, die Methoden z.B. zur Textverarbeitung, bündeln. Die Bibliotheken können installiert, in den Programmcode geladen und dann angewendet werden.
 Für Python gibt es verschiedene Bibliotheken, mit denen die Verarbeitung von Texten mittels NLP möglich ist. Am weitesten vebreitet sind die Bibliotheken <a href="https://spacy.io" class="external-link" target="_blank">spaCy</a> und <a href="https://www.nltk.org/" class="external-link" target="_blank">nltk</a>, die in Tabelle {ref}`cmp-spacy-nltk` verglichen werden.
 
@@ -69,7 +69,7 @@ Die Modelle in spaCy sind auf zeitgenössische Zeitungs- und Medientexte ausgele
 
 `````
 
-## 4. Zusammenfassung und nächste Schritte
+## Zusammenfassung und nächste Schritte
 Die NLP-Methoden, die für die Vorverarbeitung von Texten notwendig sind, wurden erklärt. spaCy wurde als Bibliothek festgelegt, mit der die Methoden auf die Textdaten angewendet werden. Im nächsten Schritt werden die Texte, die als txt-Dateien vorliegen, mittels spaCy annotiert und die Annotationen werden in Tabellen (csv-Dateien) gespeichert. 
 
 ## Mögliche Fragen fürs Assessment
