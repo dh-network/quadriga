@@ -12,9 +12,9 @@ Besonders wichtig ist das Verständnis der [OCR-Qualität](ocr-quality): Die Met
 
 **Prozesscharakter der OCR**
 
-Die [praktische Durchführung](../data-input/FS_1_MVP_OCR) der OCR muss als mehrstufiger Prozess verstanden werden, bei dem die eigentliche Texterkennung nur einen Schritt darstellt. Die Qualitätskontrolle und eventuelle Nachkorrektur sind integrale Bestandteile des Workflows.
+Die [praktische Durchführung](../ocr/ocr_pytesseract_intro) der OCR muss als mehrstufiger Prozess verstanden werden, bei dem die eigentliche Texterkennung nur einen Schritt darstellt. Die Qualitätskontrolle und eventuelle Nachkorrektur sind integrale Bestandteile des Workflows.
 ```
 
 <!-- 
-Dieses Kapitel führte [OCR](ocr) als Methode zur maschinellen Lesbarkeit Ihres Korpus ein. Es zeigte, wie [OCR in Python](../data-input/FS_1_MVP_OCR) durchgeführt werden kann und wie die [Qualität der OCR](ocr-quality) bewertet werden kann. Das nächste Kapitel wird sich der Nachkorrektur der OCR-Ergebnisse widmen.
+Dieses Kapitel führte [OCR](ocr) als Methode zur maschinellen Lesbarkeit Ihres Korpus ein. Es zeigte, wie [OCR in Python](../ocr/ocr_pytesseract_intro) durchgeführt werden kann und wie die [Qualität der OCR](ocr-quality) bewertet werden kann. Das nächste Kapitel wird sich der Nachkorrektur der OCR-Ergebnisse widmen.
 -->
