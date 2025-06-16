@@ -20,7 +20,7 @@ chapters:
     - file: corpus_collection/corpus-collection_metadata
     - file: corpus_collection/corpus-collection_building-our-corpus
     - file: corpus_collection/corpus-collection_summary
-    - file: corpus_collection/korpusaufbau_assessment
+    - file: corpus_collection/corpus-collection_assessment
   - file: ocr/ocr_intro
     sections:
     - file: ocr/ocr

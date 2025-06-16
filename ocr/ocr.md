@@ -1,8 +1,4 @@
 # OCR als Methode, um Text maschinenlesbar zu machen
-```{admonition} Feinlernziel(e) dieses Kapitels
-:class: lernziele
-Sie können den Prozess der Optical Character Recognition (OCR) für die Korpuserstellung beschreiben und Tools zur Durchführung der OCR aufzählen.
-```
 
 **Optical Character Recognition (OCR)** ist eine Technologie, die es ermöglicht, gedruckten oder handgeschriebenen Text in Dokumenten oder Bildern in maschinenlesbaren Text umzuwandeln. OCR-Software analysiert das Layout des Dokuments, erkennt die Formen der Buchstaben und Zahlen und wandelt diese in digitale Texte um, die weiterverarbeitet werden können.
 

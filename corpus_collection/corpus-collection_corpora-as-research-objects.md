@@ -1,9 +1,5 @@
 (corpus-collection_corpora-as-research-objects)=
 # Korpora als Forschungsobjekte der Digital Humanities
-```{admonition} Feinlernziel(e) dieses Kapitels
-:class: lernziele
-Sie können Korpora als geisteswissenschaftliche Forschungsobjekte definieren und ihre wesentlichen Merkmale beschreiben.
-```
 
 Für die Forschung in den textbasierten Digital Humanities hat sich das Korpus als das wichtigste epistemische Objekt herauskristallisiert. Korpora lassen sich dabei vereinfacht verstehen als 
 

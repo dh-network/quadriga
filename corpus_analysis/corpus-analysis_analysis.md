@@ -1,8 +1,4 @@
 # Häufigkeitenanalyse, Visualierung und KWIC 
-```{admonition} Feinlernziel(e) dieses Kapitels
-:class: lernziele
-Sie verfügen über ein Grundverständnis des Konzepts des semantischen Feldes, können den Unterschied zwischen absoluten und relativen Häufigkeiten erklären und die Darstellungsmethoden des Liniendiagramms und der Key Word in Context (KWIC)-Anzeige interpretieren. 
-```
 
 ## 1. Forschungsfrage und Operationalisierung
 Wir gehen von folgender Forschungsfrage aus: 
