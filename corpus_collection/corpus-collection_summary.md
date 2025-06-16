@@ -1,3 +1,4 @@
+(corpus-collection_summary)=
 # Resümee
 
 ```{admonition} Key points des Kapitels

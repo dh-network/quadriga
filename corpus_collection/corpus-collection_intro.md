@@ -28,7 +28,7 @@ Mit Ihren Rückmeldungen können wir unser interaktives Lehrbuch gezielt an Ihre
 4. Der schrittweise Prozess des praktischen Korpusaufbaus (Konzeptentwicklung, Metadatenerstellung und Datensammlung) kann am Beispiel eines Zeitungskorpus beschrieben werde
 ```
 
-Nachdem im [vorherigen Kapitel](introduction_intro) die **Fragestellung** dieser Fallstudie und deren **Operationalisierung** erläutert wurde, muss nun der Forschungsgegenstand im Sinne der Operationalisierung vorbereitet werden. In unserem Fall bedeutet dies, dass wir ein **Korpus zusammenstellen** müssen, anhand dessen sich (wie es in unserer Operationalisierung heißt) "die Texte in Berliner Tageszeitungen" untersuchen lassen. 
+Nachdem im [vorherigen Kapitel](research-question_intro) die **Fragestellung** dieser Fallstudie und deren **Operationalisierung** erläutert wurde, muss nun der Forschungsgegenstand im Sinne der Operationalisierung vorbereitet werden. In unserem Fall bedeutet dies, dass wir ein **Korpus zusammenstellen** müssen, anhand dessen sich (wie es in unserer Operationalisierung heißt) "die Texte in Berliner Tageszeitungen" untersuchen lassen. 
 
 ```{figure} ../assets/images/flow-chart_corpus-collection.png
 ---
