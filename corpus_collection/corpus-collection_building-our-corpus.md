@@ -19,7 +19,7 @@ Um das Korpus für unser Forschungsprojekt aufzubauen, müssen nun drei Punkte a
 3. Die **Sammlung der Elemente** muss durchgeführt werden. 
 
 
-## 1. Korpuskonzept
+## Korpuskonzept
 Als Untersuchungsgegenstand wurde [oben](research-question_operationalization) "Texte in Berliner Tageszeitungen" angegeben, wobei wir uns auf den Zeitraum der Spanischen Grippe-Pandemie beschränken wollen. Als Zeitraum für die Spanische Grippe gibt <a href="https://en.wikipedia.org/wiki/Spanish_flu" class="external-link" target="_blank">Wikipedia</a> "February 1918 – April 1920" an. Ebenfalls auf <a href="https://de.wikipedia.org/wiki/Liste_Berliner_Tageszeitungen" class="external-link" target="_blank">Wikipedia</a> wird angegeben, dass es um 1925 in Berlin "30 Tageszeitungen" gab. Geht man nur von einer Ausgabe pro Tag aus (was wenig ist, da viele Zeitungen in dieser Zeit in Morgen- und Abendausgabe erscheinen), würde ein vollständiges Korpus für diesen Untersuchungsgegenstand 24.570 Ausgaben von Tageszeitungen umfassen. 
 Bei unseren Recherchen haben wir als mögliche Quelle für die Korpuselemente das <a href="https://zefys.staatsbibliothek-berlin.de/" class="external-link" target="_blank">"ZEitungsinFormationssYStem der Staatsbibliothek zu Berlin"</a>, kurz "ZEFYS", identifiziert, das zu zahlreichen Berliner Tageszeitungen unseres Untersuchungszeitraums Bilddigitalisate (u.a. im PDF-Format) führt. Eine von uns durchgeführte Stichproben hat dabei ergeben, das dass PDF einer Ausgabe im Durchschnitt etwa 74 MB groß ist. Eine erste Grobschätzung für ein Korpus ergab damit eine Größe von 
 
@@ -47,7 +47,7 @@ Das Korpus soll ausgehend von den über ZEFYS verfügbaren PDF-Dateien aufgebaut
 - **<a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/coverage/" class="external-link" target="_blank">DC.coverage</a>**: "1918-01-01 bis 1919-12-31, Berlin"
 - **<a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/identifier/" class="external-link" target="_blank">DC.identifier</a>**: "QUADRIGA\_FS-Text-01\_Data01_Corpus-Table"
 
-## 2. Elemente des Korpus
+## Elemente des Korpus
 Mit dem eben ausgeführten Korpuskonzept sind auch die Elemente des Korpus definiert. Wir entscheiden uns für ein basales Metadatenschema, das folgende Felder umfasst:
 
 - ID: `DC.identifier`
@@ -96,7 +96,7 @@ df.head()
 
 Die vollständige CSV-Datei kann [hier](https://github.com/dh-network/quadriga/blob/ec3334a4b18750e5bb10c25b2badcbfbbf18592c/data/metadata/QUADRIGA_FS-Text-01_Data01_Corpus-Table.csv) heruntergeladen werden.
 
-## 3. Sammlung der Elemente
+## Sammlung der Elemente
 Die CSV-Datei, die sämtliche Elemente Korpus aufführt, listet auch jeweils einen Link zur PDF-Datei des Korpus. Dieser Link hat stets die Form: 
 
 ```
