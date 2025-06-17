@@ -12,10 +12,10 @@ Die vorgestellten <a href="corpus-processing_intro-to-nlp#verwendete-nlp-methode
 
 **Praktische Umsetzung**
 
-Mit spaCy steht ein effizientes Werkzeug zur [systematischen Korpusverarbeitung](../nlp-enrichment/NLP-Enrichment) zur Verfügung, das die Annotation großer Textmengen ermöglicht und die Grundlage für quantitative Analysen schafft.
+Mit spaCy steht ein effizientes Werkzeug zur [systematischen Korpusverarbeitung](corpus-processing_nlp-annotation) zur Verfügung, das die Annotation großer Textmengen ermöglicht und die Grundlage für quantitative Analysen schafft.
 ```
 
 <!-- 
-In diesem Kapitel wurde eine Übersicht über eine [Auswahl an Methoden des Natural Language Processing](corpus-processing-intro-2) gegeben (Tokenisierung, Lemmatisierung) und es wurde gezeigt, wie diese durch die Python-Bibliothek spaCy auf ein Textkorpus angewendet werden können. 
+In diesem Kapitel wurde eine Übersicht über eine [Auswahl an Methoden des Natural Language Processing](corpus-processing-intro-to-nlp) gegeben (Tokenisierung, Lemmatisierung) und es wurde gezeigt, wie diese durch die Python-Bibliothek spaCy auf ein Textkorpus angewendet werden können. 
 Im nächsten Schritt kann auf Grundlage der Token und Lemma das Korpus an Hand von Worthäufigkeiten analysiert werden. 
 -->

@@ -1,4 +1,4 @@
-(corpus-analysis_analysis)=
+(corpus-analysis_anlysis)=
 # Häufigkeitenanalyse, Visualierung und KWIC 
 
 ## Forschungsfrage und Operationalisierung
@@ -124,7 +124,7 @@ Mit der zweiten Methode ist die relative Häufigkeit um 0.005 Prozentpunkte höh
 
 Im diesen Schritt werden die extrahierten absoluten oder relativen Häufigkeiten mit einem Liniendiagramm visualisert. Liniendiagramme eignen sich gut, um zeitliche Verläufe darzustellen, da lokale und globale Minima und Maxima leicht erkennbar sind und sie die Kontinuität der Daten unterstreichen. 
 
-```{figure} ../book_images/Drei-Wellen-1918-19-UK.png
+```{figure} ../assets/images/Drei-Wellen-1918-19-UK.png
 ---
 height: 300px
 name: fig-brit-drei-wellen

@@ -40,6 +40,6 @@ Flussdiagramm der Fallstudie. Wir befinden uns im dritten Arbeitspaket.
 ```
 Zunächst werden wir lernen, [was OCR ist](ocr), warum wir es brauchen und wie es funktioniert. Außerdem werden wir einen Überblick über einige OCR-Tools geben.
 
-Anschließend werden wir [OCR in Python mit PyTesseract](https://dh-network.github.io/quadriga/data-input/FS_1_MVP_OCR) durchführen, einem kostenlosen und quelloffenen OCR-Tool.
+Anschließend werden wir [OCR in Python mit PyTesseract](ocr_pytesseract_intro) durchführen, einem kostenlosen und quelloffenen OCR-Tool.
 
-Schließlich werden wir die Metriken kennenlernen, die zur Messung der [OCR-Qualität](ocr-quality) verwendet werden, und [Qualitätsmessungen](https://dh-network.github.io/quadriga/data-input/FS_1_MVP_OCR_Quality) durchführen.
+Schließlich werden wir die Metriken kennenlernen, die zur Messung der [OCR-Qualität](ocr-quality) verwendet werden, und [Qualitätsmessungen](ocr_ocr-quality) durchführen.
